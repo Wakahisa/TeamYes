@@ -16,11 +16,21 @@
         
     </div>
     <div class="col-md-4">
-       link to student page
-       link to instructor page
-       link to admin page
+        <div>
+            link to student page
+            @Html.ActionLink("Student Home View", "StudentHomeView", "Student")
+        </div>
+        <div>
+            link to instructor page
+            @Html.ActionLink("Instructor Home View", "InstructorHomeView", "Instructor")
+        </div>
+        <div>
+            link to admin page
+            @Html.ActionLink("Admin View", "AdminView", "Admin")
+        </div>
+        <div>
+            links to UAA sites
+        </div>
     </div>
-    <div class="col-md-4">
-       links to UAA sites
-    </div>
+   
 </div>

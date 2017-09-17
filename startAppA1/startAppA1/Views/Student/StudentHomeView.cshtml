@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "StudentHome";
+}
+
+<h2>StudentHomepage</h2>
+
+<div>
+    displays student account management, accessable courses, current courses, past courses, and course progress
+    some of those may be partial views, collapsable/popups
+</div>
+<div>
+    links to student courses pages
+    @Html.ActionLink("Student Course View", "StudentCourseView", "Student")
+</div>
+<div>
+    links back to main page
+    @Html.ActionLink("Home", "Index", "Home")
+</div>

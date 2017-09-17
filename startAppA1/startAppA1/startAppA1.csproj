@@ -212,7 +212,10 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\Admin\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\Instructor\InstructorController.cs" />
+    <Compile Include="Controllers\Student\StudentController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -265,20 +268,25 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Student\StudentHomepageView.cshtml" />
+    <Content Include="Views\Student\StudentHomeView.cshtml" />
     <Content Include="Views\Student\StudentCourseView.cshtml" />
     <Content Include="Views\Student\StudentLessonView.cshtml" />
+    <Content Include="Views\Student\StudentWorkView.cshtml" />
+    <Content Include="Views\Student\StudentGradeView.cshtml" />
+    <Content Include="Views\Admin\AdminView.cshtml" />
+    <Content Include="Views\Instructor\InstructorHomeView.cshtml" />
+    <Content Include="Views\Instructor\InstructorCourseManagementView.cshtml" />
+    <Content Include="Views\Instructor\InstructorLessonManagement.cshtml" />
+    <Content Include="Views\Instructor\InstructorStudentManagementView.cshtml" />
+    <Content Include="Views\Instructor\InstructorCourseCreationView.cshtml" />
+    <Content Include="Views\Instructor\InstructorCourseEditView.cshtml" />
+    <Content Include="Views\Instructor\InstructorLessonEditView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\Admin\" />
-    <Folder Include="Controllers\Instructor\" />
-    <Folder Include="Controllers\Student\" />
     <Folder Include="Models\Admin\" />
     <Folder Include="Models\Instructor\" />
     <Folder Include="Models\Student\" />
-    <Folder Include="Views\Admin\" />
-    <Folder Include="Views\Instructor\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

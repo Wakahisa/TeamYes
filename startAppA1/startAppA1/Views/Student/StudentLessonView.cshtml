@@ -5,3 +5,19 @@
 
 <h2>StudentLessonView</h2>
 
+<div>
+    this is where the students will see the lesson stuff, particularly text, video, audio, and links
+    lesson work ststus will be here (not started, in progress, submitted, graded)
+</div>
+<div>
+    links to student work page
+    @Html.ActionLink("Student Work View", "StudentWorkView", "Student")
+</div>
+<div>
+    links to next and previous lessons,
+    @Html.ActionLink("Student Next /Prev Lesson View", "StudentLessonView", "Student")
+</div>
+<div>
+    back to the course overview
+    @Html.ActionLink("Student Course View", "StudentCourseView", "Student")
+</div>
