@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "InstructorLessonManagement";
+}
+
+<h2>InstructorLessonManagement</h2>
+
+instructors manage lessons from here
+activate/deactivate/edit lesson and content
+view/grade student submissions
+
+links to next lesson, 
+@Html.ActionLink("Next Lesson Management View", "InstructorLessonManagementView", "Instructor")
+previous lesson,
+@Html.ActionLink("Previous Lesson Management View", "InstructorLessonManagementView", "Instructor")
+ course management,
+@Html.ActionLink("Course Management View", "InstructorCourseManagementView", "Instructor")
+ students(per submission?)
+@Html.ActionLink("Student Management View", "InstructorStudentManagementView", "Instructor")

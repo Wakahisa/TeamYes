@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "StudentWorkView";
+}
+
+<h2>StudentWorkView</h2>
+
+<div>
+    this will be where the student will do the work, take the test/quiz, etc.
+    the python plug-in will go here
+</div>
+<div>
+    it will link back to the lesson view
+    @Html.ActionLink("Student Lesson View", "StudentLessonView", "Student")
+</div>
+<div>
+    and back to teh course view
+    @Html.ActionLink("Student Course View", "StudentCourseView", "Student")
+</div>
+<div>
+    and to the response/grade view
+    @Html.ActionLink("Student Grade View", "StudentGradeView", "Student")
+</div>

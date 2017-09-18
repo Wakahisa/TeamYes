@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "View";
+}
+
+<h2>InstructorCourseEditView</h2>
+
+<div>
+    overall course editing
+    add lessons, edit lessons, link/order lessons
+</div>
+
+<div>
+    links back to the course creation page
+    @Html.ActionLink("Instructor Course Creation View", "InstructorCourseCreationView", "Instructor")
+</div>
+
+<div>
+    links to the course lessons
+    @Html.ActionLink("Instructor Lesson Edit View", "InstructorLessonEditView", "Instructor")
+</div>

@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "InstructorCourseManagementView";
+}
+
+<h2>InstructorCourseManagementView</h2>
+
+<div>
+    instructors manages individual courses from here, has a status panel/s for some course statistics or info
+    add/remove students, whole class announcements, activate/deactivate lessons
+</div>
+
+<div>
+    link to blackboard?
+    @Html.ActionLink("Dummy to UAA blackboard", "InstructorCourseManagementView", "Instructor")
+</div>
+
+<div>
+    links to each lesson for management/grading
+    @Html.ActionLink("Instructor Lesson Management View", "InstructorLessonManagementView", "Instructor")
+</div>
+
+<div>
+    has a modal table of links to the students enrolled in the course
+    @*@Html.ActionLink("Instructor Lesson Edit View", "InstructorLessonEditView", "Instructor")*@
+</div>

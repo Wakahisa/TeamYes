@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "InstructorCourseCreationView";
+}
+
+<h2>InstructorCourseCreationView</h2>
+
+<div>
+    page for creating/editing courses
+    basic instructions
+    choose a course to edit
+    create a course button
+</div>
+<div>
+    links to the course overview creator
+    @*@Html.ActionLink("Instructor Creator Module", "InstructorCourseCreationView", "Instructor")*@
+    actually this is probably just a partial view, maybe, mostly text and a few links probably, pictures?
+</div>
+
+
+<div>
+    links to the course to edit
+    @Html.ActionLink("Instructor Course Edit View", "InstructorCourseEditView", "Instructor")
+</div>
+
+
+
+note/idea: only one create/edit track, just populate it with existing 
+data if chooing to edit and populate with no data if choosing to create

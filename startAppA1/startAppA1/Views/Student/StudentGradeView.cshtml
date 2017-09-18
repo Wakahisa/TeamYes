@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "StudentGradeView";
+}
+
+<h2>StudentGradeView</h2>
+
+<div>
+    this is where the response/grade to the student's final submitted work will be posted
+    it may be an automated response of a response entered by the instructor
+</div>
+<div>
+    links back to the courses view
+    @Html.ActionLink("Student Course View", "StudentCourseView", "Student")
+</div>
+<div>
+    and to the next lesson
+    @Html.ActionLink("Student Lesson View", "StudentLessonView", "Student")
+</div>

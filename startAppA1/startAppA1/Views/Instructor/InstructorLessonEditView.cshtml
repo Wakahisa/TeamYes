@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "InstructoeLessonEditView";
+}
+
+<h2>InstructoeLessonEditView</h2>
+
+<div>
+    instructor sets up the lesson teaching, work, and response pages
+    maybe choose from templates for positioning?
+    add/edit text, video, audio, outside links
+</div>
+
+<div>
+    <div>
+        links a 'next lesson to create' which is just the same page with no data
+        @Html.ActionLink("Instructor Lesson Edit View", "InstructorLessonEditView", "Instructor")
+    </div>
+
+    <div>
+        if linked to another lesson/s can go to those lessons
+        @Html.ActionLink("Next Lesson Edit View", "InstructorLessonEditView", "Instructor")
+        @Html.ActionLink("Previous Lesson Edit View", "InstructorLessonEditView", "Instructor")
+        javascript hide/show this stuff
+    </div>
+
+    <div>
+        links to a "view this lesson as a student would"
+        @Html.ActionLink("Student Lesson View", "StudentLessonView", "Student")
+        current link is a total placeholder, maybe import the student view as an instructor preview partial?
+    </div>
+
+</div>
+
+links back to the course editor
+@Html.ActionLink("Instructor Lesson Edit View", "InstructorLessonEditView", "Instructor")
+
+
+<div>
+    note: probably needs a way to track which/where the lesson is in the course structure
+    possibly through a list of current lessons in creation or linked order
+</div>
+
+<div>
+    note: for coding work have a test area where the instructor can put in code and get responses from the
+    python interpreter just like the student does
+</div>
