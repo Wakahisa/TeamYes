@@ -5,8 +5,17 @@
 
 <h2>InstructorCourseEditView</h2>
 
-overall course editing
-add lessons, edit lessons, link/order lessons
+<div>
+    overall course editing
+    add lessons, edit lessons, link/order lessons
+</div>
 
-links back to the course creation page
-links to the course lessons
+<div>
+    links back to the course creation page
+    @Html.ActionLink("Instructor Course Creation View", "InstructorCourseCreationView", "Instructor")
+</div>
+
+<div>
+    links to the course lessons
+    @Html.ActionLink("Instructor Lesson Edit View", "InstructorLessonEditView", "Instructor")
+</div>
