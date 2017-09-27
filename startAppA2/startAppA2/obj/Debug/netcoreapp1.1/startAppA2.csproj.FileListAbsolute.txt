@@ -1,0 +1,10 @@
+C:\Users\Peter\Documents\GitHub\TeamYes\startAppA2\startAppA2\bin\Debug\netcoreapp1.1\startAppA2.deps.json
+C:\Users\Peter\Documents\GitHub\TeamYes\startAppA2\startAppA2\bin\Debug\netcoreapp1.1\startAppA2.runtimeconfig.json
+C:\Users\Peter\Documents\GitHub\TeamYes\startAppA2\startAppA2\bin\Debug\netcoreapp1.1\startAppA2.runtimeconfig.dev.json
+C:\Users\Peter\Documents\GitHub\TeamYes\startAppA2\startAppA2\bin\Debug\netcoreapp1.1\startAppA2.dll
+C:\Users\Peter\Documents\GitHub\TeamYes\startAppA2\startAppA2\bin\Debug\netcoreapp1.1\startAppA2.pdb
+C:\Users\Peter\Documents\GitHub\TeamYes\startAppA2\startAppA2\obj\Debug\netcoreapp1.1\startAppA2.csprojResolveAssemblyReference.cache
+C:\Users\Peter\Documents\GitHub\TeamYes\startAppA2\startAppA2\obj\Debug\netcoreapp1.1\startAppA2.csproj.CoreCompileInputs.cache
+C:\Users\Peter\Documents\GitHub\TeamYes\startAppA2\startAppA2\obj\Debug\netcoreapp1.1\startAppA2.AssemblyInfo.cs
+C:\Users\Peter\Documents\GitHub\TeamYes\startAppA2\startAppA2\obj\Debug\netcoreapp1.1\startAppA2.dll
+C:\Users\Peter\Documents\GitHub\TeamYes\startAppA2\startAppA2\obj\Debug\netcoreapp1.1\startAppA2.pdb
