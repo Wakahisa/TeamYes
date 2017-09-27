@@ -3,7 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link rel="stylesheet" href="~/Content/font-awesome.min.css">
+
+    <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
@@ -13,7 +15,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - <a href="https://www.uaa.alaska.edu/">UAA</a></p>
+            @*<p>&copy; @DateTime.Now.Year - <a href="https://www.uaa.alaska.edu/">UAA</a></p>*@
         </footer>
     </div>
 
