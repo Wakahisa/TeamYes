@@ -9,30 +9,47 @@
     displays student account management, accessable courses, current courses, past courses, and course progress
     some of those may be partial views, collapsable/popups
 </div>
+
 <div>
     <!--Parameters: Link Name, View, Controller-->
     <!--links to student home page-->
     @* @Html.ActionLink("Student Home View", "StudentHomeView", "Student") *@
     <!--View, Controller, Link Name-->
-    <p><a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentHomeView", "Student")'">Student Home View &raquo;</a></p>
+    @*<p><a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentHomeView", "Student")'">Student Home View &raquo;</a></p>*@
 </div>
 <div>
     <!--links to student courses pages-->
      @* @Html.ActionLink("Student Course View", "StudentCourseView", "Student") *@
-    <p><a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentCourseView", "Student")'">Student Course View &raquo;</a></p>
+    @*<p><a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentCourseView", "Student")'">Student Course View &raquo;</a></p>*@
 </div>
 <div>
     <!--links to student grade pages-->
      @* @Html.ActionLink("Student Grade View", "StudentGradeView", "Student") *@
-    <p><a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentGradeView", "Student")'">Student Grade View &raquo;</a></p>
+    @*<p><a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentGradeView", "Student")'">Student Grade View &raquo;</a></p>*@
 </div>
 <div>
     <!--links to student lesson pages-->
     @* @Html.ActionLink("Student Course View", "StudentLessonView", "Student") *@
-    <p><a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentLessonView", "Student")'">Student Lesson View &raquo;</a></p>
+    @*<p><a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentLessonView", "Student")'">Student Lesson View &raquo;</a></p>*@
 </div>
 <div>
     <!--links to student work pages-->
     @* @Html.ActionLink("Student Work View", "StudentWorkView", "Student") *@
-    <p><a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentWorkView", "Student")'">Student Work View &raquo;</a></p>
+    @*<p><a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentWorkView", "Student")'">Student Work View &raquo;</a></p>*@
 </div>
+
+<div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+        Home Menu
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+        <li><p><a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentHomeView", "Student")'">Student Home View &raquo;</a></p></li>
+        <li><p><a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentCourseView", "Student")'">Student Course View &raquo;</a></p></li>
+        <li><p><a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentLessonView", "Student")'">Student Lesson View &raquo;</a></p></li>
+        <li><p><a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentGradeView", "Student")'">Student Grade View &raquo;</a></p></li>
+        <li><p><a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentWorkView", "Student")'">Student Work View &raquo;</a></p></li>
+    </ul>
+</div>
+
+<p>Welcome to your homepage</p>
