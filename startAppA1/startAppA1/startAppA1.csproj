@@ -348,7 +348,7 @@
     <Content Include="Views\Admin\AdminView.cshtml" />
     <Content Include="Views\Instructor\InstructorHomeView.cshtml" />
     <Content Include="Views\Instructor\InstructorCourseManagementView.cshtml" />
-    <Content Include="Views\Instructor\InstructorLessonManagement.cshtml" />
+    <Content Include="Views\Instructor\InstructorLessonManagementView.cshtml" />
     <Content Include="Views\Instructor\InstructorStudentManagementView.cshtml" />
     <Content Include="Views\Instructor\InstructorCourseCreationView.cshtml" />
     <Content Include="Views\Instructor\InstructorCourseEditView.cshtml" />
@@ -372,7 +372,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
