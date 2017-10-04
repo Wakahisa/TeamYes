@@ -5,20 +5,52 @@
 
 <h2>InstructorHomeView</h2>
 
-instructor starts here and has profile/account management here
-choose a course, activate a course, deactivate a course, create a course
+<div class="panel panel-primary">
+    <div class="panel-heading">My Courses</div>
+        <div class="panel-body">
+           <ul>
+               <li> list of courses that instructor runs</li>
+               <li> list of courses that instructor runs</li>
+               <li> list of courses that instructor runs</li>
+               <li> list of courses that instructor runs</li>
+               <li> list of courses that instructor runs</li>
+           </ul>
+            <div class="panel-footer">
+                links to a courses management page
+                @Html.ActionLink("Instructor Course Management Module", "InstructorCourseManagementView", "Instructor")
+            </div>
+        </div>
+    </div>
+<div class="panel panel-primary">
+    <div class="panel-heading">My Students / My Paycheck</div>
+    <div class="panel-body">
+        <ul>
+            <li>list of students that instructor torments</li>
+            <li>list of students that instructor torments</li>
+            <li>list of students that instructor torments</li>
+            <li>list of students that instructor torments</li>
+            <li>list of students that instructor torments</li>
+            <li>list of students that instructor torments</li>
+            <li>list of students that instructor torments</li>
+        </ul>
+        <div class="panel-footer">
+            links to a student management page
+            @Html.ActionLink("Instructor Student Management Module", "InstructorStudentManagementView", "Instructor")
+        </div>
+    </div>
+</div>
+<div class="panel panel-primary">
+    <div class="panel-heading">Stuff (note: come up with a better name)</div>
+    <div class="panel-body">
+        link to course creation module
+        <div class="col-sm-4">
+            links to a course/lesson creator module
+            @Html.ActionLink("Instructor Creator Module", "InstructorCourseCreationView", "Instructor")
+        </div>
+        <div class="col-sm-4">link to user profile management page</div>
 
-<div>
-    links to a course/lesson creator module
-    @Html.ActionLink("Instructor Creator Module", "InstructorCourseCreationView", "Instructor")
+        <div class="col-sm-4">?link to communications?uaa stuff?</div>
+    </div>
 </div>
 
-<div>
-    links to a courses management page
-    @Html.ActionLink("Instructor Course Management Module", "InstructorCourseManagementView", "Instructor")
-</div>
-
-<div>
-    links to a student management page
-    @Html.ActionLink("Instructor Student Management Module", "InstructorStudentManagementView", "Instructor")
-</div>
+       

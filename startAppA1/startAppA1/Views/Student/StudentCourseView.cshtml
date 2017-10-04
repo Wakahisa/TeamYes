@@ -6,36 +6,19 @@
 <h2>StudentCourse</h2>
 
 <div>displays info, overviews, progress, lessons</div>
-@*<div>
+<div>
     links back to student homepage
     @Html.ActionLink("Student Homepage View", "StudentHomeView", "Student")
-</div>*@
-@*<div>
+</div>
+<div>
     links to instructor communication
-    @Html.ActionLink("Contact", "Contact", "Home")
-</div>*@
-@*<div>
+    @*@Html.ActionLink("Student Course View", "StudentCourseView", "Student")*@
+</div>
+<div>
     links to lessons
     @Html.ActionLink("Student Lesson View List", "StudentLessonView", "Student")
-</div>*@
-@*<div>
+</div>
+<div>
     IFF a lesson has saved work then link directly to the work page
     @Html.ActionLink("Student Work View", "StudentWorkView", "Student")
-</div>*@
-
-<div class="dropdown">
-    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-        Home Menu
-        <span class="caret"></span>
-    </button>
-    <ul class="dropdown-menu">
-        <li><p><a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentHomeView", "Student")'">Student Home View &raquo;</a></p></li>
-        <li><p><a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentLessonView", "Student")'">Student Lesson View &raquo;</a></p></li>
-        <li><p><a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentWorkView", "Student")'">Student Work View &raquo;</a></p></li>
-    </ul>
-</div>
-
-@* I'm trying to find something to use as a module..*@
-<div style="position:relative;left:350px">
-    <iframe src="https://www.w3schools.com/html/html_iframe.asp" height="400" width="600"></iframe>
 </div>

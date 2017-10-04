@@ -11,26 +11,27 @@
     choose a course to edit
     create a course button
 </div>
-<div>
-    links to the course overview creator
-    @*@Html.ActionLink("Instructor Creator Module", "InstructorCourseCreationView", "Instructor")*@
-    actually this is probably just a partial view, maybe, mostly text and a few links probably, pictures?
+<div class="panel panel-primary">
+    <div class="panel-heading">Instructions</div>
+    <div class="panel-body">
+        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah 
+        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah 
+        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah 
+    </div>
 </div>
 
 
-<div>
-    links to the course to edit
-    @Html.ActionLink("Instructor Course Edit View", "InstructorCourseEditView", "Instructor")
+<div class="panel panel-primary">
+    <div class="panel-heading">Add/Edit a course</div>
+    <div class="panel-body">
+        <ul>
+            <li>@Html.ActionLink("course", "InstructorCourseEditView", "Instructor")</li>
+            <li>@Html.ActionLink("course", "InstructorCourseEditView", "Instructor")</li>
+            <li>@Html.ActionLink("course", "InstructorCourseEditView", "Instructor")</li>
+            <li>@Html.ActionLink("course", "InstructorCourseEditView", "Instructor")</li>
+        </ul>
+    </div>
+    <div class="panel-footer">
+        @Html.ActionLink("Add a course", "InstructorCourseEditView", "Instructor")
+    </div>
 </div>
-
-<div>
-    link back to home
-    @Html.ActionLink("Instructor Home View", "InstructorHomeView", "Instructor")
-
-
-</div>
-
-
-
-note/idea: only one create/edit track, just populate it with existing 
-data if chooing to edit and populate with no data if choosing to create

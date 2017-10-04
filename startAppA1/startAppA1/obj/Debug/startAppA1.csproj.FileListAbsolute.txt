@@ -128,7 +128,6 @@ C:\Users\Valued Customer\Documents\softwareEngClass\startAppA1\startAppA1\bin\Mi
 C:\Users\Valued Customer\Documents\softwareEngClass\startAppA1\startAppA1\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\Users\Valued Customer\Documents\softwareEngClass\startAppA1\startAppA1\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\Valued Customer\Documents\softwareEngClass\startAppA1\startAppA1\bin\Microsoft.AI.Web.xml
-C:\Users\Valued Customer\Documents\softwareEngClass\startAppA1\startAppA1\obj\Debug\startAppA1.csprojResolveAssemblyReference.cache
 C:\Users\Valued Customer\Documents\softwareEngClass\startAppA1\startAppA1\obj\Debug\startAppA1.csproj.CoreCompileInputs.cache
 C:\Users\Valued Customer\Documents\softwareEngClass\startAppA1\startAppA1\obj\Debug\startAppA1.dll
 C:\Users\Valued Customer\Documents\softwareEngClass\startAppA1\startAppA1\obj\Debug\startAppA1.pdb

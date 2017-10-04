@@ -3,16 +3,39 @@
     ViewBag.Title = "InstructorStudentManagementView";
 }
 
-<h2>InstructorStudentManagementView</h2>
+<h2>Manage Students</h2>
+<div class="panel panel-primary">
+    <div class="panel-heading">Students</div>
+    <div class="row">
+       big list fo students
+        <div class="col-sm-3">
+            name/number (is email/msg link)
+        </div>
+        <div class="col-sm-3">
+            course and progress (note multiple courses?)
+        </div>
+        <div class="col-sm-3">
+            link to current lesson and put that student at top of list
+        </div>
+        <div class="col-sm-3">
+            current grade/points
+        </div>
+    </div>
+</div>
 
-manage students from here
-add/remove from courses
-view/jump to ungraded submissions of that student
-course overall grade?
-student overall course progress?
+<div class="panel panel-primary">
+    <div class="panel-heading">Add/Drop</div>
+    <div class="row">
+        <div class="col-sm-3">
+            add button
+        </div>
+        <div class="col-sm-3">
+            remove button
+        </div>
+        <div class="col-sm-3">
+            course stats button?
+        </div>
+    </div>
+</div>
 
-question: do we want a partial view for a selected student of a whole new page?
-this probably depends on how much information we have to display
 
-link back to main instructor page, breadcrumb instead?
-@Html.ActionLink("Instructor Home View", "InstructorHomeView", "Instructor")
