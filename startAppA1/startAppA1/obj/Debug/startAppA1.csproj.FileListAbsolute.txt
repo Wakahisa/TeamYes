@@ -471,3 +471,9 @@ C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\obj\D
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\obj\Debug\startAppA1.csproj.CoreCompileInputs.cache
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\obj\Debug\startAppA1.dll
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\obj\Debug\startAppA1.pdb
+C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\MvcSiteMapProvider.dll
+C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\MvcSiteMapProvider.WebActivator.dll
+C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\WebActivatorEx.dll
+C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\Microsoft.Web.Administration.dll
+C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\MvcSiteMapProvider.xml
+C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\MvcSiteMapProvider.WebActivator.xml
