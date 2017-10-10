@@ -308,6 +308,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\Admin\AdminController.cs" />
     <Compile Include="Controllers\Admin\AdminMainController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\Instructor\InstructorController.cs" />
@@ -319,10 +320,19 @@
     <Compile Include="Migrations\201710090333332_firstDataLoad.Designer.cs">
       <DependentUpon>201710090333332_firstDataLoad.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710100552510_addedManyModels.cs" />
+    <Compile Include="Migrations\201710100552510_addedManyModels.Designer.cs">
+      <DependentUpon>201710100552510_addedManyModels.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin\AdminTableModel.cs" />
     <Compile Include="Models\Context.cs" />
-    <Compile Include="Models\Student\Student.cs" />
+    <Compile Include="Models\Instructor\InstructorModel.cs" />
+    <Compile Include="Models\Shared\CourseModel.cs" />
+    <Compile Include="Models\Shared\GradeModel.cs" />
+    <Compile Include="Models\Shared\LessonModel.cs" />
+    <Compile Include="Models\Student\StudentModel.cs" />
+    <Compile Include="Models\Shared\WorkModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -411,8 +421,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\Instructor\" />
-    <Folder Include="Models\Shared\" />
     <Folder Include="References\Videos\" />
   </ItemGroup>
   <ItemGroup>
@@ -435,6 +443,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201710090333332_firstDataLoad.resx">
       <DependentUpon>201710090333332_firstDataLoad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710100552510_addedManyModels.resx">
+      <DependentUpon>201710100552510_addedManyModels.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
