@@ -8,6 +8,11 @@ namespace startAppA1.Models
 {
     public class InstructorModel
     {
+        public InstructorModel()
+        {
+            Courses = new List<CourseModel>();
+        }
+
         [Key]
         [Required]
         public int ID { get; set; }
@@ -16,6 +21,6 @@ namespace startAppA1.Models
         public string MiddleInital { get; set; }
         public string LastName { get; set; }
         public bool IsAdmin { get; set; }
-        public List<CourseModel> Courses { get; set; }
+        public virtual ICollection<CourseModel> Courses { get; set; }
     }
 }

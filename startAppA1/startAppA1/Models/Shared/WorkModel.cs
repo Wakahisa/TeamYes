@@ -9,6 +9,8 @@ namespace startAppA1.Models
 {
     public class WorkModel
     {
+        public WorkModel() { }
+
         [Key]
         [Required]
         public int ID { get; set; }
@@ -21,6 +23,12 @@ namespace startAppA1.Models
         public string InstructorNotes { get; set; }
         public bool Passed { get; set; }
         public bool IsProgramming { get; set; }
+
+        //foriegn keys for relationships
+        public int? CourseID { get; set; }
+        public CourseModel Course { get; set; }
+        public int? StudentID { get; set; }
+        public StudentModel Student { get; set; }
 
     }
 }

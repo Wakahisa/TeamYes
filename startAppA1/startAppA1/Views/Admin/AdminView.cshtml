@@ -8,9 +8,8 @@
 <div class="panel panel-primary">
     <div class="panel-heading">Instructions</div>
     <div class="panel-body">
-        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+        Select a table from the left and the rows should appear in the center.
+        Select a row to edit.
     </div>
 </div>
 
@@ -19,8 +18,11 @@
             <div class="panel-heading">Tables</div>
             <div class="panel-body">
                 <ul>
-                    <li>table</li>
-                    <li>table</li>
+                    @*@Html.ActionLink("Title", "ControllerMethod", "Controller(Admin)")*@
+                    <li>@Ajax.ActionLink("Student Table", "LoadStudents", "Admin",
+                            new AjaxOptions() { UpdateTargetId = "Display", InsertionMode = InsertionMode.Replace })</li>
+                    <li>@Ajax.ActionLink("Instructor Table", "LoadInstructors", "Admin",
+                            new AjaxOptions() { UpdateTargetId = "Display", InsertionMode = InsertionMode.Replace })</li>
                     <li>table</li>
                     <li>table</li>
                     <li>table</li>
@@ -34,13 +36,10 @@
     <div class="col-sm-9">
         <div class="panel-heading">Rows</div>
         <div class="panel-body">
-            <ul>
-                <li><div class="col-sm-2">stuff</div><div class="col-sm-2">stuff</div><div class="col-sm-2">stuff</div></li>
-                <li><div class="col-sm-2">stuff</div><div class="col-sm-2">stuff</div><div class="col-sm-2">stuff</div></li>
-                <li><div class="col-sm-2">stuff</div><div class="col-sm-2">stuff</div><div class="col-sm-2">stuff</div></li>
-                <li><div class="col-sm-2">stuff</div><div class="col-sm-2">stuff</div><div class="col-sm-2">stuff</div></li>
-                <li><div class="col-sm-2">stuff</div><div class="col-sm-2">stuff</div><div class="col-sm-2">stuff</div></li>
-            </ul>
+            <div id="Display">
+                
+            </div>
         </div>
     </div>
 </div>
+

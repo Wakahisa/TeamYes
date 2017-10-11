@@ -324,6 +324,22 @@
     <Compile Include="Migrations\201710100552510_addedManyModels.Designer.cs">
       <DependentUpon>201710100552510_addedManyModels.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710110538075_updateModels.cs" />
+    <Compile Include="Migrations\201710110538075_updateModels.Designer.cs">
+      <DependentUpon>201710110538075_updateModels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710110551378_updateModels1.cs" />
+    <Compile Include="Migrations\201710110551378_updateModels1.Designer.cs">
+      <DependentUpon>201710110551378_updateModels1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710110553317_updateModels2.cs" />
+    <Compile Include="Migrations\201710110553317_updateModels2.Designer.cs">
+      <DependentUpon>201710110553317_updateModels2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710110611369_updateModels3.cs" />
+    <Compile Include="Migrations\201710110611369_updateModels3.Designer.cs">
+      <DependentUpon>201710110611369_updateModels3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin\AdminTableModel.cs" />
     <Compile Include="Models\Context.cs" />
@@ -374,6 +390,8 @@
     <Content Include="Scripts\jquery-3.2.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.2.1.min.map" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -418,10 +436,13 @@
     <Content Include="Views\Shared\DisplayTemplates\MetaRobotsHelperModel.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\MenuHelperModel.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\CanonicalHelperModel.cshtml" />
+    <Content Include="Views\Admin\_StudentTableView.cshtml" />
+    <Content Include="Views\Admin\_InstructorTableView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="References\Videos\" />
+    <Folder Include="Views\Admin\Edit\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -446,6 +467,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710100552510_addedManyModels.resx">
       <DependentUpon>201710100552510_addedManyModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710110538075_updateModels.resx">
+      <DependentUpon>201710110538075_updateModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710110551378_updateModels1.resx">
+      <DependentUpon>201710110551378_updateModels1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710110553317_updateModels2.resx">
+      <DependentUpon>201710110553317_updateModels2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710110611369_updateModels3.resx">
+      <DependentUpon>201710110611369_updateModels3.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

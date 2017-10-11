@@ -9,6 +9,14 @@ namespace startAppA1.Models
 {
     public class StudentModel
     {
+        public StudentModel()
+        {
+            Courses = new List<CourseModel>();
+            InProgressLessons = new List<LessonModel>();
+            Homeworks = new List<WorkModel>();
+            CourseGrade = new List<GradeModel>();
+        }
+
         [Key]
         [Required]
         public int ID { get; set; }
@@ -17,11 +25,15 @@ namespace startAppA1.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string MiddleInital { get; set; }
-        public List<CourseModel> Courses { get; set; }
-        public List<LessonModel> InProgressLessons { get; set; }
-        public List<WorkModel> Homeworks { get; set; }
-        public MailAddress EmailAddress { get; set; }
-        public List<GradeModel> CourseGrade { get; set; }
+        public virtual ICollection<CourseModel> Courses { get; set; }
+        public virtual ICollection<LessonModel> InProgressLessons { get; set; }
+        public virtual ICollection<WorkModel> Homeworks { get; set; }
+        public string EmailAddress { get; set; }
+        public virtual ICollection<GradeModel> CourseGrade { get; set; }
+        
+        //foriegn keys for relationships
+        public int? CourseID { get; set; }
+        public CourseModel Course { get; set; }
 
     }
 }
