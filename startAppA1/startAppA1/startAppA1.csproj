@@ -356,6 +356,7 @@
     <Content Include="Models\ModelsREADME.txt" />
     <Content Include="References\Images\coding-language.png" />
     <Content Include="References\Images\computer-science.jpg" />
+    <Content Include="References\Images\favicon.ico" />
     <Content Include="References\Images\programing-coding-languages.jpg" />
     <Content Include="References\Images\UAA-partial.jpg" />
     <Content Include="Scripts\bootstrap.js" />
