@@ -10,10 +10,13 @@
     it may be an automated response of a response entered by the instructor
 </div>
 <div>
-    links back to the courses view
-    @Html.ActionLink("Student Course View", "StudentCourseView", "Student")
+    <!--Parameters: Link Name, View, Controller-->
+    <!--links to student courses pages-->
+    @* @Html.ActionLink("Student Course View", "StudentCourseView", "Student") *@
+    <p><a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentCourseView", "Student")'">Student Course View &raquo;</a></p>
 </div>
 <div>
-    and to the next lesson
-    @Html.ActionLink("Student Lesson View", "StudentLessonView", "Student")
+    <!--links to student lesson pages-->
+    @* @Html.ActionLink("Student Course View", "StudentLessonView", "Student") *@
+    <p><a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentLessonView", "Student")'">Student Lesson View &raquo;</a></p>
 </div>

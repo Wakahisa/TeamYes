@@ -336,18 +336,26 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Context-20171008192633.mdf" />
+    <Content Include="App_Data\Context-20171008192633_log.ldf">
+      <DependentUpon>Context-20171008192633.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap-cerulean.css" />
     <Content Include="Content\bootstrap-lumen.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\Site.css" />
     <Content Include="Controllers\ControllerREADME.txt" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Models\ModelsREADME.txt" />
+    <Content Include="References\Images\coding-language.png" />
+    <Content Include="References\Images\computer-science.jpg" />
+    <Content Include="References\Images\programing-coding-languages.jpg" />
     <Content Include="References\Images\UAA-partial.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -420,7 +428,6 @@
     <Content Include="Views\Shared\DisplayTemplates\CanonicalHelperModel.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="References\Videos\" />
   </ItemGroup>
   <ItemGroup>
