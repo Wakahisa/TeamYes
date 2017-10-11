@@ -25,7 +25,7 @@ namespace startAppA1
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap-cerulean.css",
-                      "~/Content/bootstrap.min-cerulean.css",
+                      "~/Content/bootstrap.min.css",
                       "~/Content/site.css",
                       "~/Content/custom.css"));
         }
