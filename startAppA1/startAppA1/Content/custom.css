@@ -11,13 +11,38 @@
     border-bottom: 1px solid #022241;
 }
 
-    .navbar-inverse .badge {
-        background-color: #fff;
-        color: #187303;
-    }
+.navbar-inverse .badge {
+    background-color: #fff;
+    color: #187303;
+}
+
+/*Changes NAVBAR BRAND COLOR*/
+.navbar-inverse .navbar-brand {
+    color: white;
+}
+
+/*Changes NAVBAR LINK COLOR*/
+.navbar-inverse .navbar-nav > li > a {
+     color: white;
+}
+
+/*Changes JUMBOTRON COLORS*/
+.jumbotron {
+    color: inherit;
+    background-color: #fdc523;
+}
+
+/*Changes background color*/
+body {
+    color: #333;
+    background-color: white;
+}
+
+
+
+
 
 /*Buttons*/
-
 /*.btn {
     padding: 14px 24px;
     border: 0 none;
@@ -29,7 +54,6 @@
     .btn:focus, .btn:active:focus, .btn.active:focus {
         outline: 0 none;
     }*/
-
 .btn-primary {
     background: #0099cc;
     color: #ffffff;
