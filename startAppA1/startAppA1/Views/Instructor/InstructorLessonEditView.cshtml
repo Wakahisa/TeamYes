@@ -10,7 +10,7 @@
 </div>
     <div class="panel panel-primary">
         <div class="panel-heading">Select a template</div>
-        <div class="row">
+        <div class="panel-body">
             @*javascript TODO: mouse in/out hilight, on click style=primary and load template partial view*@
             <button type="button" class="btn btn-default" style="margin-left: 16px">
                 <i class="fa fa-columns"></i> Vertical Split
@@ -30,7 +30,7 @@
     <div class="panel-primary">
         <div class="panel-heading">Upload</div>
         @*changes what to upload depending on partial view, actually part of the partial view, creates browse for modal*@
-        <div class="row">
+        <div class="panel-body">
             <div class="form-inline">
                     <button type="button" class="btn btn-default" style="margin-left: 16px">
                         Upload Video
@@ -69,7 +69,7 @@
     <div class="panel-primary">
         <div class="panel-heading">Select Work, Previous Lesson, and Next Lesson</div>
         @*bunches of javascript for choosing stuff and changing the titles*@
-        <div class="row">
+        <div class="panel-body">
             <div class="form-inline">
                 <div class="form-group" style="margin-left: 16px">
                     <label for="sel1">Lesson Work:</label>
@@ -102,7 +102,7 @@
         </div>
         </div>
 <hr />
-        <div class="row">
+        <div class="panel-body">
             <button type="button" class="btn btn-success" style="margin-left: 16px">
                 Save
             </button>
@@ -118,8 +118,10 @@
 
 <div class="panel-primary">
     <div class="panel-heading">Useful Links</div>
-    @Html.ActionLink("Create New Lesson", "InstructorLessonEditView", "Instructor", null, new { @class = "btn btn-default" })
+    <div class="panel-body">
+        @Html.ActionLink("Create New Lesson", "InstructorLessonEditView", "Instructor", null, new { @class = "btn btn-default" })
     @Html.ActionLink("Student Lesson Preview", "StudentLessonView", "Student", null, new { @class = "btn btn-default" })
     @Html.ActionLink("Course Create/Edit", "InstructorCourseEditView", "Instructor", null, new { @class = "btn btn-default" })
     @Html.ActionLink("Home", "InstructorHomeView", "Instructor", null, new { @class = "btn btn-default" })
+</div>
     </div>

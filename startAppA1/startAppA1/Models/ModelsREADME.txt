@@ -3,4 +3,5 @@ Things that go in here are instructions and notes specific to the models used in
 
 Especially important is any really useful custom helpers, templates, and coding conventions used
 
-9/26/17 - added a student class to student model
+It's up to the developer whether or not to reference by ID number or by object. If by ID number 
+then we should make a universal FindById service

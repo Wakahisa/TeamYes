@@ -3,28 +3,90 @@
     ViewBag.Title = "InstructorCourseManagementView";
 }
 
-<h2>InstructorCourseManagementView</h2>
+<h2>Course Name/Title</h2>
 
-<div>
-    instructors manages individual courses from here, has a status panel/s for some course statistics or info
-    add/remove students, whole class announcements, activate/deactivate lessons
+<div class="panel panel-primary">
+    <div class="panel-heading">Course Info</div>
+    <div class="panel-body">
+        various statistics about the course?
+        <div>
+            link to course edit
+            @Html.ActionLink("Instructor Course Edit View", "InstructorCourseEditView", "Instructor")
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading">Lessons</div>
+            <div class="panel-body">
+                <div class="col-sm-3">
+                <ul>
+                    <li>lesson</li>
+                    <li>lesson</li>
+                    <li>lesson</li>
+                    <li>lesson</li>
+                    <li>lesson</li>
+                    <li>lesson</li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <ul>
+                        <li> progress</li>
+                        <li> bar</li>
+                        <li> (#students</li>
+                        <li> finished)</li>
+                        <li> bar</li>
+                        <li> bar</li>
+                    </ul>
+                </div>
+                <div class="col-sm-5">
+                    <ul>
+                        <li> @Html.ActionLink("Manage", "InstructorLessonManagementView", "Instructor")
+                        @Html.ActionLink("Edit", "InstructorLessonEditView", "Instructor")</li>
+                        <li> @Html.ActionLink("Manage", "InstructorLessonManagementView", "Instructor")
+                        @Html.ActionLink("Edit", "InstructorLessonEditView", "Instructor")</li>
+                        <li> @Html.ActionLink("Manage", "InstructorLessonManagementView", "Instructor")
+                        @Html.ActionLink("Edit", "InstructorLessonEditView", "Instructor")</li>
+                        <li> @Html.ActionLink("Manage", "InstructorLessonManagementView", "Instructor")
+                        @Html.ActionLink("Edit", "InstructorLessonEditView", "Instructor")</li>
+                        <li> @Html.ActionLink("Manage", "InstructorLessonManagementView", "Instructor")
+                        @Html.ActionLink("Edit", "InstructorLessonEditView", "Instructor")</li>
+                        <li> @Html.ActionLink("Manage", "InstructorLessonManagementView", "Instructor")
+                        @Html.ActionLink("Edit", "InstructorLessonEditView", "Instructor")</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading">Students</div>
+            <div class="panel-body">
+                <div>
+                    <ul>
+                        <li>has a list of students enrolled in the course</li>
+                        <li>has a list of students enrolled in the course</li>
+                        <li>has a list of students enrolled in the course</li>
+                        <li>has a list of students enrolled in the course</li>
+                        <li>has a list of students enrolled in the course</li>
+                        <li>has a list of students enrolled in the course</li>
+                    </ul>
+                    
+                </div>
+                <div class="panel-footer">
+                    @Html.ActionLink("Student Management Button", "InstructorStudentManagementView", "Instructor")
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
-<div>
-    link to blackboard?
-    @Html.ActionLink("Dummy to UAA blackboard", "InstructorCourseManagementView", "Instructor")
-</div>
+
+
 
 <div>
-    links to each lesson for management/grading
-    @Html.ActionLink("Instructor Lesson Management View", "InstructorLessonManagementView", "Instructor")
-</div>
-
-<div>
-    has a modal table of links to the students enrolled in the course
-    @*@Html.ActionLink("Instructor Lesson Edit View", "InstructorLessonEditView", "Instructor")*@
-</div>
-<div>
-    link back to home
+    link back to home, will be replacved with breadcrumbs in the top nav bar
     @Html.ActionLink("Instructor Home View", "InstructoHomeView", "Instructor")
 </div>
