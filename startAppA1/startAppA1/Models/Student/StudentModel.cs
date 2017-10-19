@@ -25,15 +25,18 @@ namespace startAppA1.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string MiddleInital { get; set; }
-        public virtual ICollection<CourseModel> Courses { get; set; }
-        public virtual ICollection<LessonModel> InProgressLessons { get; set; }
-        public virtual ICollection<WorkModel> Homeworks { get; set; }
         public string EmailAddress { get; set; }
-        public virtual ICollection<GradeModel> CourseGrade { get; set; }
         
         //foriegn keys for relationships
-        public int? CourseID { get; set; }
-        public CourseModel Course { get; set; }
+
+        public List<int> CourseIDs { get; set; }
+        public virtual ICollection<CourseModel> Courses { get; set; }
+        public List<int> LessonIDs { get; set; }
+        public virtual ICollection<LessonModel> InProgressLessons { get; set; }
+        public List<int> WorkIDs { get; set; }
+        public virtual ICollection<WorkModel> Homeworks { get; set; }
+        public List<int> GradeIDs { get; set; }
+        public virtual ICollection<GradeModel> CourseGrade { get; set; }
 
     }
 }

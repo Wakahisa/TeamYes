@@ -340,6 +340,10 @@
     <Compile Include="Migrations\201710110611369_updateModels3.Designer.cs">
       <DependentUpon>201710110611369_updateModels3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710190545024_changedModelsABit.cs" />
+    <Compile Include="Migrations\201710190545024_changedModelsABit.Designer.cs">
+      <DependentUpon>201710190545024_changedModelsABit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin\AdminTableModel.cs" />
     <Compile Include="Models\Context.cs" />
@@ -438,11 +442,12 @@
     <Content Include="Views\Shared\DisplayTemplates\CanonicalHelperModel.cshtml" />
     <Content Include="Views\Admin\_StudentTableView.cshtml" />
     <Content Include="Views\Admin\_InstructorTableView.cshtml" />
+    <Content Include="Views\Admin\_StudentEditView.cshtml" />
+    <Content Include="Views\Admin\_InstructorEditView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="References\Videos\" />
-    <Folder Include="Views\Admin\Edit\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -479,6 +484,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710110611369_updateModels3.resx">
       <DependentUpon>201710110611369_updateModels3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710190545024_changedModelsABit.resx">
+      <DependentUpon>201710190545024_changedModelsABit.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

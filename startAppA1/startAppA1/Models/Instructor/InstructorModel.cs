@@ -22,5 +22,7 @@ namespace startAppA1.Models
         public string LastName { get; set; }
         public bool IsAdmin { get; set; }
         public virtual ICollection<CourseModel> Courses { get; set; }
+        public List<int> CourseIDs { get; set; }
+        public string EmailAddress { get; set; }
     }
 }

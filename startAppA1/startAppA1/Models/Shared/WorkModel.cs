@@ -25,10 +25,7 @@ namespace startAppA1.Models
         public bool IsProgramming { get; set; }
 
         //foriegn keys for relationships
-        public int? CourseID { get; set; }
-        public CourseModel Course { get; set; }
-        public int? StudentID { get; set; }
-        public StudentModel Student { get; set; }
+
 
     }
 }
