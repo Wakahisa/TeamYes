@@ -500,3 +500,33 @@ C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\obj\D
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\obj\Debug\startAppA1.Migrations.updateModels1.resources
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\obj\Debug\startAppA1.Migrations.updateModels2.resources
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\obj\Debug\startAppA1.Migrations.updateModels3.resources
+C:\Users\Peter\Documents\GitHub\TeamYes\startAppA1\startAppA1\bin\Microsoft.EntityFrameworkCore.dll
+C:\Users\Peter\Documents\GitHub\TeamYes\startAppA1\startAppA1\bin\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\Peter\Documents\GitHub\TeamYes\startAppA1\startAppA1\bin\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Peter\Documents\GitHub\TeamYes\startAppA1\startAppA1\bin\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Peter\Documents\GitHub\TeamYes\startAppA1\startAppA1\bin\Microsoft.Extensions.Logging.dll
+C:\Users\Peter\Documents\GitHub\TeamYes\startAppA1\startAppA1\bin\MvcSiteMapProvider.dll
+C:\Users\Peter\Documents\GitHub\TeamYes\startAppA1\startAppA1\bin\MvcSiteMapProvider.WebActivator.dll
+C:\Users\Peter\Documents\GitHub\TeamYes\startAppA1\startAppA1\bin\Remotion.Linq.dll
+C:\Users\Peter\Documents\GitHub\TeamYes\startAppA1\startAppA1\bin\System.Collections.Immutable.dll
+C:\Users\Peter\Documents\GitHub\TeamYes\startAppA1\startAppA1\bin\System.Interactive.Async.dll
+C:\Users\Peter\Documents\GitHub\TeamYes\startAppA1\startAppA1\bin\WebActivatorEx.dll
+C:\Users\Peter\Documents\GitHub\TeamYes\startAppA1\startAppA1\bin\Microsoft.Web.Administration.dll
+C:\Users\Peter\Documents\GitHub\TeamYes\startAppA1\startAppA1\bin\Microsoft.EntityFrameworkCore.xml
+C:\Users\Peter\Documents\GitHub\TeamYes\startAppA1\startAppA1\bin\Microsoft.Extensions.Caching.Abstractions.xml
+C:\Users\Peter\Documents\GitHub\TeamYes\startAppA1\startAppA1\bin\Microsoft.Extensions.Caching.Memory.xml
+C:\Users\Peter\Documents\GitHub\TeamYes\startAppA1\startAppA1\bin\Microsoft.Extensions.DependencyInjection.xml
+C:\Users\Peter\Documents\GitHub\TeamYes\startAppA1\startAppA1\bin\Microsoft.Extensions.Logging.xml
+C:\Users\Peter\Documents\GitHub\TeamYes\startAppA1\startAppA1\bin\MvcSiteMapProvider.xml
+C:\Users\Peter\Documents\GitHub\TeamYes\startAppA1\startAppA1\bin\MvcSiteMapProvider.WebActivator.xml
+C:\Users\Peter\Documents\GitHub\TeamYes\startAppA1\startAppA1\bin\Remotion.Linq.xml
+C:\Users\Peter\Documents\GitHub\TeamYes\startAppA1\startAppA1\bin\System.Collections.Immutable.xml
+C:\Users\Peter\Documents\GitHub\TeamYes\startAppA1\startAppA1\bin\System.Interactive.Async.xml
+C:\Users\Peter\Documents\GitHub\TeamYes\startAppA1\startAppA1\obj\Debug\startAppA1.Migrations.firstDataLoad.resources
+C:\Users\Peter\Documents\GitHub\TeamYes\startAppA1\startAppA1\obj\Debug\startAppA1.Migrations.addedManyModels.resources
+C:\Users\Peter\Documents\GitHub\TeamYes\startAppA1\startAppA1\obj\Debug\startAppA1.Migrations.updateModels.resources
+C:\Users\Peter\Documents\GitHub\TeamYes\startAppA1\startAppA1\obj\Debug\startAppA1.Migrations.updateModels1.resources
+C:\Users\Peter\Documents\GitHub\TeamYes\startAppA1\startAppA1\obj\Debug\startAppA1.Migrations.updateModels2.resources
+C:\Users\Peter\Documents\GitHub\TeamYes\startAppA1\startAppA1\obj\Debug\startAppA1.Migrations.updateModels3.resources
+C:\Users\Peter\Documents\GitHub\TeamYes\startAppA1\startAppA1\obj\Debug\startAppA1.csproj.GenerateResource.Cache
+C:\Users\Peter\Documents\GitHub\TeamYes\startAppA1\startAppA1\obj\Debug\startAppA1.Migrations.update.resources

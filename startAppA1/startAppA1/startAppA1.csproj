@@ -340,6 +340,10 @@
     <Compile Include="Migrations\201710110611369_updateModels3.Designer.cs">
       <DependentUpon>201710110611369_updateModels3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710120059566_update.cs" />
+    <Compile Include="Migrations\201710120059566_update.Designer.cs">
+      <DependentUpon>201710120059566_update.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin\AdminTableModel.cs" />
     <Compile Include="Models\Context.cs" />
@@ -355,7 +359,9 @@
     <Content Include="Content\bootstrap-cerulean.css" />
     <Content Include="Content\bootstrap-lumen.css" />
     <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min-cerulean.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\custom.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Controllers\ControllerREADME.txt" />
@@ -479,6 +485,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710110611369_updateModels3.resx">
       <DependentUpon>201710110611369_updateModels3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710120059566_update.resx">
+      <DependentUpon>201710120059566_update.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
