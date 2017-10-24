@@ -46,14 +46,14 @@ body {
 .panel-custom>.panel-heading-custom {
     background-image: none;
     color: #fff;
-    background-color: #2b4a33;
+    background-color: forestgreen;
     border-color: #2b4a33;
 }
-
+/*ID allows panel headings to be changed*/
 #mypanelId {
     background-image: none;
     color: #fff;
-    background-color: #2b4a33;
+    background-color: forestgreen;
     border-color: #2b4a33;
 }
 
