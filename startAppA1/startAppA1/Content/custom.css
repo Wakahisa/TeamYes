@@ -57,6 +57,12 @@ body {
     border-color: #2b4a33;
 }
 
+/*Creates a scrollbar if lesson body overflows*/
+#lessonID {
+    width: 150px;
+    height: 150px;
+    overflow: auto;
+}
 
 
 

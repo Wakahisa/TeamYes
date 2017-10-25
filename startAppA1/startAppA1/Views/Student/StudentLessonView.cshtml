@@ -71,48 +71,44 @@
     </div>
 </div>
 
-<div class="panel panel-primary">
-    <div class="panel-heading" id="mypanelId">LESSON DEMO</div>
-    <div class="panel-body">
-        <h1>LESSON NAME</h1>
-        <p>Lesson details</p>
-        <iframe width="560"
-                height="315"
-                src="http://www.youtube.com/embed/fxCEcPxUbYA"
-                frameborder="0"
-                allowfullscreen></iframe>
-        <p>afhakhghaghkakh For commit changes</p>
+<div>
+    <div class="panel panel-primary">
+        <div class="panel-heading" id="mypanelId">LESSON #1</div>
+        <div class="panel-body">
+            <h2>String Lesson</h2>
+            <p>In this lesson, you will learn about String and its uses</p>
+            <iframe width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/pqmhZcPpTys?rel=0"
+                    frameborder="0"
+                    allowfullscreen></iframe>
+            <p>afhakhghaghkakh For commit changes</p>
+        </div>
     </div>
-</div>
 
-<hr />
+    <hr />
 
-<div class="panel-primary">
-    <div class="panel-heading" id="mypanelId">Previous Lesson, and Next Lesson</div>
-    @*bunches of javascript for choosing stuff and changing the titles*@
-    <div class="panel-body">
-        <div class="form-inline">
-            <div class="form-group" style="margin-left: 16px">
-                <label for="sel1">Previous Lesson:</label>
-                <select class="form-control" id="sel1">
-                    <option>Lesson1</option>
-                    <option>Lesson2</option>
-                    <option>Lesson4</option>
-                </select>
-            </div>
-
-            <div class="form-group" style="margin-left: 16px">
-                <label for="sel1">Next Lesson:</label>
-                <select class="form-control" id="sel1">
-                    <option>Lesson1</option>
-                    <option>Lesson2</option>
-                    <option>Lesson4</option>
-                </select>
+    <div class="panel-primary">
+        <div class="panel-heading" id="mypanelId">Resources</div>
+        <div class="panel-body">
+            <div class="form-inline">
             </div>
         </div>
     </div>
+    <hr />
+
+    <div class="form-group">
+        <div class="col-sm-4">
+            <a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentLessonView", "Student")'">Previous Lesson &raquo;</a>
+        </div>
+        <div class="col-sm-4">
+            <a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentWorkView", "Student")'">Work Page &raquo;</a>
+        </div>
+        <div class="col-sm-4">
+            <a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentLessonView", "Student")'">Next Lesson &raquo;</a>
+        </div>
+    </div>
 </div>
-<hr />
 
 
 
