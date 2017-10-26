@@ -444,6 +444,7 @@
     <Content Include="Views\Shared\DisplayTemplates\CanonicalHelperModel.cshtml" />
     <Content Include="Views\Admin\_StudentTableView.cshtml" />
     <Content Include="Views\Admin\_InstructorTableView.cshtml" />
+    <Content Include="Views\Student\_StudentCoursesTableView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
