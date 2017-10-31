@@ -92,7 +92,7 @@ namespace startAppA1.Controllers.Admin
         }
         #endregion
 
-        #region Instructor
+#region Instructor
         /// <summary>
         /// Initates editing of the selected Instructor record
         /// </summary>
