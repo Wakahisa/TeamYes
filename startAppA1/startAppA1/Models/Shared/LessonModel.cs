@@ -11,8 +11,8 @@ namespace startAppA1.Models
     {
         public LessonModel()
         {
-            NextLessonIDs = new List<int>();
-            PreviousLessonIDs = new List<int>();
+            //NextLessonIDs = new List<int>();
+            //PreviousLessonIDs = new List<int>();
         }
 
         [Key]
@@ -23,8 +23,8 @@ namespace startAppA1.Models
         public int TemplateID { get; set; } // needs models
         public int DataID { get; set; } // stringified html?
         public WorkModel WorkItem { get; set; }
-        public List<int> NextLessonIDs { get; set; }
-        public List<int> PreviousLessonIDs { get; set; }
+        public int NextLessonIDs { get; set; }
+        public int PreviousLessonIDs { get; set; }
         public DateTime OpenAtTime { get; set; }
         public DateTime CloseAtTime { get; set; }
         public DateTime TimeLimit { get; set; }
