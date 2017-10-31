@@ -13,6 +13,8 @@ namespace startAppA1.Controllers.Student
         //{
         //    return View();
         //}
+        private Context db = new Context();
+
         public ActionResult StudentHomeView()
         {
             return View();
@@ -32,6 +34,12 @@ namespace startAppA1.Controllers.Student
         public ActionResult StudentGradeView()
         {
             return View();
+        }
+        //ActionResults for tables
+        public ActionResult LoadStudentCourses()
+        {
+            var model = db.StudentModels.ToList();
+            return PartialView("_StudentCoursesTableView", model);
         }
     }
 }

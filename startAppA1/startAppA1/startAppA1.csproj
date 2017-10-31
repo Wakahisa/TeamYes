@@ -340,9 +340,9 @@
     <Compile Include="Migrations\201710110611369_updateModels3.Designer.cs">
       <DependentUpon>201710110611369_updateModels3.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201710190545024_changedModelsABit.cs" />
-    <Compile Include="Migrations\201710190545024_changedModelsABit.Designer.cs">
-      <DependentUpon>201710190545024_changedModelsABit.cs</DependentUpon>
+    <Compile Include="Migrations\201710120059566_update.cs" />
+    <Compile Include="Migrations\201710120059566_update.Designer.cs">
+      <DependentUpon>201710120059566_update.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin\AdminTableModel.cs" />
@@ -359,7 +359,9 @@
     <Content Include="Content\bootstrap-cerulean.css" />
     <Content Include="Content\bootstrap-lumen.css" />
     <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min-cerulean.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\custom.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Controllers\ControllerREADME.txt" />
@@ -442,12 +444,12 @@
     <Content Include="Views\Shared\DisplayTemplates\CanonicalHelperModel.cshtml" />
     <Content Include="Views\Admin\_StudentTableView.cshtml" />
     <Content Include="Views\Admin\_InstructorTableView.cshtml" />
-    <Content Include="Views\Admin\_StudentEditView.cshtml" />
-    <Content Include="Views\Admin\_InstructorEditView.cshtml" />
+    <Content Include="Views\Student\_StudentCoursesTableView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="References\Videos\" />
+    <Folder Include="Views\Admin\Edit\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -485,8 +487,8 @@
     <EmbeddedResource Include="Migrations\201710110611369_updateModels3.resx">
       <DependentUpon>201710110611369_updateModels3.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710190545024_changedModelsABit.resx">
-      <DependentUpon>201710190545024_changedModelsABit.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201710120059566_update.resx">
+      <DependentUpon>201710120059566_update.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
