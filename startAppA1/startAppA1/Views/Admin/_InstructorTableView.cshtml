@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<startAppA1.Models.InstructorModel>
 
 <p>
-    @Html.ActionLink("Create New", "EditInstructor", new { id = 0 }) |
+    @Html.ActionLink("Create New", "InstructorEditView", new { id = 0 }) |
 </p>
 <table class="table">
     <tr>
@@ -35,7 +35,7 @@
             @Html.DisplayFor(modelItem => item.IsAdmin)
         </td>
         <td>
-            @Html.ActionLink("Edit", "EditInstructor", new { id=item.ID }) |
+            @Html.ActionLink("Edit", "InstructorEditView", new { id=item.ID }) |
             @Html.ActionLink("Delete", "DeleteInstructor", new { id=item.ID })
         </td>
     </tr>
