@@ -1,0 +1,127 @@
+﻿
+@{
+    ViewBag.Title = "InstructorLessonEditView";
+}
+
+<h2>Edit: Lesson3</h2>
+
+<div>
+    Workflow instructions go here.
+</div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">Select a template</div>
+        <div class="panel-body">
+            @*javascript TODO: mouse in/out hilight, on click style=primary and load template partial view*@
+            <button type="button" class="btn btn-default" style="margin-left: 16px">
+                <i class="fa fa-columns"></i> Vertical Split
+            </button>
+            <button type="button" class="btn btn-default" style="margin-left: 16px">
+                <i class="fa fa-th-large"></i>Quadrants
+            </button>
+            <button type="button" class="btn btn-default" style="margin-left: 16px">
+                <i class="fa fa-square"></i>Single Pane
+            </button>
+            <button type="button" class="btn btn-primary" style="margin-left: 16px">
+                <i class="fa fa-id-card-o"></i>Video + Text
+            </button>
+        </div>
+    </div>
+
+    <div class="panel-primary">
+        <div class="panel-heading">Upload</div>
+        @*changes what to upload depending on partial view, actually part of the partial view, creates browse for modal*@
+        <div class="panel-body">
+            <div class="form-inline">
+                    <button type="button" class="btn btn-default" style="margin-left: 16px">
+                        Upload Video
+                    </button>
+                    <button type="button" class="btn btn-default" style="margin-left: 16px">
+                        Upload Text
+                    </button>
+                    <label style="margin-left: 16px">Title:</label>
+                    <input style="height: 20px" title="Title:" id="msg" type="text" class="form-control" name="msg" value="What Not To Do">
+                
+            </div>
+        </div>
+    </div>
+
+<hr />
+
+    <div class="panel-primary">
+        <div class="panel-heading">Preview</div>
+            <div class="media">
+                <div class="media-left">
+                    <iframe frameborder="0" width="320" height="240" src="http://www.youtube.com/embed/uUWAn9oXj1M"></iframe>
+                </div>
+            <div class="media-body">
+                <h4 class="media-heading">What Not To Do</h4>
+                <p>
+                    Found this video by putting "bad coding video" into Google.
+                    I haven't watched it. 
+                    I just assume that the students will be given horrible videos.
+                </p>
+            </div>
+        </div>
+    </div>
+
+<hr />
+
+    <div class="panel-primary">
+        <div class="panel-heading">Select Work, Previous Lesson, and Next Lesson</div>
+        @*bunches of javascript for choosing stuff and changing the titles*@
+        <div class="panel-body">
+            <div class="form-inline">
+                <div class="form-group" style="margin-left: 16px">
+                    <label for="sel1">Lesson Work:</label>
+                    <select class="form-control" id="sel1">
+                        <option>Work1</option>
+                        <option>Work2</option>
+                        <option>Work3</option>
+                        <option>Work4</option>
+                    </select>
+                </div>
+
+                <div class="form-group" style="margin-left: 16px">
+                    <label for="sel1">Previous Lesson:</label>
+                    <select class="form-control" id="sel1">
+                        <option>Lesson1</option>
+                        <option>Lesson2</option>
+                        <option>Lesson4</option>
+                    </select>
+                </div>
+
+                <div class="form-group" style="margin-left: 16px">
+                    <label for="sel1">Next Lesson:</label>
+                    <select class="form-control" id="sel1">
+                        <option>Lesson1</option>
+                        <option>Lesson2</option>
+                        <option>Lesson4</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        </div>
+<hr />
+        <div class="panel-body">
+            <button type="button" class="btn btn-success" style="margin-left: 16px">
+                Save
+            </button>
+            <button type="button" class="btn btn-warning" style="margin-left: 16px">
+                Clear
+            </button>
+            <button type="button" class="btn btn-primary" style="margin-left: 16px">
+                Create Work
+            </button>
+        </div>
+
+<hr />
+
+<div class="panel-primary">
+    <div class="panel-heading">Useful Links</div>
+    <div class="panel-body">
+        @Html.ActionLink("Create New Lesson", "InstructorLessonEditView", "Instructor", null, new { @class = "btn btn-default" })
+    @Html.ActionLink("Student Lesson Preview", "StudentLessonView", "Student", null, new { @class = "btn btn-default" })
+    @Html.ActionLink("Course Create/Edit", "InstructorCourseEditView", "Instructor", null, new { @class = "btn btn-default" })
+    @Html.ActionLink("Home", "InstructorHomeView", "Instructor", null, new { @class = "btn btn-default" })
+</div>
+    </div>
