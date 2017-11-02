@@ -489,7 +489,6 @@ C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\M
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\Microsoft.AI.Web.xml
-C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\obj\Debug\startAppA1.csprojResolveAssemblyReference.cache
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\obj\Debug\startAppA1.Migrations.firstDataLoad.resources
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\obj\Debug\startAppA1.Migrations.addedManyModels.resources
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\obj\Debug\startAppA1.Migrations.updateModels.resources
@@ -502,3 +501,6 @@ C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\obj\D
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\obj\Debug\startAppA1.csproj.CoreCompileInputs.cache
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\obj\Debug\startAppA1.dll
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\obj\Debug\startAppA1.pdb
+C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\obj\Debug\startAppA1.Migrations.updatedmodelsseededawholecourse.resources
+C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\obj\Debug\startAppA1.Migrations.updatedmodelsseededawholecoursesecondtime.resources
+C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\obj\Debug\startAppA1.Migrations.OneLastTimeToCleanTheDBAndSeedNicely.resources

@@ -47,6 +47,7 @@ namespace startAppA1.Controllers.Admin
             if (id != null)
             {
                 model = db.StudentModels.Find(id);
+                model.PasswordShield="*************";
             }
             return View(model);
         }
@@ -92,7 +93,7 @@ namespace startAppA1.Controllers.Admin
         }
         #endregion
 
-        #region Instructor
+#region Instructor
         /// <summary>
         /// Initates editing of the selected Instructor record
         /// </summary>
@@ -104,6 +105,7 @@ namespace startAppA1.Controllers.Admin
             if (id != null)
             {
                 model = db.InstructorModels.Find(id);
+                model.PasswordShield = "*************";
             }
             return View(model);
         }
@@ -146,7 +148,7 @@ namespace startAppA1.Controllers.Admin
             }
             return RedirectToAction("AdminView");
         }
-        #endregion
+#endregion
 
 
 

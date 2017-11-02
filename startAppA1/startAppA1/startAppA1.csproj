@@ -348,9 +348,24 @@
     <Compile Include="Migrations\201710310334336_mergeMigration.Designer.cs">
       <DependentUpon>201710310334336_mergeMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711020601289_updated models, seeded a whole course.cs" />
+    <Compile Include="Migrations\201711020601289_updated models, seeded a whole course.Designer.cs">
+      <DependentUpon>201711020601289_updated models, seeded a whole course.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711020610196_updated models, seeded a whole course, second time.cs" />
+    <Compile Include="Migrations\201711020610196_updated models, seeded a whole course, second time.Designer.cs">
+      <DependentUpon>201711020610196_updated models, seeded a whole course, second time.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711020628169_OneLastTimeToCleanTheDBAndSeedNicely.cs" />
+    <Compile Include="Migrations\201711020628169_OneLastTimeToCleanTheDBAndSeedNicely.Designer.cs">
+      <DependentUpon>201711020628169_OneLastTimeToCleanTheDBAndSeedNicely.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin\AdminTableModel.cs" />
     <Compile Include="Models\Context.cs" />
+    <Compile Include="Models\DataItems\AnswerModel.cs" />
+    <Compile Include="Models\DataItems\LessonDataModel.cs" />
+    <Compile Include="Models\DataItems\QuestionsModel.cs" />
     <Compile Include="Models\Instructor\InstructorModel.cs" />
     <Compile Include="Models\Shared\CourseModel.cs" />
     <Compile Include="Models\Shared\GradeModel.cs" />
@@ -451,6 +466,7 @@
     <Content Include="Views\Student\_StudentCoursesTableView.cshtml" />
     <Content Include="Views\Admin\StudentEditView.cshtml" />
     <Content Include="Views\Admin\InstructorEditView.cshtml" />
+    <Content Include="Views\Admin\WorkEditView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -497,6 +513,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710310334336_mergeMigration.resx">
       <DependentUpon>201710310334336_mergeMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711020601289_updated models, seeded a whole course.resx">
+      <DependentUpon>201711020601289_updated models, seeded a whole course.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711020610196_updated models, seeded a whole course, second time.resx">
+      <DependentUpon>201711020610196_updated models, seeded a whole course, second time.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711020628169_OneLastTimeToCleanTheDBAndSeedNicely.resx">
+      <DependentUpon>201711020628169_OneLastTimeToCleanTheDBAndSeedNicely.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
