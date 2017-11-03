@@ -504,3 +504,4 @@ C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\obj\D
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\obj\Debug\startAppA1.Migrations.updatedmodelsseededawholecourse.resources
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\obj\Debug\startAppA1.Migrations.updatedmodelsseededawholecoursesecondtime.resources
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\obj\Debug\startAppA1.Migrations.OneLastTimeToCleanTheDBAndSeedNicely.resources
+C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\obj\Debug\startAppA1.csprojResolveAssemblyReference.cache
