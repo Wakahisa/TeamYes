@@ -210,6 +210,33 @@ namespace startAppA1.Migrations
                 LastName = "Dorisdotter",
                 MiddleInital = "D",
             });
+            context.WorkModels.Add(new WorkModel
+            {
+                ID = 1,
+                Title = "True and False Lesson 1",
+                AnswerID = 1,
+                QuestionsID = 1,
+                IsProgramming = false,
+                InstructionText = "Answer these three true/false quesions.",
+            });
+            context.WorkModels.Add(new WorkModel
+            {
+                ID = 2,
+                Title = "Multiple Choice Lesson 2",
+                AnswerID = 2,
+                QuestionsID = 2,
+                IsProgramming = false,
+                InstructionText = "Answer these multiple choice quesions by typing in the number.",
+            });
+            context.WorkModels.Add(new WorkModel
+            {
+                ID = 3,
+                Title = "String Match Lesson 3",
+                AnswerID = 3,
+                QuestionsID = 3,
+                IsProgramming = false,
+                InstructionText = "Answer these three quesions.",
+            });
 
         }
     }
