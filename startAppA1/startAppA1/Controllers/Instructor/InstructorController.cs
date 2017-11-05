@@ -29,24 +29,12 @@ namespace startAppA1.Controllers.Instructor
         /// loads lesson edit
         /// </summary>
         /// <returns></returns>
-        public ActionResult InstructorLessonEditView()
-        {
-            var model = new LessonCreateViewModel();
-            model.Load(db.LessonModels.FirstOrDefault());
-            return View(model);
-        }
-
-        /// <summary>
-        /// loads a lesson into the view by passing in the lessonID
-        /// </summary>
-        /// <param name="lessonID"></param>
-        /// <returns></returns>
-        public ActionResult LoadLessonForEdit(int? lessonID)
+        public ActionResult InstructorLessonEditView(int? lessonID)
         {
             var model = new LessonCreateViewModel();
             if (lessonID > 0)
-            {               
-                model.Load(db.LessonModels.First(f => f.ID == lessonID)); 
+            {
+                model.Load(db.LessonModels.First(f => f.ID == lessonID));
             }
             else
             {
@@ -55,15 +43,16 @@ namespace startAppA1.Controllers.Instructor
             return View(model);
         }
 
-        /// <summary>
-        /// loads an empty lesson to be edited
-        /// </summary>
-        /// <returns></returns>
-        public ActionResult CreateNewLesson()
+        [HttpPost]
+        public ActionResult InstructorLessonEditView(LessonCreateViewModel entry)
         {
             var model = new LessonCreateViewModel();
+            model.Save(entry);
+
             return View(model);
         }
+
+
 
 #endregion
 

@@ -22,6 +22,7 @@ namespace startAppA1.Models
         public IEnumerable<SelectListItem> NextLessonList { get; set; }
         public int? NextID { get; set; }
 
+        public int LessonID { get; set; }
         public string Title { get; set; }
         public string Intro { get; set; }
         public string Text { get; set; }
@@ -36,6 +37,7 @@ namespace startAppA1.Models
         {
             var model = new LessonCreateViewModel();
 
+            LessonID = obj.ID;
             Title = obj.Title;
             Intro = obj.IntroText;
             Text = db.LessonDataModels.FirstOrDefault(f => f.ID == obj.LessonDataID).Placeholder;
@@ -44,7 +46,7 @@ namespace startAppA1.Models
                 VideoLink = obj.VideoHtml;
             }
             WorkList = db.WorkModels.Select(x => 
-                    new SelectListItem { Text = x.InstructorNotes, Value = x.ID.ToString() }).ToList();
+                    new SelectListItem { Text = x.Title, Value = x.ID.ToString() }).ToList();
             WorkID = obj.WorkID;
             PreviousLessonList = db.LessonModels.Select(x =>
                     new SelectListItem { Text = x.Title, Value = x.ID.ToString() }).ToList();
@@ -86,14 +88,15 @@ namespace startAppA1.Models
                 Placeholder = obj.Text
             };
             db.Entry(data).State = EntityState.Modified;
-            db.SaveChanges();
             // save the lesson data and get the primary key
             // awkward, but functional
             int dataID = db.LessonDataModels.FirstOrDefault(f => f.Placeholder == data.Placeholder).ID;
 
             bool hasVid = false;
             if (obj.VideoLink.Length > 0) { hasVid = true; }
-            
+
+            int lesID = db.LessonModels.FirstOrDefault(f => f.ID == obj.LessonID).ID;
+
             var model = new LessonModel()
             {
                 Title = obj.Title,
@@ -106,8 +109,17 @@ namespace startAppA1.Models
                 WorkID = obj.WorkID ?? 0,
             };
             // save the lesson
-            db.Entry(model).State = EntityState.Modified;
-            db.SaveChanges();
+
+            if (model.ID > 0)
+            {
+                db.Entry(model).State = EntityState.Modified;
+                db.SaveChanges();
+            }
+            else
+            {
+                db.LessonModels.Add(model);
+                db.SaveChanges();
+            }
         }
 
 

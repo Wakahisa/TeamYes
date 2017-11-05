@@ -30,18 +30,18 @@
             @*changes what to upload depending on partial view, actually part of the partial view, creates browse for modal*@
             <div class="panel-body">
                 <div class="form-inline">
-                    @Html.ActionLink("New Lesson", "CreateNewLesson", "Instructor", null, new { @class = "btn btn-default" })
-                    @Html.ActionLink("Load Lesson", "LoadLessonForEdit", "Instructor", Model. ,new { @class = "btn btn-default", @id = "loadLesson" })
-                    <label>TItle: @Html.TextBoxFor(model => model.Title, new { @class = "form-control" } )</label>
+                    @Html.ActionLink("New Lesson", "InstructorLessonEditView", "Instructor", null, new { @class = "btn btn-default" })
+                    <button type="button" class="btn btn-default" onclick="loadLesson()">Load Lesson</button>
+                    <label>Title: @Html.TextBoxFor(model => model.Title, new { @class = "form-control" } )</label>
                 </div>
                 <div>
-                    @Html.DropDownListFor(x=>Model.Title, Model.NextLessonList, "Select a lesson", new { @id = "selectLesson", @onClick= "setForLoad" })
+                    @Html.DropDownListFor(x=>Model.Title, Model.NextLessonList, "Select a lesson", new { @id = "selectLesson" })
                 </div>
             </div>
             <div class="panel-body">
                 <div class="form-inline">
                     <label>Video Http Address: @Html.TextBoxFor(x => Model.VideoLink, new { @class = "form-control", @id = "vidAddress" })</label>
-                    <button type="button" class="btn btn-primary" style="margin-left: 16px" onclick="loadVideo">Activate</button>
+                    <button type="button" class="btn btn-primary" style="margin-left: 16px" onclick="loadVideo()">Activate</button>
                 </div>            
             </div>
         </div>
@@ -55,11 +55,9 @@
                         <iframe frameborder="0" width="320" height="240" id="iFrameIs" src=""></iframe>
                     </div>
                 <div class="media-body">
-                    <h4 class="media-heading">What Not To Do</h4>
+                    <h4 class="media-heading">@Html.TextBoxFor(x => x.Intro, new { @class = "form-control" })</h4>
                     <p>
-                        Found this video by putting "bad coding video" into Google.
-                        I haven't watched it. 
-                        I just assume that the students will be given horrible videos.
+                        @Html.TextAreaFor(x=>x.Text, new { @class = "form-control", @rows = "20" })
                     </p>
                 </div>
             </div>
@@ -73,45 +71,27 @@
             <div class="panel-body">
                 <div class="form-inline">
                     <div class="form-group" style="margin-left: 16px">
-                        <label for="sel1">Lesson Work:</label>
-                        <select class="form-control" id="sel1">
-                            <option>Work1</option>
-                            <option>Work2</option>
-                            <option>Work3</option>
-                            <option>Work4</option>
-                        </select>
+                        <label>Lesson Work:</label>
+                        @Html.DropDownListFor(x => Model.WorkID, Model.WorkList, "Select a Homework", new { @class = "form-control" })
                     </div>
 
                     <div class="form-group" style="margin-left: 16px">
-                        <label for="sel1">Previous Lesson:</label>
-                        <select class="form-control" id="sel1">
-                            <option>Lesson1</option>
-                            <option>Lesson2</option>
-                            <option>Lesson4</option>
-                        </select>
+                        <label>Previous Lesson:</label>
+                        @Html.DropDownListFor(x => Model.NextID, Model.NextLessonList, "Select a lesson", new { @class = "form-control" })
                     </div>
 
                     <div class="form-group" style="margin-left: 16px">
-                        <label for="sel1">Next Lesson:</label>
-                        <select class="form-control" id="sel1">
-                            <option>Lesson1</option>
-                            <option>Lesson2</option>
-                            <option>Lesson4</option>
-                        </select>
+                        <label>Next Lesson:</label>
+                        @Html.DropDownListFor(x => Model.PreviousID, Model.PreviousLessonList, "Select a lesson", new { @class = "form-control" })
                     </div>
                 </div>
             </div>
             </div>
     <hr />
-            <div class="panel-body">
-                <button type="button" class="btn btn-success" style="margin-left: 16px">
-                    Save
-                </button>
-                <button type="button" class="btn btn-warning" style="margin-left: 16px">
-                    Clear
-                </button>
+            <div class="panel-body form-group">
+                    <input type="submit" value="Save" class="btn btn-success" style="margin-left: 16px" />
                 <button type="button" class="btn btn-primary" style="margin-left: 16px">
-                    Create Work
+                    Create Homework
                 </button>
             </div>
 
@@ -120,7 +100,6 @@
     <div class="panel-primary">
         <div class="panel-heading">Useful Links</div>
         <div class="panel-body">
-            @Html.ActionLink("Create New Lesson", "InstructorLessonEditView", "Instructor", null, new { @class = "btn btn-default" })
             @Html.ActionLink("Student Lesson Preview", "StudentLessonView", "Student", null, new { @class = "btn btn-default" })
             @Html.ActionLink("Course Create/Edit", "InstructorCourseEditView", "Instructor", null, new { @class = "btn btn-default" })
             @Html.ActionLink("Home", "InstructorHomeView", "Instructor", null, new { @class = "btn btn-default" })
@@ -128,20 +107,28 @@
     </div>
 }
 
-<script>
-    function () {
+<script type="text/javascript">
+   
 
-    };
+        function loadVideo() {
+            var site = document.getElementById('vidAddress').value;
+            document.getElementById('iFrameIs').src = site;
+        };
 
+        function loadLesson() {
+            var lessonID = document.getElementById('selectLesson').value;
+            console.log(lessonID)
+            //BORKED, FIX, BORKED, FIX, BORKED, FIX, BORKED, FIX
+            $(this).ajax({
+                url: 'InstructorLessonEditView',
+                data: { lessonID: lessonID }
+            });
+            
+        };
 
-    function loadVideo() {
-        var site = document.getElementById('vidAddress').value;
-        document.getElementById('iFrameIs').src = site;
-    };
+        window.onload = function () {
+            loadVideo();
+        };
 
-    function setForLoad() {
-
-    };
-
-
+    
 </script>
