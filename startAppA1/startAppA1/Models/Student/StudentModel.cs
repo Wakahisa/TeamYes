@@ -26,17 +26,21 @@ namespace startAppA1.Models
         public string LastName { get; set; }
         public string MiddleInital { get; set; }
         public string EmailAddress { get; set; }
+
+        public string LoginName { get; set; }
+        public string Password { get; set; }
+        public string PasswordShield { get; set; }
         
         //foriegn keys for relationships
 
         public List<int> CourseIDs { get; set; }
-        public virtual ICollection<CourseModel> Courses { get; set; }
+        public List<CourseModel> Courses { get; set; }
         public List<int> LessonIDs { get; set; }
-        public virtual ICollection<LessonModel> InProgressLessons { get; set; }
+        public List<LessonModel> InProgressLessons { get; set; }
         public List<int> WorkIDs { get; set; }
-        public virtual ICollection<WorkModel> Homeworks { get; set; }
+        public List<WorkModel> Homeworks { get; set; }
         public List<int> GradeIDs { get; set; }
-        public virtual ICollection<GradeModel> CourseGrade { get; set; }
+        public List<GradeModel> CourseGrade { get; set; }
 
     }
 }

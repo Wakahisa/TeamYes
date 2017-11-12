@@ -1,0 +1,144 @@
+﻿@model startAppA1.Models.HomeworkCreateViewModel
+
+
+
+@using (Html.BeginForm())
+{
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            Workflow instructions go here.
+            Homeworks are stored in the database as a work object with a title, instructions, notes, a set of questions and a set of answers.
+            The questions and answers each have their own titles in order to facilitate human readability for sorting and reuse.
+        </div>
+    </div>
+        <div class="panel panel-primary"> 
+            <div class="panel-heading">Select a template</div>
+            <div class="panel-body form-group">
+                <label>@Html.CheckBoxFor(x => x.answer.TrueFalse, new { @class = "form-control checkbox-inline", @id = "exclusive", @onclick = "isExclusive(this)" }) True/False</label>
+                <label>@Html.CheckBoxFor(x => x.answer.MultipleChoice, new { @class = "form-control checkbox-inline", @id = "exclusive", @onclick = "isExclusive(this)" }) Multiple Choice</label>
+                <label>@Html.CheckBoxFor(x => x.answer.StringMatching, new { @class = "form-control checkbox-inline", @id = "exclusive", @onclick = "isExclusive(this)" }) String Matching</label>
+                <label>@Html.CheckBoxFor(x => x.answer.GradeByHand, new { @class = "form-control checkbox-inline", @id = "exclusive", @onclick = "isExclusive(this)" }) Hand Graded</label>
+                <label>@Html.CheckBoxFor(x => x.work.IsProgramming, new { @class = "form-control checkbox-inline", @id = "exclusive", @onclick = "isExclusive(this)" }) Programming</label>
+            </div>
+        </div>
+        <div class=" = panel-primary">
+            <div class="panel-heading">Notes for Instructors</div>
+            <div class="panel-body">@Html.TextBoxFor(x => x.work.InstructorNotes, new { @class = "form-control" })</div>
+        </div>
+        <div class=" = panel-primary">
+            <div class="panel-heading">Student Instructions</div>
+            <div class="panel-body">@Html.TextBoxFor(x => x.work.InstructionText, new { @class = "form-control" })</div>
+        </div>
+        <div>
+            <div class="col-sm-6">
+                <div class="panel-primary">
+                    <div class="panel-heading">Set questions</div>
+                    <label>Question set title</label>
+                    <div class="panel-body">
+                        @Html.TextBoxFor(x => x.questions.Title, new { @class = "form-control" })
+                        <label>Questions. Empty boxes will be skipped.</label>
+                        <table class="table table-bordered table-responsive">
+                            <tbody>
+                                <tr>
+                                    <td>@Html.TextBoxFor(x => x.questions.Questions, new { @class = "form-control" })</td>
+                                </tr>
+                                <tr>
+                                    <td>@Html.TextBoxFor(x => x.questions.Questions, new { @class = "form-control" })</td>
+                                </tr>
+                                <tr>
+                                    <td>@Html.TextBoxFor(x => x.questions.Questions, new { @class = "form-control" })</td>
+                                </tr>
+                                <tr>
+                                    <td>@Html.TextBoxFor(x => x.questions.Questions, new { @class = "form-control" })</td>
+                                </tr>
+                                <tr>
+                                    <td>@Html.TextBoxFor(x => x.questions.Questions, new { @class = "form-control" })</td>
+                                </tr>
+                                <tr>
+                                    <td>@Html.TextBoxFor(x => x.questions.Questions, new { @class = "form-control" })</td>
+                                </tr>
+                                <tr>
+                                    <td>@Html.TextBoxFor(x => x.questions.Questions, new { @class = "form-control" })</td>
+                                </tr>
+                                <tr>
+                                    <td>@Html.TextBoxFor(x => x.questions.Questions, new { @class = "form-control" })</td>
+                                </tr>
+                                <tr>
+                                    <td>@Html.TextBoxFor(x => x.questions.Questions, new { @class = "form-control" })</td>
+                                </tr>
+                                <tr>
+                                    <td>@Html.TextBoxFor(x => x.questions.Questions, new { @class = "form-control" })</td>
+                                </tr>
+                                <tr>
+                                    <td>@Html.TextBoxFor(x => x.questions.Questions, new { @class = "form-control" })</td>
+                                </tr>
+                                <tr>
+                                    <td>@Html.TextBoxFor(x => x.questions.Questions, new { @class = "form-control" })</td>
+                                </tr>
+                                <tr>
+                                    <td>@Html.TextBoxFor(x => x.questions.Questions, new { @class = "form-control" })</td>
+                                </tr>
+                                <tr>
+                                    <td>@Html.TextBoxFor(x => x.questions.Questions, new { @class = "form-control" })</td>
+                                </tr>
+                                <tr>
+                                    <td>@Html.TextBoxFor(x => x.questions.Questions, new { @class = "form-control" })</td>
+                                </tr>
+                                <tr>
+                                    <td>@Html.TextBoxFor(x => x.questions.Questions, new { @class = "form-control" })</td>
+                                </tr>
+                                <tr>
+                                    <td>@Html.TextBoxFor(x => x.questions.Questions, new { @class = "form-control" })</td>
+                                </tr>
+                                <tr>
+                                    <td>@Html.TextBoxFor(x => x.questions.Questions, new { @class = "form-control" })</td>
+                                </tr>
+                                <tr>
+                                    <td>@Html.TextBoxFor(x => x.questions.Questions, new { @class = "form-control" })</td>
+                                </tr>
+                                <tr>
+                                    <td>@Html.TextBoxFor(x => x.questions.Questions, new { @class = "form-control" })</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="panel-primary">
+                    <div class="panel-heading">Set answers</div>
+                    <label>Answer set title</label>
+                    <div class="panel-body">
+                        @Html.TextBoxFor(x => x.answer.Title, new { @class = "form-control" })
+                    </div>
+                    <label class="label-danger">NEEDS DEVELOPMENT</label>
+                </div>
+            </div>
+
+            <hr />
+            <div class="col-sm-12" column-span>
+                <input type="submit" value="Save" class="btn btn-success" style="margin-left: 16px" />
+                @Html.ActionLink("Clear", "InstructorWorkEditView", "Instructor", null, new { @class = "btn btn-default" })
+            </div>
+
+        </div>
+        }
+
+        <script type="text/javascript" language="javascript">
+            window.onload = function () {
+                var repeater = document.getElementById('exclusive');
+                var chks = repeater.querySelectorAll('[type=checkbox]');
+                for (var i = 0, chk; chk = chks[i]; ++i) {
+                    chk.onclick = function () {
+                        if (this.checked) {
+                            for (var j = 0, ch; ch = chks[j, ++j];){
+                                if (ch !== this)
+                                    ch.checked = false;
+                            }//for
+                        }//if(this...
+                    }//chk.onclick
+                }//for(var i
+            }//window.onload
+
+
+        </script>
