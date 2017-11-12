@@ -451,6 +451,9 @@
     <Content Include="Views\Student\_StudentCoursesTableView.cshtml" />
     <Content Include="Views\Admin\StudentEditView.cshtml" />
     <Content Include="Views\Admin\InstructorEditView.cshtml" />
+    <Content Include="Views\Student\_StudentLesson1View.cshtml" />
+    <Content Include="Views\Student\_StudentLesson2View.cshtml" />
+    <Content Include="Views\Student\_StudentLesson3View.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
