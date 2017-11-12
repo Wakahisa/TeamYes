@@ -59,7 +59,7 @@ namespace startAppA1.Controllers.Instructor
 
         #endregion
 
-        #region Work Edit
+#region Work Edit
 
         /// <summary>
         /// Loads a homework set into the homework view for editing via the model load method
@@ -75,7 +75,19 @@ namespace startAppA1.Controllers.Instructor
             }
             else
             {
-                model.Load();
+                model.work = new WorkModel();
+                model.questions = new QuestionstModel();
+                model.answer = new AnswerModel();
+
+                model.work.Title = "Empty Title";
+                model.work.IsProgramming = false;
+                model.work.InstructorNotes = "Note text";
+                model.work.InstructionText = "Instructions go here";
+
+                model.answerList.Capacity = 20;
+                model.questionList.Capacity = 20;
+                model.TFAnswerList.Capacity = 20;
+                model.MCAnswerList.Capacity = 20;
             }
             return View(model);
         }
@@ -94,7 +106,7 @@ namespace startAppA1.Controllers.Instructor
             return View(model);
         }
 
-        #endregion
+#endregion
 
         public ActionResult InstructorCourseManagementView()
         {

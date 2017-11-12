@@ -1,4 +1,4 @@
-﻿
+﻿@model startAppA1.Models.WorkModel
 @{
     ViewBag.Title = "StudentWorkView";
 }
@@ -8,8 +8,8 @@
 <h2>StudentWorkView</h2>
 
 <div>
-    this will be where the student will do the work, take the test/quiz, etc.
-    the python plug-in will go here
+    <h1>@Html.DisplayFor(x=>x.Title)</h1>
+    <h3>@Html.DisplayFor(x=>x.InstructionText)</h3>
 </div>
 
 <!--Dropdown menu-->

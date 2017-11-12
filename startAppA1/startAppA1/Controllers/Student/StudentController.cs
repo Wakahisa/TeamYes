@@ -28,8 +28,18 @@ namespace startAppA1.Controllers.Student
             return View();
         }
         public ActionResult StudentWorkView()
+        // public ActionResult StudentWorkView(int workID)
         {
-            return View();
+            var model = new WorkModel();
+            //if (workID > 0)
+            //{
+            //    model = db.WorkModels.FirstOrDefault(x => x.ID == workID);
+            //}
+            //else
+            //{
+                model = db.WorkModels.FirstOrDefault(x => x.ID == 1);
+            //}
+            return View(model);
         }
         public ActionResult StudentGradeView()
         {

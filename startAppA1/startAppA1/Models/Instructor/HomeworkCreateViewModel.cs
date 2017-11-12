@@ -13,31 +13,19 @@ namespace startAppA1.Models
 
         public HomeworkCreateViewModel()
         {
+            questionList = new List<string>();
+            answerList = new List<string>();
+            TFAnswerList = new List<bool>();
+            MCAnswerList = new List<int>();
         }
 
         public WorkModel work { get; set; }
         public QuestionstModel questions { get; set; }
         public AnswerModel answer { get; set; }
-        
-
-        /// <summary>
-        /// Create empty work & view for editing
-        /// </summary>
-        /// <returns>HomeworkCreateViewModel</returns>
-        public HomeworkCreateViewModel Load()
-        {
-            var model = new HomeworkCreateViewModel();
-            model.work = new WorkModel();
-            model.questions = new QuestionstModel();
-            model.answer = new AnswerModel();
-
-            model.work.Title = "Empty Title";
-            model.work.IsProgramming = false;
-            model.work.InstructorNotes = "Note text";
-            model.work.InstructionText = "Instructions go here";
-
-            return model;
-        }
+        public List<string> questionList { get; set; }
+        public List<string> answerList { get; set; }
+        public List<bool> TFAnswerList { get; set; }
+        public List<int> MCAnswerList { get; set; }
 
         /// <summary>
         /// Load a work, questions, and answers from a work ID
@@ -51,6 +39,19 @@ namespace startAppA1.Models
             model.work = db.WorkModels.FirstOrDefault(f => f.ID == workID);
             model.questions = db.QuestionModels.FirstOrDefault(f => f.ID == work.QuestionsID);
             model.answer = db.AnswerModels.FirstOrDefault(f => f.ID == work.AnswerID);
+            model.questionList = model.questions.Questions;
+            if (model.answer.TrueFalse)
+            {
+                model.TFAnswerList = model.answer.TrueFalseAnswers;
+            }
+            else if (model.answer.MultipleChoice)
+            {
+                model.MCAnswerList = model.answer.MultiChoiceAnswers;
+            }
+            else if (model.answer.StringMatching)
+            {
+                model.answerList = model.answer.StringMatchAnswers;
+            }
 
             return model;
         }

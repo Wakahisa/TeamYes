@@ -16,11 +16,11 @@
         <div class="panel panel-primary"> 
             <div class="panel-heading">Select a template, please only choose one.</div>
             <div class="panel-body form-group">
-                <div class="checkbox-inline" title="True/False">@Html.EditorFor(x=>x.answer.TrueFalse, new { @id = "exclusive"})</div>
-                <div class="checkbox-inline" title="Multiple Choice">@Html.EditorFor(x => x.answer.MultipleChoice, new { @id = "exclusive" })</div>
-                <div class="checkbox-inline" title="String matching">@Html.EditorFor(x => x.answer.StringMatching, new { @id = "exclusive" })</div>
-                <div class="checkbox-inline" title="Hand graded">@Html.EditorFor(x => x.answer.GradeByHand, new { @id = "exclusive" })</div>
-                <div class="checkbox-inline" title="Programming">@Html.EditorFor(x => x.work.IsProgramming, new { @id = "exclusive" })</div>
+                <label class="checkbox-inline" title="True/False">@Html.EditorFor(x=>x.answer.TrueFalse, new { @id = "exclusive"})</label>
+                <label class="checkbox-inline" title="Multiple Choice">@Html.EditorFor(x => x.answer.MultipleChoice, new { @id = "exclusive" })</label>
+                <label class="checkbox-inline" title="String matching">@Html.EditorFor(x => x.answer.StringMatching, new { @id = "exclusive" })</label>
+                <label class="checkbox-inline" title="Hand graded">@Html.EditorFor(x => x.answer.GradeByHand, new { @id = "exclusive" })</label>
+                <label class="checkbox-inline" title="Programming">@Html.EditorFor(x => x.work.IsProgramming, new { @id = "exclusive" })</label>
             </div>
         </div>
         <div class=" = panel-primary">
@@ -41,66 +41,15 @@
                         <label>Questions. Empty boxes will be skipped.</label>
                         <table class="table table-bordered table-responsive">
                             <tbody>
-                                <tr>
-                                    <td>@Html.TextBoxFor(x => x.questions.Questions, new { @class = "form-control" })</td>
-                                </tr>
-                                <tr>
-                                    <td>@Html.TextBoxFor(x => x.questions.Questions, new { @class = "form-control" })</td>
-                                </tr>
-                                <tr>
-                                    <td>@Html.TextBoxFor(x => x.questions.Questions, new { @class = "form-control" })</td>
-                                </tr>
-                                <tr>
-                                    <td>@Html.TextBoxFor(x => x.questions.Questions, new { @class = "form-control" })</td>
-                                </tr>
-                                <tr>
-                                    <td>@Html.TextBoxFor(x => x.questions.Questions, new { @class = "form-control" })</td>
-                                </tr>
-                                <tr>
-                                    <td>@Html.TextBoxFor(x => x.questions.Questions, new { @class = "form-control" })</td>
-                                </tr>
-                                <tr>
-                                    <td>@Html.TextBoxFor(x => x.questions.Questions, new { @class = "form-control" })</td>
-                                </tr>
-                                <tr>
-                                    <td>@Html.TextBoxFor(x => x.questions.Questions, new { @class = "form-control" })</td>
-                                </tr>
-                                <tr>
-                                    <td>@Html.TextBoxFor(x => x.questions.Questions, new { @class = "form-control" })</td>
-                                </tr>
-                                <tr>
-                                    <td>@Html.TextBoxFor(x => x.questions.Questions, new { @class = "form-control" })</td>
-                                </tr>
-                                <tr>
-                                    <td>@Html.TextBoxFor(x => x.questions.Questions, new { @class = "form-control" })</td>
-                                </tr>
-                                <tr>
-                                    <td>@Html.TextBoxFor(x => x.questions.Questions, new { @class = "form-control" })</td>
-                                </tr>
-                                <tr>
-                                    <td>@Html.TextBoxFor(x => x.questions.Questions, new { @class = "form-control" })</td>
-                                </tr>
-                                <tr>
-                                    <td>@Html.TextBoxFor(x => x.questions.Questions, new { @class = "form-control" })</td>
-                                </tr>
-                                <tr>
-                                    <td>@Html.TextBoxFor(x => x.questions.Questions, new { @class = "form-control" })</td>
-                                </tr>
-                                <tr>
-                                    <td>@Html.TextBoxFor(x => x.questions.Questions, new { @class = "form-control" })</td>
-                                </tr>
-                                <tr>
-                                    <td>@Html.TextBoxFor(x => x.questions.Questions, new { @class = "form-control" })</td>
-                                </tr>
-                                <tr>
-                                    <td>@Html.TextBoxFor(x => x.questions.Questions, new { @class = "form-control" })</td>
-                                </tr>
-                                <tr>
-                                    <td>@Html.TextBoxFor(x => x.questions.Questions, new { @class = "form-control" })</td>
-                                </tr>
-                                <tr>
-                                    <td>@Html.TextBoxFor(x => x.questions.Questions, new { @class = "form-control" })</td>
-                                </tr>
+                                @*@Html.EditorFor(x=>x.questionList)
+                                @foreach (var thing in Model.questionList)
+                                {
+                                    <tr>@Html.EditorFor(x=>thing)</tr>
+                                }*@
+                                @for (int q = 0; q==Model.questionList.Capacity; q++)
+                                {
+                                    <tr>@Html.EditorFor(x=>x.questionList[q])</tr>
+                                }
                             </tbody>
                         </table>
                     </div>
@@ -113,7 +62,31 @@
                     <div class="panel-body">
                         @Html.TextBoxFor(x => x.answer.Title, new { @class = "form-control" })
                     </div>
-                    <label class="label-danger">NEEDS DEVELOPMENT</label>
+                    <table class="table table-bordered table-responsive">
+                        <tbody>
+                            @if (Model.work.IsProgramming)
+                            {
+                                <tr>This is a programming assignment TODO: set answer checking</tr>
+                            }else if (Model.answer.GradeByHand)
+                            {
+                                <tr>Grade these answers by hand.</tr>
+                            }else if (Model.answer.MultipleChoice)
+                            {
+                                
+                            }else if (Model.answer.StringMatching)
+                            {
+
+                            }else if (Model.answer.TrueFalse)
+                            {
+
+                            }else
+                            {
+
+                            }
+
+
+                        </tbody>
+                    </table>
                 </div>
             </div>
 
