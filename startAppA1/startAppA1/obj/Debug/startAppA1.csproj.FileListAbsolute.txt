@@ -190,7 +190,6 @@ C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\M
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\Microsoft.AI.Web.xml
-C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\obj\Debug\startAppA1.csprojResolveAssemblyReference.cache
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\obj\Debug\startAppA1.Migrations.firstDataLoad.resources
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\obj\Debug\startAppA1.Migrations.addedManyModels.resources
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\obj\Debug\startAppA1.Migrations.updateModels.resources

@@ -1,7 +1,9 @@
 ﻿@model startAppA1.Models.HomeworkCreateViewModel
 
-
-
+<head>
+    
+</head>
+<hr />
 @using (Html.BeginForm())
 {
     <div class="panel panel-primary">
@@ -12,13 +14,13 @@
         </div>
     </div>
         <div class="panel panel-primary"> 
-            <div class="panel-heading">Select a template</div>
+            <div class="panel-heading">Select a template, please only choose one.</div>
             <div class="panel-body form-group">
-                <label>@Html.CheckBoxFor(x => x.answer.TrueFalse, new { @class = "form-control checkbox-inline", @id = "exclusive", @onclick = "isExclusive(this)" }) True/False</label>
-                <label>@Html.CheckBoxFor(x => x.answer.MultipleChoice, new { @class = "form-control checkbox-inline", @id = "exclusive", @onclick = "isExclusive(this)" }) Multiple Choice</label>
-                <label>@Html.CheckBoxFor(x => x.answer.StringMatching, new { @class = "form-control checkbox-inline", @id = "exclusive", @onclick = "isExclusive(this)" }) String Matching</label>
-                <label>@Html.CheckBoxFor(x => x.answer.GradeByHand, new { @class = "form-control checkbox-inline", @id = "exclusive", @onclick = "isExclusive(this)" }) Hand Graded</label>
-                <label>@Html.CheckBoxFor(x => x.work.IsProgramming, new { @class = "form-control checkbox-inline", @id = "exclusive", @onclick = "isExclusive(this)" }) Programming</label>
+                <div class="checkbox-inline" title="True/False">@Html.EditorFor(x=>x.answer.TrueFalse, new { @id = "exclusive"})</div>
+                <div class="checkbox-inline" title="Multiple Choice">@Html.EditorFor(x => x.answer.MultipleChoice, new { @id = "exclusive" })</div>
+                <div class="checkbox-inline" title="String matching">@Html.EditorFor(x => x.answer.StringMatching, new { @id = "exclusive" })</div>
+                <div class="checkbox-inline" title="Hand graded">@Html.EditorFor(x => x.answer.GradeByHand, new { @id = "exclusive" })</div>
+                <div class="checkbox-inline" title="Programming">@Html.EditorFor(x => x.work.IsProgramming, new { @id = "exclusive" })</div>
             </div>
         </div>
         <div class=" = panel-primary">
@@ -125,20 +127,21 @@
         }
 
         <script type="text/javascript" language="javascript">
-            window.onload = function () {
-                var repeater = document.getElementById('exclusive');
-                var chks = repeater.querySelectorAll('[type=checkbox]');
-                for (var i = 0, chk; chk = chks[i]; ++i) {
-                    chk.onclick = function () {
-                        if (this.checked) {
-                            for (var j = 0, ch; ch = chks[j, ++j];){
-                                if (ch !== this)
-                                    ch.checked = false;
-                            }//for
-                        }//if(this...
-                    }//chk.onclick
-                }//for(var i
-            }//window.onload
+            // FIND / FOX ABILITY TO SELECT ONLY ONE CHECKBOX
+            //window.onload = function () {
+            //    var repeater = document.getElementById('exclusive');
+            //    var chks = repeater.querySelectorAll('[type=checkbox]');
+            //    for (var i = 0, chk; chk = chks[i]; ++i) {
+            //        chk.onclick = function () {
+            //            if (this.checked) {
+            //                for (var j = 0, ch; ch = chks[j, ++j];){
+            //                    if (ch !== this)
+            //                        ch.checked = false;
+            //                }//for
+            //            }//if(this...
+            //        }//chk.onclick
+            //    }//for(var i
+            //}//window.onload
 
 
         </script>
