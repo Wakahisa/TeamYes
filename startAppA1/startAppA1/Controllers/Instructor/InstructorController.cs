@@ -26,7 +26,7 @@ namespace startAppA1.Controllers.Instructor
 #region Lesson Edit
 
         /// <summary>
-        /// loads lesson edit
+        /// Loads a lesson for editing via the model load method
         /// </summary>
         /// <returns></returns>
         public ActionResult InstructorLessonEditView(int? lessonID)
@@ -43,6 +43,11 @@ namespace startAppA1.Controllers.Instructor
             return View(model);
         }
 
+        /// <summary>
+        /// Saves the lesson via the model save method
+        /// </summary>
+        /// <param name="entry"></param>
+        /// <returns></returns>
         [HttpPost]
         public ActionResult InstructorLessonEditView(LessonCreateViewModel entry)
         {
@@ -52,9 +57,44 @@ namespace startAppA1.Controllers.Instructor
             return View(model);
         }
 
+        #endregion
 
+        #region Work Edit
 
-#endregion
+        /// <summary>
+        /// Loads a homework set into the homework view for editing via the model load method
+        /// </summary>
+        /// <param name="workID"></param>
+        /// <returns></returns>
+        public ActionResult InstructorWorkEditView(int? workID)
+        {
+            var model = new HomeworkCreateViewModel();
+            if (workID > 0)
+            {
+                model.Load((int)workID);
+            }
+            else
+            {
+                model.Load();
+            }
+            return View(model);
+        }
+
+        /// <summary>
+        /// Saves the work, questions, and answers via the model save method
+        /// </summary>
+        /// <param name="entry"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public ActionResult InstructorWorkEditView(HomeworkCreateViewModel entry)
+        {
+            var model = new HomeworkCreateViewModel();
+            model.Save(entry);
+
+            return View(model);
+        }
+
+        #endregion
 
         public ActionResult InstructorCourseManagementView()
         {

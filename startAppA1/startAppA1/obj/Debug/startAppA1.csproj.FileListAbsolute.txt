@@ -207,3 +207,4 @@ C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\obj\D
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\obj\Debug\startAppA1.pdb
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\obj\Debug\startAppA1.Migrations.addedHomeworkToSeeder.resources
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\obj\Debug\startAppA1.Migrations.canSaveLessons.resources
+C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\obj\Debug\startAppA1.csprojResolveAssemblyReference.cache

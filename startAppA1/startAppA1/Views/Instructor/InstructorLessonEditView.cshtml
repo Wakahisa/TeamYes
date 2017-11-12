@@ -31,7 +31,7 @@
             <div class="panel-body">
                 <div class="form-inline">
                     @Html.ActionLink("New Lesson", "InstructorLessonEditView", "Instructor", null, new { @class = "btn btn-default" })
-                    <button type="button" class="btn btn-default" onclick="loadLesson()">Load Lesson</button>
+                    <button type="button" class="btn btn-default" onclick="loadLesson()">Load Lesson (error: ajax call)</button>
                     <label>Title: @Html.TextBoxFor(model => model.Title, new { @class = "form-control" } )</label>
                 </div>
                 <div>
@@ -90,9 +90,7 @@
     <hr />
             <div class="panel-body form-group">
                     <input type="submit" value="Save" class="btn btn-success" style="margin-left: 16px" />
-                <button type="button" class="btn btn-primary" style="margin-left: 16px">
-                    Create Homework
-                </button>
+                    @Html.ActionLink("Create Homework", "InstructorWorkEditView", "Instructor", Model.WorkID, new { @class = "btn btn-default" })
             </div>
 
     <hr />

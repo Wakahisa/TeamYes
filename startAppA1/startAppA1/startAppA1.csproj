@@ -398,6 +398,7 @@
     <Compile Include="Models\DataItems\AnswerModel.cs" />
     <Compile Include="Models\DataItems\LessonDataModel.cs" />
     <Compile Include="Models\DataItems\QuestionsModel.cs" />
+    <Compile Include="Models\Instructor\HomeworkCreateViewModel.cs" />
     <Compile Include="Models\Instructor\InstructorModel.cs" />
     <Compile Include="Models\Instructor\LessonCreateViewModel.cs" />
     <Compile Include="Models\Shared\CourseModel.cs" />
@@ -1013,7 +1014,7 @@
     <Content Include="Views\Student\_StudentCoursesTableView.cshtml" />
     <Content Include="Views\Admin\StudentEditView.cshtml" />
     <Content Include="Views\Admin\InstructorEditView.cshtml" />
-    <Content Include="Views\Admin\WorkEditView.cshtml" />
+    <Content Include="Views\Instructor\InstructorWorkEditView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -32,7 +32,7 @@ namespace startAppA1.Models
         /// Load up voew obj with an existing lesson
         /// </summary>
         /// <param name="obj"></param>
-        /// <returns></returns>
+        /// <returns>LessonCreateViewModel</returns>
         public LessonCreateViewModel Load(LessonModel obj)
         {
             var model = new LessonCreateViewModel();
@@ -62,7 +62,7 @@ namespace startAppA1.Models
         /// Load up an empty view to be used
         /// </summary>
         /// <param></param>
-        /// <returns></returns>
+        /// <returns>LessonCreateViewModel</returns>
         public LessonCreateViewModel Load()
         {
             var model = new LessonCreateViewModel();
@@ -81,6 +81,10 @@ namespace startAppA1.Models
             return model;
         }
 
+        /// <summary>
+        /// Save editied lesson
+        /// </summary>
+        /// <param name="obj"></param>
         public void Save(LessonCreateViewModel obj)
         {
             var data = new LessonDataModel()
@@ -108,6 +112,7 @@ namespace startAppA1.Models
                 PreviousLessonIDs = obj.PreviousID ?? 0,
                 WorkID = obj.WorkID ?? 0,
             };
+            if (lesID > 0) { model.ID = lesID; };
             // save the lesson
 
             if (model.ID > 0)
