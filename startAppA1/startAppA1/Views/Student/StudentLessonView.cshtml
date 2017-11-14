@@ -70,8 +70,72 @@
     </div>
 </div>
 
+<div class="panel panel-primary">
+    <div class="panel-heading" id="mypanelId">Lessons</div>
+    <div class="col-sm-3">
+        @*<div class="panel-heading">Lessons</div>*@
+        <div class="panel-body">
+            <ul>
+                @*<li>
+                        @Html.Partial("_StudentLesson1View")
+                    </li>*@
+                <li>
+                    @Ajax.ActionLink("Lesson #1", "LoadStudentLesson1", "Student",
+                                new AjaxOptions { UpdateTargetId = "Display", InsertionMode = InsertionMode.Replace })
+                </li>
+                <li>
+                    @Ajax.ActionLink("Lesson #2", "LoadStudentLesson2", "Student",
+                                new AjaxOptions { UpdateTargetId = "Display", InsertionMode = InsertionMode.Replace })
+                </li>
+                <li>
+                    @Ajax.ActionLink("Lesson #3", "LoadStudentLesson3", "Student",
+                                new AjaxOptions { UpdateTargetId = "Display", InsertionMode = InsertionMode.Replace })
+                </li>
+                <li>Lesson</li>
+                <li>Lesson</li>
+                <li>Lesson</li>
+                <li>Lesson</li>
+                <li>Lesson</li>
+                <li>Lesson</li>
+            </ul>
+        </div>
+    </div>
 
-<div>
+    <div class="col-sm-9">
+        <div class="panel-heading">Lesson</div>
+        <div class="panel-body">
+            <div id="Display">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@*<div class="panel-primary">
+    <div class="panel-heading" id="mypanelId">Resources</div>
+    <div class="panel-body">
+        <div class="form-inline">
+        </div>
+    </div>
+</div>*@
+
+@*<div class="form-group">
+    <div class="col-sm-4">
+        <a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentLessonView", "Student")'">Previous Lesson &raquo;</a>
+    </div>
+    <div class="col-sm-4">
+        <a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentWorkView", "Student")'">Work Page &raquo;</a>
+    </div>
+    <div class="col-sm-4">
+        <a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentLessonView", "Student")'">Next Lesson &raquo;</a>
+    </div>
+</div>*@
+
+
+
+
+@*<div>
     <div class="panel panel-primary">
         <div class="panel-heading" id="mypanelId">LESSON #1</div>
         <div class="panel-body">
@@ -107,7 +171,7 @@
             <a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentLessonView", "Student")'">Next Lesson &raquo;</a>
         </div>
     </div>
-</div>
+</div>*@
 
 
 
@@ -115,15 +179,15 @@
 
 
 @*<!--BUTTONS ALONE-->
-<div>
-    <!--links to student work pages-->
-    <p><a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentWorkView", "Student")'">Student Work View &raquo;</a></p>
-</div>
-<div>
-    links to next and previous lessons,
-    @Html.ActionLink("Student Next /Prev Lesson View", "StudentLessonView", "Student")
-</div>
-<div>
-    <!--links to student courses pages-->
-    <p><a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentCourseView", "Student")'">Student Course View &raquo;</a></p>
-</div>*@
+    <div>
+        <!--links to student work pages-->
+        <p><a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentWorkView", "Student")'">Student Work View &raquo;</a></p>
+    </div>
+    <div>
+        links to next and previous lessons,
+        @Html.ActionLink("Student Next /Prev Lesson View", "StudentLessonView", "Student")
+    </div>
+    <div>
+        <!--links to student courses pages-->
+        <p><a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentCourseView", "Student")'">Student Course View &raquo;</a></p>
+    </div>*@
