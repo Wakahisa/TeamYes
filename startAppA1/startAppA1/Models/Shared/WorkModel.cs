@@ -16,7 +16,7 @@ namespace startAppA1.Models
         public int ID { get; set; }
         public int? TemplateID { get; set; }
 
-
+        public string Title { get; set; }
         public string InstructionText { get; set; }
         public double Grade { get; set; }
         public string InstructorNotes { get; set; }

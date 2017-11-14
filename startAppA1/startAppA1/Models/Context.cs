@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity.EntityFramework;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -6,7 +7,7 @@ using System.Web;
 
 namespace startAppA1.Models
 {
-    public class Context : DbContext
+    public class Context : IdentityDbContext<AppUser>
     {    
         public Context() : base("name=Context")
         {
