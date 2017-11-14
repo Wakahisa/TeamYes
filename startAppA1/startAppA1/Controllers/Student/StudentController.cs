@@ -45,11 +45,26 @@ namespace startAppA1.Controllers.Student
         {
             return View();
         }
-        //ActionResults for tables
+        //ActionResults for tables/multiple lessons
         public ActionResult LoadStudentCourses()
         {
             var model = db.StudentModels.ToList();
             return PartialView("_StudentCoursesTableView", model);
+        }
+
+        public PartialViewResult LoadStudentLesson1()
+        {
+            return PartialView("_StudentLesson1View");
+        }
+
+        public PartialViewResult LoadStudentLesson2()
+        {
+            return PartialView("_StudentLesson2View");
+        }
+
+        public PartialViewResult LoadStudentLesson3()
+        {
+            return PartialView("_StudentLesson3View");
         }
     }
 }

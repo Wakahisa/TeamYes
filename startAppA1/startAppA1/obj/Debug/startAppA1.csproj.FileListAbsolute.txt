@@ -53,10 +53,6 @@ C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\r
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\Antlr3.Runtime.dll
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\EntityFramework.dll
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\EntityFramework.SqlServer.dll
-C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\IronPython.dll
-C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\IronPython.Modules.dll
-C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\IronPython.SQLite.dll
-C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\IronPython.Wpf.dll
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\Microsoft.AI.Agent.Intercept.dll
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\Microsoft.AI.DependencyCollector.dll
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\Microsoft.AI.PerfCounterCollector.dll
@@ -135,10 +131,6 @@ C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\M
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\Antlr3.Runtime.pdb
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\EntityFramework.xml
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\EntityFramework.SqlServer.xml
-C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\IronPython.xml
-C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\IronPython.Modules.xml
-C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\IronPython.SQLite.xml
-C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\IronPython.Wpf.xml
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\Microsoft.AspNet.Identity.Core.xml
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\Microsoft.AspNet.Identity.EntityFramework.xml
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\Microsoft.AspNetCore.Hosting.Abstractions.xml
