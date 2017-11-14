@@ -83,6 +83,10 @@ C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\M
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\Microsoft.Extensions.Primitives.dll
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\Microsoft.Extensions.WebEncoders.dll
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\Microsoft.Net.Http.Headers.dll
+C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\Microsoft.Owin.dll
+C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\Microsoft.Owin.Security.dll
+C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\Microsoft.Owin.Security.OAuth.dll
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\Microsoft.Scripting.AspNet.dll
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\Microsoft.Scripting.dll
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\Microsoft.Scripting.Metadata.dll
@@ -93,6 +97,7 @@ C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\M
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\MvcSiteMapProvider.WebActivator.dll
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\Newtonsoft.Json.dll
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\NuGet.Core.dll
+C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\Owin.dll
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\Remotion.Linq.dll
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\System.AppContext.dll
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\System.Buffers.dll
@@ -155,6 +160,10 @@ C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\M
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\Microsoft.Extensions.Primitives.xml
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\Microsoft.Extensions.WebEncoders.xml
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\Microsoft.Net.Http.Headers.xml
+C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\Microsoft.Owin.xml
+C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\Microsoft.Owin.Security.xml
+C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\Microsoft.Owin.Security.OAuth.xml
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\Microsoft.Scripting.xml
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\Microsoft.Scripting.AspNet.xml
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\Microsoft.Scripting.Metadata.xml
@@ -182,6 +191,7 @@ C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\M
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\Microsoft.AI.Web.xml
+C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\obj\Debug\startAppA1.csprojResolveAssemblyReference.cache
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\obj\Debug\startAppA1.Migrations.firstDataLoad.resources
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\obj\Debug\startAppA1.Migrations.addedManyModels.resources
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\obj\Debug\startAppA1.Migrations.updateModels.resources
@@ -195,18 +205,8 @@ C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\obj\D
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\obj\Debug\startAppA1.Migrations.OneLastTimeToCleanTheDBAndSeedNicely.resources
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\obj\Debug\startAppA1.Migrations.addedHomeworkToSeeder.resources
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\obj\Debug\startAppA1.Migrations.canSaveLessons.resources
+C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\obj\Debug\startAppA1.Migrations.addIdentityFramework.resources
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\obj\Debug\startAppA1.csproj.GenerateResource.Cache
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\obj\Debug\startAppA1.csproj.CoreCompileInputs.cache
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\obj\Debug\startAppA1.dll
 C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\obj\Debug\startAppA1.pdb
-C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\obj\Debug\startAppA1.csprojResolveAssemblyReference.cache
-C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\Microsoft.Owin.dll
-C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\Microsoft.Owin.Host.SystemWeb.dll
-C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\Microsoft.Owin.Security.dll
-C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\Microsoft.Owin.Security.OAuth.dll
-C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\Owin.dll
-C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\Microsoft.Owin.xml
-C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\Microsoft.Owin.Host.SystemWeb.xml
-C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\Microsoft.Owin.Security.xml
-C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\bin\Microsoft.Owin.Security.OAuth.xml
-C:\Users\Valued Customer\Documents\softwareEngClass2\startAppA1\startAppA1\obj\Debug\startAppA1.Migrations.addIdentityFramework.resources
