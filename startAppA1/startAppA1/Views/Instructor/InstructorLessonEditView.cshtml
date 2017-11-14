@@ -1,127 +1,132 @@
-﻿
-@{
-    ViewBag.Title = "InstructorLessonEditView";
+﻿@model startAppA1.Models.LessonCreateViewModel
+
+@using (Html.BeginForm())
+{
+    <div>
+        Workflow instructions go here.
+    </div>
+        <div class="panel panel-primary">
+            <div class="panel-heading">Select a template</div>
+            <div class="panel-body">
+                @*javascript TODO: mouse in/out highlight, on click style=primary and load template partial view*@
+                @* TODO implement templates *@
+                <button type="button" class="btn btn-default" style="margin-left: 16px">
+                    <i class="fa fa-columns"></i> Vertical Split
+                </button>
+                <button type="button" class="btn btn-default" style="margin-left: 16px">
+                    <i class="fa fa-th-large"></i> Coding Box + Text
+                </button>
+                <button type="button" class="btn btn-default" style="margin-left: 16px">
+                    <i class="fa fa-square"></i> Single Pane
+                </button>
+                <button type="button" class="btn btn-primary" style="margin-left: 16px">
+                    <i class="fa fa-id-card-o"></i> Video + Text
+                </button>
+            </div>
+        </div>
+
+        <div class="panel-primary">
+            <div class="panel-heading">Edit</div>
+            @*changes what to upload depending on partial view, actually part of the partial view, creates browse for modal*@
+            <div class="panel-body">
+                <div class="form-inline">
+                    @Html.ActionLink("New Lesson", "InstructorLessonEditView", "Instructor", null, new { @class = "btn btn-default" })
+                    <button type="button" class="btn btn-default" onclick="loadLesson()">Load Lesson (error: ajax call)</button>
+                    <label>Title: @Html.TextBoxFor(model => model.Title, new { @class = "form-control" } )</label>
+                </div>
+                <div>
+                    @Html.DropDownListFor(x=>Model.Title, Model.NextLessonList, "Select a lesson", new { @id = "selectLesson" })
+                </div>
+            </div>
+            <div class="panel-body">
+                <div class="form-inline">
+                    <label>Video Http Address: @Html.TextBoxFor(x => Model.VideoLink, new { @class = "form-control", @id = "vidAddress" })</label>
+                    <button type="button" class="btn btn-primary" style="margin-left: 16px" onclick="loadVideo()">Activate</button>
+                </div>            
+            </div>
+        </div>
+
+    <hr />
+
+        <div class="panel-primary">
+            <div class="panel-heading">Preview</div>
+                <div class="media">
+                    <div class="media-left">
+                        <iframe frameborder="0" width="320" height="240" id="iFrameIs" src=""></iframe>
+                    </div>
+                <div class="media-body">
+                    <h4 class="media-heading">@Html.TextBoxFor(x => x.Intro, new { @class = "form-control" })</h4>
+                    <p>
+                        @Html.TextAreaFor(x=>x.Text, new { @class = "form-control", @rows = "20" })
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    <hr />
+
+        <div class="panel-primary">
+            <div class="panel-heading">Select Work, Previous Lesson, and Next Lesson</div>
+            @*bunches of javascript for choosing stuff and changing the titles*@
+            <div class="panel-body">
+                <div class="form-inline">
+                    <div class="form-group" style="margin-left: 16px">
+                        <label>Lesson Work:</label>
+                        @Html.DropDownListFor(x => Model.WorkID, Model.WorkList, "Select a Homework", new { @class = "form-control" })
+                    </div>
+
+                    <div class="form-group" style="margin-left: 16px">
+                        <label>Previous Lesson:</label>
+                        @Html.DropDownListFor(x => Model.NextID, Model.NextLessonList, "Select a lesson", new { @class = "form-control" })
+                    </div>
+
+                    <div class="form-group" style="margin-left: 16px">
+                        <label>Next Lesson:</label>
+                        @Html.DropDownListFor(x => Model.PreviousID, Model.PreviousLessonList, "Select a lesson", new { @class = "form-control" })
+                    </div>
+                </div>
+            </div>
+            </div>
+    <hr />
+            <div class="panel-body form-group">
+                    <input type="submit" value="Save" class="btn btn-success" style="margin-left: 16px" />
+                    @Html.ActionLink("Create Homework", "InstructorWorkEditView", "Instructor", Model.WorkID, new { @class = "btn btn-default" })
+            </div>
+
+    <hr />
+
+    <div class="panel-primary">
+        <div class="panel-heading">Useful Links</div>
+        <div class="panel-body">
+            @Html.ActionLink("Student Lesson Preview", "StudentLessonView", "Student", null, new { @class = "btn btn-default" })
+            @Html.ActionLink("Course Create/Edit", "InstructorCourseEditView", "Instructor", null, new { @class = "btn btn-default" })
+            @Html.ActionLink("Home", "InstructorHomeView", "Instructor", null, new { @class = "btn btn-default" })
+        </div>
+    </div>
 }
 
-<h2>Edit: Lesson3</h2>
+<script type="text/javascript">
+   
 
-<div>
-    Workflow instructions go here.
-</div>
-    <div class="panel panel-primary">
-        <div class="panel-heading">Select a template</div>
-        <div class="panel-body">
-            @*javascript TODO: mouse in/out hilight, on click style=primary and load template partial view*@
-            <button type="button" class="btn btn-default" style="margin-left: 16px">
-                <i class="fa fa-columns"></i> Vertical Split
-            </button>
-            <button type="button" class="btn btn-default" style="margin-left: 16px">
-                <i class="fa fa-th-large"></i>Quadrants
-            </button>
-            <button type="button" class="btn btn-default" style="margin-left: 16px">
-                <i class="fa fa-square"></i>Single Pane
-            </button>
-            <button type="button" class="btn btn-primary" style="margin-left: 16px">
-                <i class="fa fa-id-card-o"></i>Video + Text
-            </button>
-        </div>
-    </div>
+        function loadVideo() {
+            var site = document.getElementById('vidAddress').value;
+            document.getElementById('iFrameIs').src = site;
+        };
 
-    <div class="panel-primary">
-        <div class="panel-heading">Upload</div>
-        @*changes what to upload depending on partial view, actually part of the partial view, creates browse for modal*@
-        <div class="panel-body">
-            <div class="form-inline">
-                    <button type="button" class="btn btn-default" style="margin-left: 16px">
-                        Upload Video
-                    </button>
-                    <button type="button" class="btn btn-default" style="margin-left: 16px">
-                        Upload Text
-                    </button>
-                    <label style="margin-left: 16px">Title:</label>
-                    <input style="height: 20px" title="Title:" id="msg" type="text" class="form-control" name="msg" value="What Not To Do">
-                
-            </div>
-        </div>
-    </div>
+        function loadLesson() {
+            var lessonID = document.getElementById('selectLesson').value;
+            console.log(lessonID)
+            //BORKED, FIX, BORKED, FIX, BORKED, FIX, BORKED, FIX
+            $(this).ajax({
+                url: 'InstructorLessonEditView',
+                data: { lessonID: lessonID }
+            });
+            
+        };
 
-<hr />
+        window.onload = function () {
+            loadVideo();
+        };
 
-    <div class="panel-primary">
-        <div class="panel-heading">Preview</div>
-            <div class="media">
-                <div class="media-left">
-                    <iframe frameborder="0" width="320" height="240" src="http://www.youtube.com/embed/uUWAn9oXj1M"></iframe>
-                </div>
-            <div class="media-body">
-                <h4 class="media-heading">What Not To Do</h4>
-                <p>
-                    Found this video by putting "bad coding video" into Google.
-                    I haven't watched it. 
-                    I just assume that the students will be given horrible videos.
-                </p>
-            </div>
-        </div>
-    </div>
-
-<hr />
-
-    <div class="panel-primary">
-        <div class="panel-heading">Select Work, Previous Lesson, and Next Lesson</div>
-        @*bunches of javascript for choosing stuff and changing the titles*@
-        <div class="panel-body">
-            <div class="form-inline">
-                <div class="form-group" style="margin-left: 16px">
-                    <label for="sel1">Lesson Work:</label>
-                    <select class="form-control" id="sel1">
-                        <option>Work1</option>
-                        <option>Work2</option>
-                        <option>Work3</option>
-                        <option>Work4</option>
-                    </select>
-                </div>
-
-                <div class="form-group" style="margin-left: 16px">
-                    <label for="sel1">Previous Lesson:</label>
-                    <select class="form-control" id="sel1">
-                        <option>Lesson1</option>
-                        <option>Lesson2</option>
-                        <option>Lesson4</option>
-                    </select>
-                </div>
-
-                <div class="form-group" style="margin-left: 16px">
-                    <label for="sel1">Next Lesson:</label>
-                    <select class="form-control" id="sel1">
-                        <option>Lesson1</option>
-                        <option>Lesson2</option>
-                        <option>Lesson4</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-        </div>
-<hr />
-        <div class="panel-body">
-            <button type="button" class="btn btn-success" style="margin-left: 16px">
-                Save
-            </button>
-            <button type="button" class="btn btn-warning" style="margin-left: 16px">
-                Clear
-            </button>
-            <button type="button" class="btn btn-primary" style="margin-left: 16px">
-                Create Work
-            </button>
-        </div>
-
-<hr />
-
-<div class="panel-primary">
-    <div class="panel-heading">Useful Links</div>
-    <div class="panel-body">
-        @Html.ActionLink("Create New Lesson", "InstructorLessonEditView", "Instructor", null, new { @class = "btn btn-default" })
-    @Html.ActionLink("Student Lesson Preview", "StudentLessonView", "Student", null, new { @class = "btn btn-default" })
-    @Html.ActionLink("Course Create/Edit", "InstructorCourseEditView", "Instructor", null, new { @class = "btn btn-default" })
-    @Html.ActionLink("Home", "InstructorHomeView", "Instructor", null, new { @class = "btn btn-default" })
-</div>
-    </div>
+    
+</script>

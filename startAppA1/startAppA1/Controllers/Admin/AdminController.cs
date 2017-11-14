@@ -47,6 +47,7 @@ namespace startAppA1.Controllers.Admin
             if (id != null)
             {
                 model = db.StudentModels.Find(id);
+                model.PasswordShield="*************";
             }
             return View(model);
         }
@@ -104,6 +105,7 @@ namespace startAppA1.Controllers.Admin
             if (id != null)
             {
                 model = db.InstructorModels.Find(id);
+                model.PasswordShield = "*************";
             }
             return View(model);
         }
@@ -120,15 +122,15 @@ namespace startAppA1.Controllers.Admin
             {
                 db.Entry(model).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("AdminView");
+                return RedirectToAction("LoadInstructors");
             }
             else if (ModelState.IsValid)
             {
                 db.InstructorModels.Add(model);
                 db.SaveChanges();
-                return RedirectToAction("AdminView");
+                return RedirectToAction("LoadInstructors");
             }
-            return RedirectToAction("AdminView");
+            return RedirectToAction("LoadInstructors");
         }
 
         /// <summary>
@@ -144,9 +146,9 @@ namespace startAppA1.Controllers.Admin
                 db.InstructorModels.Remove(model);
                 db.SaveChanges();
             }
-            return RedirectToAction("AdminView");
+            return RedirectToAction("LoadInstructors");
         }
-        #endregion
+#endregion
 
 
 

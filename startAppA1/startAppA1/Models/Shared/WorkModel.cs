@@ -14,18 +14,19 @@ namespace startAppA1.Models
         [Key]
         [Required]
         public int ID { get; set; }
+        public int? TemplateID { get; set; }
+
+        public string Title { get; set; }
         public string InstructionText { get; set; }
-        public int TemplateID { get; set; }
-        public int WorkSetID { get; set; }
-        public int LessonID { get; set; }
-        public int AnswerID { get; set; }
         public double Grade { get; set; }
         public string InstructorNotes { get; set; }
         public bool Passed { get; set; }
         public bool IsProgramming { get; set; }
 
         //foriegn keys for relationships
-
-
+        public int? QuestionsID { get; set; }
+        public QuestionstModel Questions { get; set; }
+        public int? AnswerID { get; set; }
+        public AnswerModel Answers { get; set; }
     }
 }
