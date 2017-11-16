@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "StudentCourse";
+}
+
+<h2>StudentCourse</h2>
+
+<div>displays info, overviews, progress, lessons</div>
+
+<!--Dropdown menu-->
+<div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+        Student Menu
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+        <li><a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentHomeView", "Student")'">Student Home View &raquo;</a></li>
+        <li><a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentCourseView", "Student")'">Student Course View &raquo;</a></li>
+        <li><a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentGradeView", "Student")'">Student Grade View &raquo;</a></li>
+        <li><a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentLessonView", "Student")'">Student Lesson View &raquo;</a></li>
+        <li><a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentWorkView", "Student")'">Student Work View &raquo;</a></li>
+    </ul>
+</div>
+
+<!--Student courses-->
+<div class="panel panel-primary">
+    <div class="panel-heading" id="mypanelId">MY COURSES</div>
+    <div class="panel-body">
+        <p>DISPLAY COURSE #1</p>
+        <p>DISPLAY COURSE #2</p>
+        <p>DISPLAY COURSE #3</p>
+        <p>DISPLAY COURSE #4</p>
+        <a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentLessonView", "Student")'">Lessons &raquo;</a>
+    </div>
+</div>

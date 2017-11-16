@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "AdminView";
+}
+
+<h2>AdminView</h2>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">Instructions</div>
+    <div class="panel-body">
+        Select a table from the left and the rows should appear in the center.
+        Select a row to edit.
+    </div>
+</div>
+
+<div class="panel panel-primary">
+    <div class="col-sm-3">
+            <div class="panel-heading">Tables</div>
+            <div class="panel-body">
+                <ul>
+                    <li>@Ajax.ActionLink("Student Table", "LoadStudents", "Admin",
+                            new AjaxOptions() { UpdateTargetId = "Display", InsertionMode = InsertionMode.Replace })</li>
+                    <li>@Ajax.ActionLink("Instructor Table", "LoadInstructors", "Admin",
+                            new AjaxOptions() { UpdateTargetId = "Display", InsertionMode = InsertionMode.Replace })</li>
+                    <li>@Ajax.ActionLink("Homework Table", "LoadWork", "Admin",
+                            new AjaxOptions() { UpdateTargetId = "Display", InsertionMode = InsertionMode.Replace })</li>
+                    <li>table</li>
+                    <li>table</li>
+                    <li>table</li>
+                    <li>table</li>
+                    <li>table</li>
+                </ul>
+            </div>
+        </div>
+
+    <div class="col-sm-9">
+        <div class="panel-heading">Rows</div>
+        <div class="panel-body">
+            <div id="Display">
+                
+            </div>
+        </div>
+    </div>
+</div>
+

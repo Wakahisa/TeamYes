@@ -1,0 +1,120 @@
+﻿@model startAppA1.Models.HomeworkCreateViewModel
+
+<head>
+    
+</head>
+<hr />
+@using (Html.BeginForm())
+{
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            Workflow instructions go here.
+            Homeworks are stored in the database as a work object with a title, instructions, notes, a set of questions and a set of answers.
+            The questions and answers each have their own titles in order to facilitate human readability for sorting and reuse.
+        </div>
+    </div>
+        <div class="panel panel-primary"> 
+            <div class="panel-heading">Select a template, please only choose one.</div>
+            <div class="panel-body form-group">
+                <label class="checkbox-inline" title="True/False">@Html.EditorFor(x=>x.answer.TrueFalse, new { @id = "exclusive"})</label>
+                <label class="checkbox-inline" title="Multiple Choice">@Html.EditorFor(x => x.answer.MultipleChoice, new { @id = "exclusive" })</label>
+                <label class="checkbox-inline" title="String matching">@Html.EditorFor(x => x.answer.StringMatching, new { @id = "exclusive" })</label>
+                <label class="checkbox-inline" title="Hand graded">@Html.EditorFor(x => x.answer.GradeByHand, new { @id = "exclusive" })</label>
+                <label class="checkbox-inline" title="Programming">@Html.EditorFor(x => x.work.IsProgramming, new { @id = "exclusive" })</label>
+            </div>
+        </div>
+        <div class=" = panel-primary">
+            <div class="panel-heading">Notes for Instructors</div>
+            <div class="panel-body">@Html.TextBoxFor(x => x.work.InstructorNotes, new { @class = "form-control" })</div>
+        </div>
+        <div class=" = panel-primary">
+            <div class="panel-heading">Student Instructions</div>
+            <div class="panel-body">@Html.TextBoxFor(x => x.work.InstructionText, new { @class = "form-control" })</div>
+        </div>
+        <div>
+            <div class="col-sm-6">
+                <div class="panel-primary">
+                    <div class="panel-heading">Set questions</div>
+                    <label>Question set title</label>
+                    <div class="panel-body">
+                        @Html.TextBoxFor(x => x.questions.Title, new { @class = "form-control" })
+                        <label>Questions. Empty boxes will be skipped.</label>
+                        <table class="table table-bordered table-responsive">
+                            <tbody>
+                                @*@Html.EditorFor(x=>x.questionList)
+                                @foreach (var thing in Model.questionList)
+                                {
+                                    <tr>@Html.EditorFor(x=>thing)</tr>
+                                }*@
+                                @for (int q = 0; q==Model.questionList.Capacity; q++)
+                                {
+                                    <tr>@Html.EditorFor(x=>x.questionList[q])</tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="panel-primary">
+                    <div class="panel-heading">Set answers</div>
+                    <label>Answer set title</label>
+                    <div class="panel-body">
+                        @Html.TextBoxFor(x => x.answer.Title, new { @class = "form-control" })
+                    </div>
+                    <table class="table table-bordered table-responsive">
+                        <tbody>
+                            @if (Model.work.IsProgramming)
+                            {
+                                <tr>This is a programming assignment TODO: set answer checking</tr>
+                            }else if (Model.answer.GradeByHand)
+                            {
+                                <tr>Grade these answers by hand.</tr>
+                            }else if (Model.answer.MultipleChoice)
+                            {
+                                
+                            }else if (Model.answer.StringMatching)
+                            {
+
+                            }else if (Model.answer.TrueFalse)
+                            {
+
+                            }else
+                            {
+
+                            }
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <hr />
+            <div class="col-sm-12" column-span>
+                <input type="submit" value="Save" class="btn btn-success" style="margin-left: 16px" />
+                @Html.ActionLink("Clear", "InstructorWorkEditView", "Instructor", null, new { @class = "btn btn-default" })
+            </div>
+
+        </div>
+        }
+
+        <script type="text/javascript" language="javascript">
+            // FIND / FOX ABILITY TO SELECT ONLY ONE CHECKBOX
+            //window.onload = function () {
+            //    var repeater = document.getElementById('exclusive');
+            //    var chks = repeater.querySelectorAll('[type=checkbox]');
+            //    for (var i = 0, chk; chk = chks[i]; ++i) {
+            //        chk.onclick = function () {
+            //            if (this.checked) {
+            //                for (var j = 0, ch; ch = chks[j, ++j];){
+            //                    if (ch !== this)
+            //                        ch.checked = false;
+            //                }//for
+            //            }//if(this...
+            //        }//chk.onclick
+            //    }//for(var i
+            //}//window.onload
+
+
+        </script>
