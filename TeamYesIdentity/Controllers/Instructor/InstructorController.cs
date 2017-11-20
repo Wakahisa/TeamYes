@@ -33,8 +33,7 @@ namespace TeamYesIdentity.Controllers.Instructor
         public ActionResult InstructorLessonEditView(int? lessonID)
         {
             var model = new LessonCreateViewModel();
-            int lastID = db.LessonModels.LastOrDefault().ID;
-            if (lessonID > 0 && lessonID <= lastID)
+            if (lessonID > 0)
             {
                 model.Load(db.LessonModels.First(f => f.ID == lessonID));
             }

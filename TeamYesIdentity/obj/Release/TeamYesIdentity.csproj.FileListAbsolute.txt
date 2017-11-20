@@ -260,3 +260,7 @@ C:\Users\Valued Customer\Documents\softwareEngClass2\TeamYesIdentity\obj\Release
 C:\Users\Valued Customer\Documents\softwareEngClass2\TeamYesIdentity\obj\Release\TeamYesIdentity.csproj.CoreCompileInputs.cache
 C:\Users\Valued Customer\Documents\softwareEngClass2\TeamYesIdentity\obj\Release\TeamYesIdentity.dll
 C:\Users\Valued Customer\Documents\softwareEngClass2\TeamYesIdentity\obj\Release\TeamYesIdentity.pdb
+C:\Users\Valued Customer\Documents\softwareEngClass2\TeamYesIdentity\bin\TeamYesIdentity.dll.config
+C:\Users\Valued Customer\Documents\softwareEngClass2\TeamYesIdentity\bin\TeamYesIdentity.dll
+C:\Users\Valued Customer\Documents\softwareEngClass2\TeamYesIdentity\bin\TeamYesIdentity.pdb
+C:\Users\Valued Customer\Documents\softwareEngClass2\TeamYesIdentity\obj\Release\TeamYesIdentity.csprojResolveAssemblyReference.cache
