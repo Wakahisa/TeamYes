@@ -4,7 +4,8 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web.Mvc;
-
+using System.Web;
+using System.IO;
 
 namespace TeamYesIdentity.Controllers.Instructor
 {
@@ -32,7 +33,8 @@ namespace TeamYesIdentity.Controllers.Instructor
         public ActionResult InstructorLessonEditView(int? lessonID)
         {
             var model = new LessonCreateViewModel();
-            if (lessonID > 0)
+            int lastID = db.LessonModels.LastOrDefault().ID;
+            if (lessonID > 0 && lessonID <= lastID)
             {
                 model.Load(db.LessonModels.First(f => f.ID == lessonID));
             }
@@ -41,6 +43,25 @@ namespace TeamYesIdentity.Controllers.Instructor
                 model.Load(db.LessonModels.FirstOrDefault());
             }
             return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult SaveFile()
+        {
+            try
+            {
+                if (System.Web.HttpContext.Current.Request.Files.AllKeys.Any())
+                {
+                    var pic = System.Web.HttpContext.Current.Request.Files["SavedFiles"];
+                    HttpPostedFileBase filebase = new HttpPostedFileWrapper(pic);
+                    var fileName = Path.GetFileName(filebase.FileName);
+                    var path = Path.Combine(Server.MapPath("~/UploadFile/"), fileName);
+                    filebase.SaveAs(path);
+                    return Json("File Saved Successfully.");
+                }
+                else { return Json("No File Saved."); }
+            }
+            catch (Exception ex) { return Json("Error While Saving."); }
         }
 
         /// <summary>

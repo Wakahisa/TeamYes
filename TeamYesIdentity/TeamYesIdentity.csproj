@@ -243,12 +243,33 @@
     <Compile Include="Migrations\201711200154569_entityFrameworkTestByFooGooBoo.Designer.cs">
       <DependentUpon>201711200154569_entityFrameworkTestByFooGooBoo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711200216125_lastTestForManyToMany.cs" />
+    <Compile Include="Migrations\201711200216125_lastTestForManyToMany.Designer.cs">
+      <DependentUpon>201711200216125_lastTestForManyToMany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711200224384_tryResetLists.cs" />
+    <Compile Include="Migrations\201711200224384_tryResetLists.Designer.cs">
+      <DependentUpon>201711200224384_tryResetLists.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711200226310_yesResetLists.cs" />
+    <Compile Include="Migrations\201711200226310_yesResetLists.Designer.cs">
+      <DependentUpon>201711200226310_yesResetLists.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711200236398_moreResetLists.cs" />
+    <Compile Include="Migrations\201711200236398_moreResetLists.Designer.cs">
+      <DependentUpon>201711200236398_moreResetLists.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711200435169_FilePaths.cs" />
+    <Compile Include="Migrations\201711200435169_FilePaths.Designer.cs">
+      <DependentUpon>201711200435169_FilePaths.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711200451312_FilePathsRemoved.cs" />
+    <Compile Include="Migrations\201711200451312_FilePathsRemoved.Designer.cs">
+      <DependentUpon>201711200451312_FilePathsRemoved.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Admin\AdminTableModel.cs" />
-    <Compile Include="Models\Admin\BooModel.cs" />
-    <Compile Include="Models\Admin\FooModel.cs" />
-    <Compile Include="Models\Admin\GooModel.cs" />
     <Compile Include="Models\AppRole.cs" />
     <Compile Include="Models\AppUser.cs" />
     <Compile Include="Models\Context.cs" />
@@ -426,6 +447,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711200154569_entityFrameworkTestByFooGooBoo.resx">
       <DependentUpon>201711200154569_entityFrameworkTestByFooGooBoo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711200216125_lastTestForManyToMany.resx">
+      <DependentUpon>201711200216125_lastTestForManyToMany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711200224384_tryResetLists.resx">
+      <DependentUpon>201711200224384_tryResetLists.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711200226310_yesResetLists.resx">
+      <DependentUpon>201711200226310_yesResetLists.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711200236398_moreResetLists.resx">
+      <DependentUpon>201711200236398_moreResetLists.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711200435169_FilePaths.resx">
+      <DependentUpon>201711200435169_FilePaths.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711200451312_FilePathsRemoved.resx">
+      <DependentUpon>201711200451312_FilePathsRemoved.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

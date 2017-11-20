@@ -26,43 +26,12 @@ namespace TeamYesIdentity.Models
         public DbSet<StringAnswerModel> StringAnswers { get; set; }
         public DbSet<StringQuestionModel> StringQuestions { get; set; }
 
-        //testing
-        public DbSet<FooModel> FooModels { get; set; }
-        public DbSet<BooModel> BooModels { get; set; }
-        public DbSet<GooModel> GooModels { get; set; }
-
         /// <summary>
         /// configures one-many and many-many relationships
         /// </summary>
         /// <param name="modelBuilder"></param>
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<GradeModel>()
-                .HasRequired(c => c.Student)
-                .WithMany(c => c.CourseGrade)
-                .HasForeignKey(c => c.StudentID);
-
-            modelBuilder.Entity<CourseModel>() // this is one of a set that
-                .HasRequired(c => c.Instructor) // this has a lot of
-                .WithMany(c => c.Courses) // it goes in this variable of it's holder
-                .HasForeignKey(c => c.InstructorID); // and it IDs it holder as
-
-            modelBuilder.Entity<LessonModel>() // this is one of a set that
-                .HasRequired(c => c.Course) // this has a lot of
-                .WithMany(c => c.Lessons) // it goes in this variable of it's holder
-                .HasForeignKey(c => c.CourseID); // and it IDs it holder as
-
-            modelBuilder.Entity<StringAnswerModel>() // this is one of a set that
-                .HasRequired(c => c.AnswerModel) // this has a lot of
-                .WithMany(c => c.Answers) // it goes in this variable of it's holder
-                .HasForeignKey(c => c.AnswerModelID); // and it IDs it holder as
-
-            modelBuilder.Entity<StringQuestionModel>() // this is one of a set that
-                .HasRequired(c => c.QuestionModel) // this has a lot of
-                .WithMany(c => c.Questions) // it goes in this variable of it's holder
-                .HasForeignKey(c => c.QuestionModelID); // and it IDs it holder as
-
-
             modelBuilder.Entity<IdentityUserLogin>().HasKey<string>(l => l.UserId);
             modelBuilder.Entity<IdentityRole>().HasKey<string>(r => r.Id);
             modelBuilder.Entity<IdentityUserRole>().HasKey(r => new

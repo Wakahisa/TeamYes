@@ -11,6 +11,11 @@ namespace TeamYesIdentity.Models
         public StringQuestionModel(string que)
         {
             Question = que;
+            QuestionModels = new List<QuestionsModel>();
+        }
+        public StringQuestionModel()
+        {
+            QuestionModels = new List<QuestionsModel>();
         }
 
         [Key]
@@ -19,6 +24,6 @@ namespace TeamYesIdentity.Models
         public string Question { get; set; }
 
         public int? QuestionModelID { get; set; }
-        public QuestionsModel QuestionModel { get; set; }
+        public ICollection<QuestionsModel> QuestionModels { get; set; }
     }
 }

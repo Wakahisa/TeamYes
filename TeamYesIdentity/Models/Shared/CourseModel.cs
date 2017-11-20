@@ -15,6 +15,7 @@ namespace TeamYesIdentity.Models
             Homeworks = new List<WorkModel>();
             Students = new List<StudentModel>();
             LessonOrderByID = new List<int>();
+            Instructors = new List<InstructorModel>();
         }
 
         [Key]
@@ -28,11 +29,12 @@ namespace TeamYesIdentity.Models
         //foriegn keys for relationships
         public int? InstructorID { get; set; }
         public InstructorModel Instructor { get; set; }
-        public virtual ICollection<int> StudentIDs { get; set; }
-        public virtual ICollection<StudentModel> Students { get; set; }
-        public virtual ICollection<int> LessonIDs { get; set; }
-        public virtual ICollection<LessonModel> Lessons { get; set; }
-        public virtual ICollection<int> HomeworkIDs { get; set; }
-        public virtual ICollection<WorkModel> Homeworks { get; set; }
+        public ICollection<int> StudentIDs { get; set; }
+        public ICollection<StudentModel> Students { get; set; }
+        public ICollection<int> LessonIDs { get; set; }
+        public ICollection<LessonModel> Lessons { get; set; }
+        public ICollection<int> HomeworkIDs { get; set; }
+        public ICollection<WorkModel> Homeworks { get; set; }
+        public ICollection<InstructorModel> Instructors { get; set; }
     }
 }

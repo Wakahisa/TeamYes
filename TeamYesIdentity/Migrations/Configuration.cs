@@ -28,6 +28,8 @@ namespace TeamYesIdentity.Migrations
             //context.QuestionModels.RemoveRange(context.QuestionModels);
             //context.StudentModels.RemoveRange(context.StudentModels);
             //context.WorkModels.RemoveRange(context.WorkModels);
+            //context.StringAnswers.RemoveRange(context.StringAnswers);
+            //context.StringQuestions.RemoveRange(context.StringQuestions);
 
 
             /// <summary>
@@ -51,34 +53,46 @@ namespace TeamYesIdentity.Migrations
                 Placeholder = "In lesson three we learn about the python programming language, lists, and how to declare a class. Please watch the video."
 
             });
-            //context.StringQuestions.AddOrUpdate(new StringQuestionModel("You use a double type of variable to hold decimal numbers.") { ID = 1});
             context.QuestionModels.AddOrUpdate(new QuestionsModel
             {
                 ID = 1,
                 Title = "L1TrueFalseQs",
-                Questions = new List<StringQuestionModel>(new StringQuestionModel[] { new StringQuestionModel("You use a double type of variable to hold decimal numbers."),
+            });
+            var questionSet = new List<StringQuestionModel>(new StringQuestionModel[] { new StringQuestionModel("You use a double type of variable to hold decimal numbers."),
                                                                             new StringQuestionModel("You cannot duplicate the effects of nested if/then/else with a switch statement."),
                                                                             new StringQuestionModel("A private class variable can be called by functions in a different class.")
-                })
-            });
+                });
+            var questionSetModel = context.QuestionModels.FirstOrDefault(c => c.ID == 1);
+            questionSetModel.Questions = questionSet;
+            context.QuestionModels.AddOrUpdate(questionSetModel);
+
             context.QuestionModels.AddOrUpdate(new QuestionsModel
             {
                 ID = 2,
                 Title = "L2MultipleChoiceQs",
-                Questions = new List<StringQuestionModel>(new StringQuestionModel[] { new StringQuestionModel("A class is:   1. A file   2. An object   3. Both   4. Neither   5. More complicated than that"),
+                
+            });
+            questionSet = new List<StringQuestionModel>(new StringQuestionModel[] { new StringQuestionModel("A class is:   1. A file   2. An object   3. Both   4. Neither   5. More complicated than that"),
                                                                             new StringQuestionModel("How many bits are in a byte?   1. Two bits   2. Four bits   3. Six bits   4. Eight bits"),
                                                                             new StringQuestionModel("Pointers are:  1. God's gift to programmers.   2. A horror that programming languages have outgrown.   3. I like lasers!   4. What's a pointer?")
-                })
-            });
+                });
+            questionSetModel = context.QuestionModels.FirstOrDefault(c => c.ID == 2);
+            questionSetModel.Questions = questionSet;
+            context.QuestionModels.AddOrUpdate(questionSetModel);
+
             context.QuestionModels.AddOrUpdate(new QuestionsModel
             {
                 ID = 3,
                 Title = "L3StringMatchQs",
-                Questions = new List<StringQuestionModel>(new StringQuestionModel[] { new StringQuestionModel("What programming language does this class teach?"),
+            });
+            questionSet = new List<StringQuestionModel>(new StringQuestionModel[] { new StringQuestionModel("What programming language does this class teach?"),
                                                                             new StringQuestionModel("What number does the index of a list start at?"),
                                                                             new StringQuestionModel("Rewrite the following line of code correctly: public void FindAndReturnIdNumberOfPersonByName (long nameVariable)")
-                })
-            });
+                });
+            questionSetModel = context.QuestionModels.FirstOrDefault(c => c.ID == 3);
+            questionSetModel.Questions = questionSet;
+            context.QuestionModels.AddOrUpdate(questionSetModel);
+
             context.AnswerModels.AddOrUpdate(new AnswerModel
             {
                 ID = 1,
@@ -91,11 +105,15 @@ namespace TeamYesIdentity.Migrations
                 {
                     true,true,false
                 }),
-                Answers = new List<StringAnswerModel>(new StringAnswerModel[]
+            });
+            var answerSet = new List<StringAnswerModel>(new StringAnswerModel[]
                 {
                     new StringAnswerModel("true"), new StringAnswerModel("true"), new StringAnswerModel("false")
-                })
-            });
+                });
+            var answerSetModel = context.AnswerModels.FirstOrDefault(c => c.ID == 1);
+            answerSetModel.Answers = answerSet;
+            context.AnswerModels.AddOrUpdate(answerSetModel);
+
             context.AnswerModels.AddOrUpdate(new AnswerModel
             {
                 ID = 2,
@@ -108,11 +126,15 @@ namespace TeamYesIdentity.Migrations
                 {
                     5,4,3
                 }),
-                Answers = new List<StringAnswerModel>(new StringAnswerModel[]
+            });
+            answerSet = new List<StringAnswerModel>(new StringAnswerModel[]
                 {
                     new StringAnswerModel("5"), new StringAnswerModel("4"), new StringAnswerModel("3")
-                })
-            });
+                });
+            answerSetModel = context.AnswerModels.FirstOrDefault(c => c.ID == 2);
+            answerSetModel.Answers = answerSet;
+            context.AnswerModels.AddOrUpdate(answerSetModel);
+
             context.AnswerModels.AddOrUpdate(new AnswerModel
             {
                 ID = 3,
@@ -125,11 +147,15 @@ namespace TeamYesIdentity.Migrations
                 {
                     "python","0","public int FindAndReturnIdNumberOfPersonByName (string nameVariable)"
                 }),
-                Answers = new List<StringAnswerModel>(new StringAnswerModel[]
+            });
+            answerSet = new List<StringAnswerModel>(new StringAnswerModel[]
                 {
                     new StringAnswerModel("python"), new StringAnswerModel("0"), new StringAnswerModel("public int FindAndReturnIdNumberOfPersonByName (string nameVariable)"),
-                })
-            });
+                });
+            answerSetModel = context.AnswerModels.FirstOrDefault(c => c.ID == 3);
+            answerSetModel.Answers = answerSet;
+            context.AnswerModels.AddOrUpdate(answerSetModel);
+
             context.StudentModels.AddOrUpdate(new StudentModel
             {
                 ID = 1,
@@ -137,7 +163,7 @@ namespace TeamYesIdentity.Migrations
                 FirstName = "Amy",
                 LastName = "Addams",
                 MiddleInital = "A",
-                EmailAddress = "A@uaa.edu"
+                EmailAddress = "A@uaa.edu",                
             });
             context.StudentModels.AddOrUpdate(new StudentModel
             {
@@ -216,7 +242,7 @@ namespace TeamYesIdentity.Migrations
                 PreviousLessonIDs = 1,
                 TemplateID = 1,
                 Title = "Learning some basics!",
-                VideoHtml = "https://www.youtube.com/embed/pqmhZcPpTys?rel=0",
+                VideoHtml = "https://www.youtube.com/embed/cpPG0bKHYKc?rel=0",
                 WorkID = 2,
             });
             context.LessonModels.AddOrUpdate(new LessonModel
@@ -230,7 +256,7 @@ namespace TeamYesIdentity.Migrations
                 PreviousLessonIDs = 2,
                 TemplateID = 1,
                 Title = "Learning about being a programmer!",
-                VideoHtml = "https://www.youtube.com/embed/pqmhZcPpTys?rel=0",
+                VideoHtml = "https://www.youtube.com/embed/1F_OgqRuSdI?rel=0",
                 WorkID = 3,
             });
             context.CourseModels.AddOrUpdate(new CourseModel
@@ -248,6 +274,10 @@ namespace TeamYesIdentity.Migrations
                     1,2
                 })
             });
+            //var theCourse = context.CourseModels.FirstOrDefault(c => c.ID == 1);
+            //theCourse.Lessons = context.LessonModels.Where(c => c.ID < 4).ToList();
+            //theCourse.Students = context.StudentModels.Where(c => c.ID < 3).ToList();
+            //context.CourseModels.AddOrUpdate(theCourse);
         }
     }
 }

@@ -19,8 +19,8 @@ namespace TeamYesIdentity.Models
         [Required]
         public int ID { get; set; }
         public string Title { get; set; }
-        public virtual ICollection<int> QuestionIDs { get; set; }
-        public virtual ICollection<StringQuestionModel> Questions { get; set; }
+        public ICollection<int> QuestionIDs { get; set; }
+        public ICollection<StringQuestionModel> Questions { get; set; }
         
     }
 }

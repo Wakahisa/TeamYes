@@ -26,8 +26,8 @@ namespace TeamYesIdentity.Models
         public List<int> MultiChoiceAnswers { get; set; }
         public List<string> StringMatchAnswers { get; set; }
         public List<string> ByHandAnswers { get; set; } // just in case
-        public virtual ICollection<int> AnswerIDs { get; set; }
-        public virtual ICollection<StringAnswerModel> Answers { get; set; }
+        public ICollection<int> AnswerIDs { get; set; }
+        public ICollection<StringAnswerModel> Answers { get; set; }
         
     }
 }
