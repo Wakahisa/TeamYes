@@ -21,8 +21,8 @@ namespace TeamYesIdentity.Models
         public string MiddleInital { get; set; }
         public string LastName { get; set; }
         public bool IsAdmin { get; set; }
-        public List<CourseModel> Courses { get; set; }
-        public List<int> CourseIDs { get; set; }
+        public virtual ICollection<CourseModel> Courses { get; set; }
+        public virtual ICollection<int> CourseIDs { get; set; }
         public string EmailAddress { get; set; }
         public string LoginName { get; set; }
         public string Password { get; set; }

@@ -1,23 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 
 namespace TeamYesIdentity.Models
 {
-    public class QuestionstModel
+    public class QuestionsModel
     {
-        public QuestionstModel()
+        public QuestionsModel()
         {
-            Questions = new List<string>();
+            QuestionIDs = new List<int>();
+            Questions = new List<StringQuestionModel>();
         }
 
         [Key]
         [Required]
         public int ID { get; set; }
         public string Title { get; set; }
-        public List<string> Questions { get; set; }
-
+        public virtual ICollection<int> QuestionIDs { get; set; }
+        public virtual ICollection<StringQuestionModel> Questions { get; set; }
+        
     }
 }

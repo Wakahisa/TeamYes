@@ -215,15 +215,48 @@
     <Compile Include="Migrations\201711160246099_second.Designer.cs">
       <DependentUpon>201711160246099_second.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711182314484_fixing_questions_and_answers.cs" />
+    <Compile Include="Migrations\201711182314484_fixing_questions_and_answers.Designer.cs">
+      <DependentUpon>201711182314484_fixing_questions_and_answers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711182318226_fixing_questions_and_answers1.cs" />
+    <Compile Include="Migrations\201711182318226_fixing_questions_and_answers1.Designer.cs">
+      <DependentUpon>201711182318226_fixing_questions_and_answers1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711182345211_updatedQandAs.cs" />
+    <Compile Include="Migrations\201711182345211_updatedQandAs.Designer.cs">
+      <DependentUpon>201711182345211_updatedQandAs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711182358245_yetmotemodelchanges.cs" />
+    <Compile Include="Migrations\201711182358245_yetmotemodelchanges.Designer.cs">
+      <DependentUpon>201711182358245_yetmotemodelchanges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711190017286_stillmodelchanges.cs" />
+    <Compile Include="Migrations\201711190017286_stillmodelchanges.Designer.cs">
+      <DependentUpon>201711190017286_stillmodelchanges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711190140593_cmonFixAlreadyNew.cs" />
+    <Compile Include="Migrations\201711190140593_cmonFixAlreadyNew.Designer.cs">
+      <DependentUpon>201711190140593_cmonFixAlreadyNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711200154569_entityFrameworkTestByFooGooBoo.cs" />
+    <Compile Include="Migrations\201711200154569_entityFrameworkTestByFooGooBoo.Designer.cs">
+      <DependentUpon>201711200154569_entityFrameworkTestByFooGooBoo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Admin\AdminTableModel.cs" />
+    <Compile Include="Models\Admin\BooModel.cs" />
+    <Compile Include="Models\Admin\FooModel.cs" />
+    <Compile Include="Models\Admin\GooModel.cs" />
     <Compile Include="Models\AppRole.cs" />
     <Compile Include="Models\AppUser.cs" />
     <Compile Include="Models\Context.cs" />
     <Compile Include="Models\DataItems\AnswerModel.cs" />
     <Compile Include="Models\DataItems\LessonDataModel.cs" />
     <Compile Include="Models\DataItems\QuestionsModel.cs" />
+    <Compile Include="Models\DataItems\StringAnswerModel.cs" />
+    <Compile Include="Models\DataItems\StringQuestionModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Instructor\HomeworkCreateViewModel.cs" />
     <Compile Include="Models\Instructor\InstructorModel.cs" />
@@ -372,6 +405,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711160246099_second.resx">
       <DependentUpon>201711160246099_second.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711182314484_fixing_questions_and_answers.resx">
+      <DependentUpon>201711182314484_fixing_questions_and_answers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711182318226_fixing_questions_and_answers1.resx">
+      <DependentUpon>201711182318226_fixing_questions_and_answers1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711182345211_updatedQandAs.resx">
+      <DependentUpon>201711182345211_updatedQandAs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711182358245_yetmotemodelchanges.resx">
+      <DependentUpon>201711182358245_yetmotemodelchanges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711190017286_stillmodelchanges.resx">
+      <DependentUpon>201711190017286_stillmodelchanges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711190140593_cmonFixAlreadyNew.resx">
+      <DependentUpon>201711190140593_cmonFixAlreadyNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711200154569_entityFrameworkTestByFooGooBoo.resx">
+      <DependentUpon>201711200154569_entityFrameworkTestByFooGooBoo.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

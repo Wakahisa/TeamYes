@@ -33,14 +33,14 @@ namespace TeamYesIdentity.Models
         
         //foriegn keys for relationships
 
-        public List<int> CourseIDs { get; set; }
-        public List<CourseModel> Courses { get; set; }
-        public List<int> LessonIDs { get; set; }
-        public List<LessonModel> InProgressLessons { get; set; }
-        public List<int> WorkIDs { get; set; }
-        public List<WorkModel> Homeworks { get; set; }
-        public List<int> GradeIDs { get; set; }
-        public List<GradeModel> CourseGrade { get; set; }
+        public ICollection<int> CourseIDs { get; set; }
+        public ICollection<CourseModel> Courses { get; set; }
+        public ICollection<int> LessonIDs { get; set; }
+        public ICollection<LessonModel> InProgressLessons { get; set; }
+        public ICollection<int> WorkIDs { get; set; }
+        public ICollection<WorkModel> Homeworks { get; set; }
+        public ICollection<int> GradeIDs { get; set; }
+        public ICollection<GradeModel> CourseGrade { get; set; }
 
     }
 }

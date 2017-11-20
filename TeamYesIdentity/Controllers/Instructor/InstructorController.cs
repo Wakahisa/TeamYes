@@ -76,8 +76,8 @@ namespace TeamYesIdentity.Controllers.Instructor
             else
             {
                 model.work = new WorkModel();
-                model.questions = new QuestionstModel();
-                model.answer = new AnswerModel();
+                model.questionModel = new QuestionsModel();
+                model.answerModel = new AnswerModel();
 
                 model.work.Title = "Empty Title";
                 model.work.IsProgramming = false;

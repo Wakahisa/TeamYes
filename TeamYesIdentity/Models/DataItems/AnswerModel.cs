@@ -10,7 +10,8 @@ namespace TeamYesIdentity.Models
     {
         public AnswerModel()
         {
-
+            Answers = new List<StringAnswerModel>();
+            AnswerIDs = new List<int>();
         }
 
         [Key]
@@ -25,6 +26,8 @@ namespace TeamYesIdentity.Models
         public List<int> MultiChoiceAnswers { get; set; }
         public List<string> StringMatchAnswers { get; set; }
         public List<string> ByHandAnswers { get; set; } // just in case
-
+        public virtual ICollection<int> AnswerIDs { get; set; }
+        public virtual ICollection<StringAnswerModel> Answers { get; set; }
+        
     }
 }
