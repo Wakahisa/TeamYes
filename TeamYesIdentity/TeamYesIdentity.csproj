@@ -350,6 +350,8 @@
     <Content Include="Views\Student\_StudentLesson1View.cshtml" />
     <Content Include="Views\Student\_StudentLesson2View.cshtml" />
     <Content Include="Views\Student\_StudentLesson3View.cshtml" />
+    <Content Include="Views\Student\StudentWorkView3.cshtml" />
+    <Content Include="Views\Student\StudentWorkView2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
