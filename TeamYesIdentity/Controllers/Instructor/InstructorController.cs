@@ -4,7 +4,8 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web.Mvc;
-
+using System.Web;
+using System.IO;
 
 namespace TeamYesIdentity.Controllers.Instructor
 {
@@ -43,6 +44,25 @@ namespace TeamYesIdentity.Controllers.Instructor
             return View(model);
         }
 
+        [HttpPost]
+        public ActionResult SaveFile()
+        {
+            try
+            {
+                if (System.Web.HttpContext.Current.Request.Files.AllKeys.Any())
+                {
+                    var pic = System.Web.HttpContext.Current.Request.Files["SavedFiles"];
+                    HttpPostedFileBase filebase = new HttpPostedFileWrapper(pic);
+                    var fileName = Path.GetFileName(filebase.FileName);
+                    var path = Path.Combine(Server.MapPath("~/UploadFile/"), fileName);
+                    filebase.SaveAs(path);
+                    return Json("File Saved Successfully.");
+                }
+                else { return Json("No File Saved."); }
+            }
+            catch (Exception ex) { return Json("Error While Saving."); }
+        }
+
         /// <summary>
         /// Saves the lesson via the model save method
         /// </summary>
@@ -76,8 +96,8 @@ namespace TeamYesIdentity.Controllers.Instructor
             else
             {
                 model.work = new WorkModel();
-                model.questions = new QuestionstModel();
-                model.answer = new AnswerModel();
+                model.questionModel = new QuestionsModel();
+                model.answerModel = new AnswerModel();
 
                 model.work.Title = "Empty Title";
                 model.work.IsProgramming = false;

@@ -9,7 +9,10 @@ namespace TeamYesIdentity.Models
 {
     public class WorkModel
     {
-        public WorkModel() { }
+        public WorkModel()
+        {
+            Students = new List<StudentModel>();
+    }
 
         [Key]
         [Required]
@@ -25,8 +28,10 @@ namespace TeamYesIdentity.Models
 
         //foriegn keys for relationships
         public int? QuestionsID { get; set; }
-        public QuestionstModel Questions { get; set; }
+        public QuestionsModel Questions { get; set; }
         public int? AnswerID { get; set; }
         public AnswerModel Answers { get; set; }
+        public ICollection<StudentModel> Students { get; set; }
+
     }
 }

@@ -20,8 +20,8 @@ namespace TeamYesIdentity.Models
         }
 
         public WorkModel work { get; set; }
-        public QuestionstModel questions { get; set; }
-        public AnswerModel answer { get; set; }
+        public QuestionsModel questionModel { get; set; }
+        public AnswerModel answerModel { get; set; }
         public List<string> questionList { get; set; }
         public List<string> answerList { get; set; }
         public List<bool> TFAnswerList { get; set; }
@@ -37,21 +37,21 @@ namespace TeamYesIdentity.Models
             var model = new HomeworkCreateViewModel();
 
             model.work = db.WorkModels.FirstOrDefault(f => f.ID == workID);
-            model.questions = db.QuestionModels.FirstOrDefault(f => f.ID == work.QuestionsID);
-            model.answer = db.AnswerModels.FirstOrDefault(f => f.ID == work.AnswerID);
-            model.questionList = model.questions.Questions;
-            if (model.answer.TrueFalse)
-            {
-                model.TFAnswerList = model.answer.TrueFalseAnswers;
-            }
-            else if (model.answer.MultipleChoice)
-            {
-                model.MCAnswerList = model.answer.MultiChoiceAnswers;
-            }
-            else if (model.answer.StringMatching)
-            {
-                model.answerList = model.answer.StringMatchAnswers;
-            }
+            model.questionModel = db.QuestionModels.FirstOrDefault(f => f.ID == work.QuestionsID);
+            model.answerModel = db.AnswerModels.FirstOrDefault(f => f.ID == work.AnswerID);
+            //model.questionList = model.questions.Questions;
+            //if (model.answer.TrueFalse)
+            //{
+            //    model.TFAnswerList = model.answer.TrueFalseAnswers;
+            //}
+            //else if (model.answer.MultipleChoice)
+            //{
+            //    model.MCAnswerList = model.answer.MultiChoiceAnswers;
+            //}
+            //else if (model.answer.StringMatching)
+            //{
+            //    model.answerList = model.answer.StringMatchAnswers;
+            //}
 
             return model;
         }
@@ -75,27 +75,27 @@ namespace TeamYesIdentity.Models
                 db.SaveChanges();
             }
             // save questions
-            if (questions.ID > 0)
-            {
-                db.Entry(questions).State = EntityState.Modified;
-                db.SaveChanges();
-            }
-            else
-            {
-                db.QuestionModels.Add(questions);
-                db.SaveChanges();
-            }
-            //save answers
-            if (answer.ID > 0)
-            {
-                db.Entry(answer).State = EntityState.Modified;
-                db.SaveChanges();
-            }
-            else
-            {
-                db.WorkModels.Add(work);
-                db.SaveChanges();
-            }
+            //if (questions.ID > 0)
+            //{
+            //    db.Entry(questions).State = EntityState.Modified;
+            //    db.SaveChanges();
+            //}
+            //else
+            //{
+            //    db.QuestionModels.Add(questions);
+            //    db.SaveChanges();
+            //}
+            ////save answers
+            //if (answer.ID > 0)
+            //{
+            //    db.Entry(answer).State = EntityState.Modified;
+            //    db.SaveChanges();
+            //}
+            //else
+            //{
+            //    db.WorkModels.Add(work);
+            //    db.SaveChanges();
+            //}
         }
 
     }

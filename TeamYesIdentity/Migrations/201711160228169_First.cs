@@ -61,7 +61,7 @@ namespace TeamYesIdentity.Migrations
                     })
                 .PrimaryKey(t => t.ID)
                 .ForeignKey("dbo.AnswerModels", t => t.Answers_ID)
-                .ForeignKey("dbo.QuestionstModels", t => t.QuestionsID)
+                .ForeignKey("dbo.QuestionsModels", t => t.QuestionsID)
                 .ForeignKey("dbo.CourseModels", t => t.CourseModel_ID)
                 .ForeignKey("dbo.StudentModels", t => t.StudentModel_ID)
                 .Index(t => t.QuestionsID)
@@ -70,7 +70,7 @@ namespace TeamYesIdentity.Migrations
                 .Index(t => t.StudentModel_ID);
             
             CreateTable(
-                "dbo.QuestionstModels",
+                "dbo.QuestionsModels",
                 c => new
                     {
                         ID = c.Int(nullable: false, identity: true),
@@ -263,7 +263,7 @@ namespace TeamYesIdentity.Migrations
             DropForeignKey("dbo.LessonModels", "CourseID", "dbo.CourseModels");
             DropForeignKey("dbo.CourseModels", "InstructorID", "dbo.InstructorModels");
             DropForeignKey("dbo.WorkModels", "CourseModel_ID", "dbo.CourseModels");
-            DropForeignKey("dbo.WorkModels", "QuestionsID", "dbo.QuestionstModels");
+            DropForeignKey("dbo.WorkModels", "QuestionsID", "dbo.QuestionsModels");
             DropForeignKey("dbo.WorkModels", "Answers_ID", "dbo.AnswerModels");
             DropIndex("dbo.StudentModelCourseModels", new[] { "CourseModel_ID" });
             DropIndex("dbo.StudentModelCourseModels", new[] { "StudentModel_ID" });
@@ -294,7 +294,7 @@ namespace TeamYesIdentity.Migrations
             DropTable("dbo.LessonDataModels");
             DropTable("dbo.LessonModels");
             DropTable("dbo.InstructorModels");
-            DropTable("dbo.QuestionstModels");
+            DropTable("dbo.QuestionsModels");
             DropTable("dbo.WorkModels");
             DropTable("dbo.CourseModels");
             DropTable("dbo.AnswerModels");
