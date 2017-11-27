@@ -262,8 +262,8 @@ namespace TeamYesIdentity.Migrations
             context.CourseModels.AddOrUpdate(new CourseModel
             {
                 ID = 1,
-                Title = "Into to Programming",
-                Description = "In this course you will learn about programming.",
+                Title = "Intro to Programming",
+                Description = "In this course you will learn basic information about programming.",
                 InstructorID = 2,
                 LessonOrderByID = new List<int>(new int[]
                 {
@@ -272,12 +272,11 @@ namespace TeamYesIdentity.Migrations
                 StudentIDs = new List<int>(new int[]
                 {
                     1,2
-                })
+                }),
+                Students = context.StudentModels.Where(f => f.ID < 3).ToList(),
+                Lessons = context.LessonModels.Where(f=>f.ID < 4).ToList(),
+                Homeworks = context.WorkModels.Where(f=>f.ID<4).ToList()
             });
-            //var theCourse = context.CourseModels.FirstOrDefault(c => c.ID == 1);
-            //theCourse.Lessons = context.LessonModels.Where(c => c.ID < 4).ToList();
-            //theCourse.Students = context.StudentModels.Where(c => c.ID < 3).ToList();
-            //context.CourseModels.AddOrUpdate(theCourse);
         }
     }
 }

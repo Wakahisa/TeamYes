@@ -35,7 +35,7 @@ namespace TeamYesIdentity.Models
 
         //foriegn keys for relationships
         public int? CourseID { get; set; }
-        public CourseModel Course { get; set; }
+        public ICollection<CourseModel> Course { get; set; }
         public ICollection<StudentModel> Students { get; set; }
         public int? LessonDataID { get; set; }
         public LessonDataModel LessonData { get; set; }

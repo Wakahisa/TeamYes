@@ -1,4 +1,5 @@
-﻿
+﻿@model TeamYesIdentity.Models.InstructorHomeViewModel
+
 @{
     ViewBag.Title = "InstructorHomeView";
 }
@@ -9,15 +10,12 @@
     <div class="panel-heading">My Courses</div>
         <div class="panel-body">
            <ul>
-               <li> list of courses that instructor runs</li>
-               <li> list of courses that instructor runs</li>
-               <li> list of courses that instructor runs</li>
-               <li> list of courses that instructor runs</li>
-               <li> list of courses that instructor runs</li>
+               @foreach(var course in Model.CourseList){
+                   <li>@Html.ActionLink(course.Title, "InstructorCourseManagementView", new { courseID = course.ID })</li>
+               }
            </ul>
             <div class="panel-footer">
-                links to a courses management page
-                @Html.ActionLink("Instructor Course Management Module", "InstructorCourseManagementView", "Instructor")
+
             </div>
         </div>
     </div>
@@ -25,31 +23,25 @@
     <div class="panel-heading">My Students / My Paycheck</div>
     <div class="panel-body">
         <ul>
-            <li>list of students that instructor torments</li>
-            <li>list of students that instructor torments</li>
-            <li>list of students that instructor torments</li>
-            <li>list of students that instructor torments</li>
-            <li>list of students that instructor torments</li>
-            <li>list of students that instructor torments</li>
-            <li>list of students that instructor torments</li>
+            @foreach (var student in Model.StudentList)
+            {
+                <li>@Html.ActionLink(student.LastName+", "+student.FirstName, "InstructorStudentManagementView", new { studentID = student.ID })</li>
+            }
         </ul>
         <div class="panel-footer">
-            links to a student management page
-            @Html.ActionLink("Instructor Student Management Module", "InstructorStudentManagementView", "Instructor")
+
         </div>
     </div>
 </div>
 <div class="panel panel-primary">
-    <div class="panel-heading">Stuff (note: come up with a better name)</div>
+    <div class="panel-heading">Course Creation Module</div>
     <div class="panel-body">
-        link to course creation module
         <div class="col-sm-4">
-            links to a course/lesson creator module
             @Html.ActionLink("Instructor Creator Module", "InstructorCourseCreationView", "Instructor")
         </div>
-        <div class="col-sm-4">link to user profile management page</div>
+        @*<div class="col-sm-4">link to user profile management page</div>
 
-        <div class="col-sm-4">?link to communications?uaa stuff?</div>
+        <div class="col-sm-4">?link to communications?uaa stuff?</div>*@
     </div>
 </div>
 
