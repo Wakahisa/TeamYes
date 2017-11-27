@@ -23,7 +23,6 @@ namespace TeamYesIdentity.Models
         public DbSet<TeamYesIdentity.Models.LessonDataModel> LessonDataModels { get; set; }
         public DbSet<TeamYesIdentity.Models.AnswerModel> AnswerModels { get; set; }
         public DbSet<TeamYesIdentity.Models.QuestionstModel> QuestionModels { get; set; }
-        public DbSet<AppUser> Appusers { get; set; }
 
     }
 }
