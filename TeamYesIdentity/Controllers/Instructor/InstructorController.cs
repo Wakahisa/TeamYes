@@ -14,10 +14,18 @@ namespace TeamYesIdentity.Controllers.Instructor
     {
         private Context db = new Context();
 
-        // GET: Instructor
+        /// <summary>
+        /// load list of courses and students for the instructor
+        /// </summary>
+        /// <returns></returns>
         public ActionResult InstructorHomeView()
         {
-            return View();
+            var model = new InstructorHomeViewModel();
+
+            // replace with model.Load( PASSED IN USER ID );
+            model.Load(2);
+
+            return View(model);
         }
         public ActionResult InstructorCourseCreationView()
         {
@@ -128,17 +136,29 @@ namespace TeamYesIdentity.Controllers.Instructor
 
 #endregion
 
-        public ActionResult InstructorCourseManagementView()
+        /// <summary>
+        /// Loads a course for the instructor to work in
+        /// </summary>
+        /// <param name="courseID"></param>
+        /// <returns></returns>
+        public ActionResult InstructorCourseManagementView(int courseID)
         {
-            return View();
+            //var model = db.CourseModels.FirstOrDefault(f => f.ID == courseID);
+            var model = new InstructorCourseManageViewModel();
+            model.Load(courseID);
+            return View(model);
         }
+
+
         public ActionResult InstructorCourseEditView()
         {
             return View();
         }
-        public ActionResult InstructorLessonManagementView()
+        public ActionResult InstructorLessonManagementView(int lessonID)
         {
-            return View();
+            var model = new InstructorLessonManageViewModel();
+            model.Load(lessonID);
+            return View(model);
         }
         public ActionResult InstructorStudentManagementView()
         {
