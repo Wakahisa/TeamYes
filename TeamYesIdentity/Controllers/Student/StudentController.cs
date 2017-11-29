@@ -27,6 +27,16 @@ namespace TeamYesIdentity.Controllers.Student
         {
             return View();
         }
+        public ActionResult StudentGradeView()
+        {
+            return View();
+        }
+        public ActionResult ResourcesView()
+        {
+            return View();
+        }
+
+
         //Multiple Workviews needed for each student lesson
         public ActionResult StudentWorkView()
         // public ActionResult StudentWorkView(int workID)
@@ -70,10 +80,7 @@ namespace TeamYesIdentity.Controllers.Student
             //}
             return View(model);
         }
-        public ActionResult StudentGradeView()
-        {
-            return View();
-        }
+
         //ActionResults for tables/multiple lessons
         public ActionResult LoadStudentCourses()
         {
