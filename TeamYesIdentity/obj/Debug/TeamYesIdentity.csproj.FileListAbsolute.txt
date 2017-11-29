@@ -266,3 +266,17 @@ C:\Users\Valued Customer\Documents\softwareEngClass2\TeamYesIdentity\obj\Debug\T
 C:\Users\Valued Customer\Documents\softwareEngClass2\TeamYesIdentity\obj\Debug\TeamYesIdentity.dll
 C:\Users\Valued Customer\Documents\softwareEngClass2\TeamYesIdentity\obj\Debug\TeamYesIdentity.pdb
 C:\Users\Valued Customer\Documents\softwareEngClass2\TeamYesIdentity\obj\Debug\TeamYesIdentity.Migrations.lessoncourseMigration.resources
+C:\Users\Peter\Documents\GitHub\TeamYes\TeamYesIdentity\obj\Debug\TeamYesIdentity.Migrations.fixing_questions_and_answers.resources
+C:\Users\Peter\Documents\GitHub\TeamYes\TeamYesIdentity\obj\Debug\TeamYesIdentity.Migrations.fixing_questions_and_answers1.resources
+C:\Users\Peter\Documents\GitHub\TeamYes\TeamYesIdentity\obj\Debug\TeamYesIdentity.Migrations.updatedQandAs.resources
+C:\Users\Peter\Documents\GitHub\TeamYes\TeamYesIdentity\obj\Debug\TeamYesIdentity.Migrations.yetmotemodelchanges.resources
+C:\Users\Peter\Documents\GitHub\TeamYes\TeamYesIdentity\obj\Debug\TeamYesIdentity.Migrations.stillmodelchanges.resources
+C:\Users\Peter\Documents\GitHub\TeamYes\TeamYesIdentity\obj\Debug\TeamYesIdentity.Migrations.cmonFixAlreadyNew.resources
+C:\Users\Peter\Documents\GitHub\TeamYes\TeamYesIdentity\obj\Debug\TeamYesIdentity.Migrations.entityFrameworkTestByFooGooBoo.resources
+C:\Users\Peter\Documents\GitHub\TeamYes\TeamYesIdentity\obj\Debug\TeamYesIdentity.Migrations.lastTestForManyToMany.resources
+C:\Users\Peter\Documents\GitHub\TeamYes\TeamYesIdentity\obj\Debug\TeamYesIdentity.Migrations.tryResetLists.resources
+C:\Users\Peter\Documents\GitHub\TeamYes\TeamYesIdentity\obj\Debug\TeamYesIdentity.Migrations.yesResetLists.resources
+C:\Users\Peter\Documents\GitHub\TeamYes\TeamYesIdentity\obj\Debug\TeamYesIdentity.Migrations.moreResetLists.resources
+C:\Users\Peter\Documents\GitHub\TeamYes\TeamYesIdentity\obj\Debug\TeamYesIdentity.Migrations.FilePaths.resources
+C:\Users\Peter\Documents\GitHub\TeamYes\TeamYesIdentity\obj\Debug\TeamYesIdentity.Migrations.FilePathsRemoved.resources
+C:\Users\Peter\Documents\GitHub\TeamYes\TeamYesIdentity\obj\Debug\TeamYesIdentity.Migrations.lessoncourseMigration.resources
