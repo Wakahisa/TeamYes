@@ -306,8 +306,11 @@
     <Content Include="Content\bootstrap.min-lumen.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\custom.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
     <Content Include="Controllers\ControllerREADME.txt" />
     <Content Include="favicon.ico" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -322,6 +325,11 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config" />
     <Content Include="Mvc.sitemap" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
     <None Include="MvcSiteMapSchema.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -346,6 +354,7 @@
     <Content Include="Views\Shared\DisplayTemplates\SiteMapNodeModelList.ascx" />
     <Content Include="Views\Shared\DisplayTemplates\SiteMapPathHelperModel.ascx" />
     <Content Include="Views\Shared\DisplayTemplates\SiteMapTitleHelperModel.ascx" />
+    <Content Include="Views\Student\StudentCourseView.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -402,7 +411,6 @@
     <Content Include="Views\Shared\DisplayTemplates\MetaRobotsHelperModel.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\MenuHelperModel.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\CanonicalHelperModel.cshtml" />
-    <Content Include="Views\Student\StudentCourseView.cshtml" />
     <Content Include="Views\Student\StudentGradeView.cshtml" />
     <Content Include="Views\Student\StudentHomeView.cshtml" />
     <Content Include="Views\Student\StudentLessonView.cshtml" />

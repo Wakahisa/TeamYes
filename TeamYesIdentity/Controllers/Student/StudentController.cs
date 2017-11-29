@@ -17,7 +17,10 @@ namespace TeamYesIdentity.Controllers.Student
 
         public ActionResult StudentHomeView()
         {
-            return View();
+            var model = new CourseModel();
+
+            model = db.CourseModels.FirstOrDefault(x => x.ID == 1);
+            return View(model);
         }
         public ActionResult StudentCourseView()
         {
@@ -61,7 +64,7 @@ namespace TeamYesIdentity.Controllers.Student
             //}
             //else
             //{
-            model = db.WorkModels.FirstOrDefault(x => x.ID == 1);
+            model = db.WorkModels.FirstOrDefault(x => x.ID == 2);
             //}
             return View(model);
         }
@@ -75,7 +78,7 @@ namespace TeamYesIdentity.Controllers.Student
             //}
             //else
             //{
-            model = db.WorkModels.FirstOrDefault(x => x.ID == 1);
+            model = db.WorkModels.FirstOrDefault(x => x.ID == 3);
             //}
             return View(model);
         }

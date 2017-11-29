@@ -1,4 +1,4 @@
-﻿
+﻿@model TeamYesIdentity.Models.CourseModel
 @{
     ViewBag.Title = "StudentHome";
 }
@@ -11,7 +11,7 @@
 </div>
 
 <div class="dropdown">
-    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
         Student Menu
         <span class="caret"></span>
     </button>
@@ -20,7 +20,6 @@
         <li><a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentCourseView", "Student")'">Student Course View &raquo;</a></li>
         <li><a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentGradeView", "Student")'">Student Grade View &raquo;</a></li>
         <li><a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentLessonView", "Student")'">Student Lesson View &raquo;</a></li>
-        <li><a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentWorkView", "Student")'">Student Work View &raquo;</a></li>
     </ul>
 </div>
 
@@ -41,39 +40,15 @@
         </div>
     </div>
 
-<div class="panel panel-primary">
+<div class="panel panel-primary", style="height: auto">
     <div class="panel-heading" id="mypanelId">MY COURSES</div>
     <div class="panel-body">
-        <p>DISPLAY COURSE #1</p>
-        <p>DISPLAY COURSE #2</p>
+        <p><b>@Html.DisplayFor(x => x.Title)</b></p>
+        <p>@Html.DisplayFor(x=>x.Description)</p>
+        @*<p>DISPLAY COURSE #2</p>
         <p>DISPLAY COURSE #3</p>
-        <p>DISPLAY COURSE #4</p>
+        <p>DISPLAY COURSE #4</p>*@
         <a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentLessonView", "Student")'">Lessons &raquo;</a>
+        <a href="#" class="btn btn-default" onclick="location.href='@Url.Action("ResourcesView", "Student")'">Resources &raquo;</a>
     </div>
 </div>
-
-
-
-@*<!--BUTTONS ALONE-->
-<div>
-    <!--Parameters: Link Name, View, Controller-->
-    <!--links to student home page-->
-    <!--View, Controller, Link Name-->
-    <p><a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentHomeView", "Student")'">Student Home View &raquo;</a></p>
-</div>
-<div>
-    <!--links to student courses pages-->
-    <p><a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentCourseView", "Student")'">Student Course View &raquo;</a></p>
-</div>
-<div>
-    <!--links to student grade pages-->
-    <p><a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentGradeView", "Student")'">Student Grade View &raquo;</a></p>
-</div>
-<div>
-    <!--links to student lesson pages-->
-    <p><a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentLessonView", "Student")'">Student Lesson View &raquo;</a></p>
-</div>
-<div>
-    <!--links to student work pages-->
-    <p><a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentWorkView", "Student")'">Student Work View &raquo;</a></p>
-</div>*@

@@ -15,6 +15,7 @@
         <mvcSiteMapNode title="Lessons" controller="Student" action="StudentLessonView"/>
         <mvcSiteMapNode title="Work" controller="Student" action="StudentWorkView"/>
         <mvcSiteMapNode title="Grade" controller="Student" action="StudentGradeView"/>
+        <mvcSiteMapNode title="Resources" controller="Student" action="ResourcesView"/>
       </mvcSiteMapNode>
     </mvcSiteMapNode>
 
