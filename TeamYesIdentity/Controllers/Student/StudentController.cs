@@ -27,17 +27,6 @@ namespace TeamYesIdentity.Controllers.Student
         {
             return View();
         }
-        public ActionResult StudentGradeView()
-        {
-            return View();
-        }
-        public ActionResult ResourcesView()
-        {
-            return View();
-        }
-
-
-        //Multiple Workviews needed for each student lesson
         public ActionResult StudentWorkView()
         // public ActionResult StudentWorkView(int workID)
         {
@@ -52,35 +41,10 @@ namespace TeamYesIdentity.Controllers.Student
             //}
             return View(model);
         }
-        public ActionResult StudentWorkView2()
-        // public ActionResult StudentWorkView(int workID)
+        public ActionResult StudentGradeView()
         {
-            var model = new WorkModel();
-            //if (workID > 0)
-            //{
-            //    model = db.WorkModels.FirstOrDefault(x => x.ID == workID);
-            //}
-            //else
-            //{
-            model = db.WorkModels.FirstOrDefault(x => x.ID == 1);
-            //}
-            return View(model);
+            return View();
         }
-        public ActionResult StudentWorkView3()
-        // public ActionResult StudentWorkView(int workID)
-        {
-            var model = new WorkModel();
-            //if (workID > 0)
-            //{
-            //    model = db.WorkModels.FirstOrDefault(x => x.ID == workID);
-            //}
-            //else
-            //{
-            model = db.WorkModels.FirstOrDefault(x => x.ID == 1);
-            //}
-            return View(model);
-        }
-
         //ActionResults for tables/multiple lessons
         public ActionResult LoadStudentCourses()
         {

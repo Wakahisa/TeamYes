@@ -4,7 +4,8 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web.Mvc;
-
+using System.Web;
+using System.IO;
 
 namespace TeamYesIdentity.Controllers.Instructor
 {
@@ -13,10 +14,18 @@ namespace TeamYesIdentity.Controllers.Instructor
     {
         private Context db = new Context();
 
-        // GET: Instructor
+        /// <summary>
+        /// load list of courses and students for the instructor
+        /// </summary>
+        /// <returns></returns>
         public ActionResult InstructorHomeView()
         {
-            return View();
+            var model = new InstructorHomeViewModel();
+
+            // replace with model.Load( PASSED IN USER ID );
+            model.Load(2);
+
+            return View(model);
         }
         public ActionResult InstructorCourseCreationView()
         {
@@ -41,6 +50,25 @@ namespace TeamYesIdentity.Controllers.Instructor
                 model.Load(db.LessonModels.FirstOrDefault());
             }
             return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult SaveFile()
+        {
+            try
+            {
+                if (System.Web.HttpContext.Current.Request.Files.AllKeys.Any())
+                {
+                    var pic = System.Web.HttpContext.Current.Request.Files["SavedFiles"];
+                    HttpPostedFileBase filebase = new HttpPostedFileWrapper(pic);
+                    var fileName = Path.GetFileName(filebase.FileName);
+                    var path = Path.Combine(Server.MapPath("~/UploadFile/"), fileName);
+                    filebase.SaveAs(path);
+                    return Json("File Saved Successfully.");
+                }
+                else { return Json("No File Saved."); }
+            }
+            catch (Exception ex) { return Json("Error While Saving."); }
         }
 
         /// <summary>
@@ -76,8 +104,8 @@ namespace TeamYesIdentity.Controllers.Instructor
             else
             {
                 model.work = new WorkModel();
-                model.questions = new QuestionsModel();
-                model.answer = new AnswerModel();
+                model.questionModel = new QuestionsModel();
+                model.answerModel = new AnswerModel();
 
                 model.work.Title = "Empty Title";
                 model.work.IsProgramming = false;
@@ -108,17 +136,29 @@ namespace TeamYesIdentity.Controllers.Instructor
 
 #endregion
 
-        public ActionResult InstructorCourseManagementView()
+        /// <summary>
+        /// Loads a course for the instructor to work in
+        /// </summary>
+        /// <param name="courseID"></param>
+        /// <returns></returns>
+        public ActionResult InstructorCourseManagementView(int courseID)
         {
-            return View();
+            //var model = db.CourseModels.FirstOrDefault(f => f.ID == courseID);
+            var model = new InstructorCourseManageViewModel();
+            model.Load(courseID);
+            return View(model);
         }
+
+
         public ActionResult InstructorCourseEditView()
         {
             return View();
         }
-        public ActionResult InstructorLessonManagementView()
+        public ActionResult InstructorLessonManagementView(int lessonID)
         {
-            return View();
+            var model = new InstructorLessonManageViewModel();
+            model.Load(lessonID);
+            return View(model);
         }
         public ActionResult InstructorStudentManagementView()
         {

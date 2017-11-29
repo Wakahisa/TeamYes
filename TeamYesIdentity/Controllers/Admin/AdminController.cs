@@ -35,6 +35,12 @@ namespace TeamYesIdentity.Controllers.Admin
             return PartialView("_InstructorTableView", model);
         }
 
+        public ActionResult LoadWorks()
+        {
+            var model = db.WorkModels.ToList();
+            return PartialView("_WorkTableView", model);
+        }
+
 #region Student
         /// <summary>
         /// Initates editing of the selected student record
@@ -148,9 +154,63 @@ namespace TeamYesIdentity.Controllers.Admin
             }
             return RedirectToAction("LoadInstructors");
         }
-#endregion
+        #endregion
 
+        #region Work
+        /// <summary>
+        /// Initates editing of the selected work record
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public ActionResult WorkEditView(int? id)
+        {
+            var model = new WorkModel();
+            if (id != null)
+            {
+                model = db.WorkModels.Find(id);
+            }
+            return View(model);
+        }
 
+        /// <summary>
+        /// Save function for the work record
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public ActionResult WorkEditView(WorkModel model)
+        {
+            if (ModelState.IsValid && model.ID > 0)
+            {
+                db.Entry(model).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("LoadWorks");
+            }
+            else if (ModelState.IsValid)
+            {
+                db.WorkModels.Add(model);
+                db.SaveChanges();
+                return RedirectToAction("LoadWorks");
+            }
+            return RedirectToAction("LoadWorks");
+        }
+
+        /// <summary>
+        /// deletes a Instructor from the db then returns to Instructor list in admin
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public ActionResult DeleteWork(WorkModel model)
+        {
+            if (model != null)
+            {
+                db.WorkModels.Attach(model);
+                db.WorkModels.Remove(model);
+                db.SaveChanges();
+            }
+            return RedirectToAction("LoadWorks");
+        }
+        #endregion
 
     }
 }
