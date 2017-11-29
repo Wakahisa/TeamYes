@@ -215,6 +215,10 @@
     <Compile Include="Migrations\201711160246099_second.Designer.cs">
       <DependentUpon>201711160246099_second.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711290213306_Fixed typo in QuestionsModel.cs" />
+    <Compile Include="Migrations\201711290213306_Fixed typo in QuestionsModel.Designer.cs">
+      <DependentUpon>201711290213306_Fixed typo in QuestionsModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Admin\AdminTableModel.cs" />
@@ -376,6 +380,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711160246099_second.resx">
       <DependentUpon>201711160246099_second.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711290213306_Fixed typo in QuestionsModel.resx">
+      <DependentUpon>201711290213306_Fixed typo in QuestionsModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

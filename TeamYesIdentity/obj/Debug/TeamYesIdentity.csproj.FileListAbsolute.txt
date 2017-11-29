@@ -125,3 +125,4 @@ C:\Users\Peter\Documents\GitHub\TeamYes\TeamYesIdentity\obj\Debug\TeamYesIdentit
 C:\Users\Peter\Documents\GitHub\TeamYes\TeamYesIdentity\obj\Debug\TeamYesIdentity.csproj.GenerateResource.Cache
 C:\Users\Peter\Documents\GitHub\TeamYes\TeamYesIdentity\obj\Debug\TeamYesIdentity.Migrations.second.resources
 C:\Users\Peter\Documents\GitHub\TeamYes\TeamYesIdentity\obj\Debug\TeamYesIdentity.csprojResolveAssemblyReference.cache
+C:\Users\Peter\Documents\GitHub\TeamYes\TeamYesIdentity\obj\Debug\TeamYesIdentity.Migrations.FixedtypoinQuestionsModel.resources

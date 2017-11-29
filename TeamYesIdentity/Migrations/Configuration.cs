@@ -108,7 +108,7 @@ namespace TeamYesIdentity.Migrations
                 Placeholder = "In lesson three we learn about the python programming language, lists, and how to declare a class. Please watch the video."
 
             });
-            context.QuestionModels.Add(new QuestionstModel
+            context.QuestionModels.Add(new QuestionsModel
             {
                 ID = 1,
                 Title = "L1TrueFalseQs",
@@ -118,7 +118,7 @@ namespace TeamYesIdentity.Migrations
                     "A private class variable can be called by functions in a different class."
                 })
             });
-            context.QuestionModels.Add(new QuestionstModel
+            context.QuestionModels.Add(new QuestionsModel
             {
                 ID = 2,
                 Title = "L2MultipleChoiceQs",
@@ -128,7 +128,7 @@ namespace TeamYesIdentity.Migrations
                     "Pointers are:  1. God's gift to programmers.   2. A horror that programming languages have outgrown.   3. I like lasers!   4. What's a pointer?"
                 })
             });
-            context.QuestionModels.Add(new QuestionstModel
+            context.QuestionModels.Add(new QuestionsModel
             {
                 ID = 3,
                 Title = "L3StringMatchQs",

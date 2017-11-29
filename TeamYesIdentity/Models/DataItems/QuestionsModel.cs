@@ -6,9 +6,9 @@ using System.Web;
 
 namespace TeamYesIdentity.Models
 {
-    public class QuestionstModel
+    public class QuestionsModel
     {
-        public QuestionstModel()
+        public QuestionsModel()
         {
             Questions = new List<string>();
         }

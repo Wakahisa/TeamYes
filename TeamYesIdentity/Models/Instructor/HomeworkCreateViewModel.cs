@@ -20,7 +20,7 @@ namespace TeamYesIdentity.Models
         }
 
         public WorkModel work { get; set; }
-        public QuestionstModel questions { get; set; }
+        public QuestionsModel questions { get; set; }
         public AnswerModel answer { get; set; }
         public List<string> questionList { get; set; }
         public List<string> answerList { get; set; }
