@@ -311,6 +311,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\ModelsREADME.txt" />
     <Content Include="References\Images\coding-language.png" />
     <Content Include="References\Images\computer-science.jpg" />
     <Content Include="References\Images\favicon.ico" />
