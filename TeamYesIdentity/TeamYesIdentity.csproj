@@ -415,6 +415,7 @@
     <Content Include="Views\Student\ResourcesView.cshtml" />
     <Content Include="Views\Student\StudentWorkView2.cshtml" />
     <Content Include="Views\Student\StudentWorkView3.cshtml" />
+    <Content Include="Views\Student\_StudentCoursesTableView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
