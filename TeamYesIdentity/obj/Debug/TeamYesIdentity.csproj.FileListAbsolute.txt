@@ -265,3 +265,4 @@ C:\Users\Valued Customer\Documents\softwareEngClass2\TeamYesIdentity\obj\Debug\T
 C:\Users\Valued Customer\Documents\softwareEngClass2\TeamYesIdentity\obj\Debug\TeamYesIdentity.csproj.CoreCompileInputs.cache
 C:\Users\Valued Customer\Documents\softwareEngClass2\TeamYesIdentity\obj\Debug\TeamYesIdentity.dll
 C:\Users\Valued Customer\Documents\softwareEngClass2\TeamYesIdentity\obj\Debug\TeamYesIdentity.pdb
+C:\Users\Valued Customer\Documents\softwareEngClass2\TeamYesIdentity\obj\Debug\TeamYesIdentity.Migrations.lessoncourseMigration.resources

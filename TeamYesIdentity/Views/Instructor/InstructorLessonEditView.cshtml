@@ -40,11 +40,11 @@
                     <label>Video Http Address: @Html.TextBoxFor(x => Model.VideoLink, new { @class = "form-control", @id = "vidAddress" })</label>
                     <button type="button" class="btn btn-primary" style="margin-left: 16px" onclick="loadVideo()">Activate</button>
                 </div>  
-                <div>@*******************************************@
+                @*<div>
                     <label for="file">Filename:</label>
                     <input type="file" name="file" id="file" />
                     <input type="submit" id="submitbtn" />
-                </div>
+                </div>*@
             </div>
         </div>
 
@@ -115,32 +115,7 @@
             document.getElementById('iFrameIs').src = site;
         };
 
-        $(function () {
-            $('#submitbtn').click(function () {
-                var data = new FormData();
-                var files = $("#file").get(0).files;
-
-                if (files.length > 0) { data.append("SavedFiles", files[0]); }
-                else {
-                    common.showNotification('warning', 'Please select file to upload.', 'top', 'right');
-                    return false;
-                }
-                var extension = $("#file").val().split('.').pop().toUpperCase();
-                
-                $.ajax({
-                    url: '../SaveFile', type: "POST", processData: false,
-                    data: data, dataType: 'json',
-                    contentType: false,
-                    success: function (response) {
-                        if (response != null || response != '')
-                            alert(response);
-                        $("#file").val('');
-                    },
-                    error: function (er) { }
-
-                });
-                return false;
-            });
+        
 
         window.onload = function () {
             loadVideo();

@@ -1,4 +1,5 @@
-﻿
+﻿@model TeamYesIdentity.Models.InstructorCourseManageViewModel
+
 @{
     ViewBag.Title = "InstructorCourseManagementView";
 }
@@ -8,52 +9,34 @@
 <div class="panel panel-primary">
     <div class="panel-heading">Course Info</div>
     <div class="panel-body">
-        various statistics about the course?
+        @*various statistics about the course?*@
         <div>
             link to course edit
-            @Html.ActionLink("Instructor Course Edit View", "InstructorCourseEditView", "Instructor")
+            @Html.ActionLink("Instructor Course Edit View", "InstructorCourseEditView", new { id = Model.Course.ID})
         </div>
     </div>
 </div>
 <div class="row">
-    <div class="col-sm-6">
+    <div class="col-sm-9">
         <div class="panel panel-primary">
             <div class="panel-heading">Lessons</div>
             <div class="panel-body">
-                <div class="col-sm-3">
+                <div class="col-sm-6">
                 <ul>
-                    <li>lesson</li>
-                    <li>lesson</li>
-                    <li>lesson</li>
-                    <li>lesson</li>
-                    <li>lesson</li>
-                    <li>lesson</li>
+                    @foreach(var lesson in Model.LessonList)
+                    {
+                        <li>@Html.ActionLink(lesson.Title, "InstructorLessonManagementView", new { lessonID = lesson.ID})</li>
+                    }
                     </ul>
+                </div>
+
                 </div>
                 <div class="col-sm-3">
                     <ul>
-                        <li> progress</li>
-                        <li> bar</li>
-                        <li> (#students</li>
-                        <li> finished)</li>
-                        <li> bar</li>
-                        <li> bar</li>
-                    </ul>
-                </div>
-                <div class="col-sm-5">
-                    <ul>
-                        <li> @Html.ActionLink("Manage", "InstructorLessonManagementView", "Instructor")
-                        @Html.ActionLink("Edit", "InstructorLessonEditView", "Instructor")</li>
-                        <li> @Html.ActionLink("Manage", "InstructorLessonManagementView", "Instructor")
-                        @Html.ActionLink("Edit", "InstructorLessonEditView", "Instructor")</li>
-                        <li> @Html.ActionLink("Manage", "InstructorLessonManagementView", "Instructor")
-                        @Html.ActionLink("Edit", "InstructorLessonEditView", "Instructor")</li>
-                        <li> @Html.ActionLink("Manage", "InstructorLessonManagementView", "Instructor")
-                        @Html.ActionLink("Edit", "InstructorLessonEditView", "Instructor")</li>
-                        <li> @Html.ActionLink("Manage", "InstructorLessonManagementView", "Instructor")
-                        @Html.ActionLink("Edit", "InstructorLessonEditView", "Instructor")</li>
-                        <li> @Html.ActionLink("Manage", "InstructorLessonManagementView", "Instructor")
-                        @Html.ActionLink("Edit", "InstructorLessonEditView", "Instructor")</li>
+                        @foreach (var lesson in Model.LessonList)
+                        {
+                            <li>@Html.ActionLink("Edit", "InstructorLessonEditView", new { lessonID = lesson.ID })</li>
+                        }
                     </ul>
                 </div>
             </div>
@@ -66,27 +49,19 @@
             <div class="panel-body">
                 <div>
                     <ul>
-                        <li>has a list of students enrolled in the course</li>
-                        <li>has a list of students enrolled in the course</li>
-                        <li>has a list of students enrolled in the course</li>
-                        <li>has a list of students enrolled in the course</li>
-                        <li>has a list of students enrolled in the course</li>
-                        <li>has a list of students enrolled in the course</li>
+                        @foreach (var student in Model.StudentList)
+                        {
+                            <li>
+                                @Html.ActionLink(student.LastName + ", " + student.FirstName, "InstructorStudentManagementView", new { studentID = student.ID })
+                            </li>
+                        }
                     </ul>
                     
                 </div>
                 <div class="panel-footer">
-                    @Html.ActionLink("Student Management Button", "InstructorStudentManagementView", "Instructor")
+
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-
-
-
-<div>
-    link back to home, will be replacved with breadcrumbs in the top nav bar
-    @Html.ActionLink("Instructor Home View", "InstructoHomeView", "Instructor")
-</div>
