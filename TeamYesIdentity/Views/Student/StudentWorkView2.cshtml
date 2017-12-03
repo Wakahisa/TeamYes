@@ -1,6 +1,6 @@
 ﻿@model TeamYesIdentity.Models.WorkModel
 @{
-    ViewBag.Title = "StudentWorkView";
+    ViewBag.Title = "StudentWorkView2";
 }
 
 <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
@@ -30,26 +30,50 @@
 <div class="panel panel-primary">
     <div class="panel-heading" id="mypanelId">My work</div>
     <div class="panel-body">
-        <h4>Python exercise 1: String</h4>
+        <h4>Python exercise 2: Variables</h4>
         <div data-datacamp-exercise data-lang="python">
             <code data-type="pre-exercise-code">
                 # This will get executed each time the exercise gets initialized
                 b = 6
             </code>
             <code data-type="sample-code">
-                # fill in the string below, to print 'hello'
-                print('change me')
+                # Create a variable savings
+                savings = 100
 
+                # Create a variable factor
+
+
+                # Calculate result
+
+
+                # Print out result
 
             </code>
             <code data-type="solution">
-                # fill in the string below, to print 'hello'
-                print('hello')
+                # Create a variable savings
+                savings = 100
+
+                # Create a variable factor
+                factor = 1.1
+
+                # Calculate result
+                result = savings * factor ** 7
+
+                # Print out result
+                print(result)
             </code>
             <code data-type="sct">
-                Ex().test_output_contains("hello", no_output_msg = "Did you print 'hello'?")
+                test_object("savings", undefined_msg = "The variable `savings` was defined for you, don't remove it!",
+                incorrect_msg = "The variable `savings` should be `100`, like it was defined for you.")
+                test_object("factor", incorrect_msg = "The value of `factor` should be `1.1`.")
+                test_object("result", incorrect_msg = "Have you used `*` and `**` to calculate `result`?")
+                msg = "Don't forget to print out `result` after assigning it."
+                test_print(not_called_msg = msg, incorrect_msg = msg)
+                success_msg("Great!")
             </code>
-            <div data-type="hint">Change the code where 'change me' is to hello.</div>
+            <div data-type="hint">To create the variable factor, use factor = 1.10.
+In the example code block of the assignment, replace 100 with savings and 1.10 with factor: savings * factor ** 7.
+Use the print() function to print the value of a variable.</div>
         </div>
         <a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentLessonView", "Student")'">Back to Lessons &raquo;</a>
     </div>

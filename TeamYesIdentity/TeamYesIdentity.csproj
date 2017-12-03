@@ -311,6 +311,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\ModelsREADME.txt" />
     <Content Include="References\Images\coding-language.png" />
     <Content Include="References\Images\computer-science.jpg" />
     <Content Include="References\Images\favicon.ico" />
@@ -411,6 +412,10 @@
     <Content Include="Views\Student\_StudentLesson3View.cshtml" />
     <Content Include="Views\Admin\_WorkTableView.cshtml" />
     <Content Include="Views\Admin\WorkEditView.cshtml" />
+    <Content Include="Views\Student\ResourcesView.cshtml" />
+    <Content Include="Views\Student\StudentWorkView2.cshtml" />
+    <Content Include="Views\Student\StudentWorkView3.cshtml" />
+    <Content Include="Views\Student\_StudentCoursesTableView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -514,10 +519,6 @@
     <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props'))" />
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
   </Target>
-  <PropertyGroup>
-    <PreBuildEvent>tasklist /FI "IMAGENAME eq VBCSCompiler.exe" 2&gt;NUL | find /I /N "VBCSCompiler.exe"&gt;NUL
-if "%25ERRORLEVEL%25"=="0" (taskkill /IM VBCSCompiler.exe /F) else (verify &gt;NUL)</PreBuildEvent>
-  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
