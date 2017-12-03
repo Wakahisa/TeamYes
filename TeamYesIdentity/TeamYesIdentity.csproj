@@ -318,6 +318,7 @@
     <Content Include="References\Images\programing-coding-languages.jpg" />
     <Content Include="References\Images\Seawolf-Head_GreenGold.png" />
     <Content Include="References\Images\UAA-partial.jpg" />
+    <Content Include="roslynFix.txt" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config" />
@@ -519,6 +520,10 @@
     <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props'))" />
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
   </Target>
+  <PropertyGroup>
+    <PreBuildEvent>tasklist /FI "IMAGENAME eq VBCSCompiler.exe" 2&gt;NUL | find /I /N "VBCSCompiler.exe"&gt;NUL
+if "%25ERRORLEVEL%25"=="0" (taskkill /IM VBCSCompiler.exe /F) else (verify &gt;NUL)</PreBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

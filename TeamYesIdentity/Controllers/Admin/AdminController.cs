@@ -211,22 +211,7 @@ namespace TeamYesIdentity.Controllers.Admin
             return RedirectToAction("LoadWorks");
         }
         #endregion
-        /// <summary>
-        /// deletes a Instructor from the db then returns to Instructor list in admin
-        /// </summary>
-        /// <param name="model"></param>
-        /// <returns></returns>
-        public ActionResult DeleteWork(WorkModel model)
-        {
-            if (model != null)
-            {
-                db.WorkModels.Attach(model);
-                db.WorkModels.Remove(model);
-                db.SaveChanges();
-            }
-            return RedirectToAction("LoadWorks");
-        }
-        #endregion
+       
 
     }
 }
