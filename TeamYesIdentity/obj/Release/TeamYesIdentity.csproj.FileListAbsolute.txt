@@ -264,3 +264,4 @@ C:\Users\Valued Customer\Documents\softwareEngClass2\TeamYesIdentity\bin\TeamYes
 C:\Users\Valued Customer\Documents\softwareEngClass2\TeamYesIdentity\bin\TeamYesIdentity.dll
 C:\Users\Valued Customer\Documents\softwareEngClass2\TeamYesIdentity\bin\TeamYesIdentity.pdb
 C:\Users\Valued Customer\Documents\softwareEngClass2\TeamYesIdentity\obj\Release\TeamYesIdentity.csprojResolveAssemblyReference.cache
+C:\Users\Valued Customer\Documents\softwareEngClass2\TeamYesIdentity\obj\Release\TeamYesIdentity.Migrations.lessoncourseMigration.resources
