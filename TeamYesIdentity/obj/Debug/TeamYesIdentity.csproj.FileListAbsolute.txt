@@ -279,3 +279,4 @@ C:\Users\Valued Customer\Documents\softwareEngClass2\TeamYesIdentity\bin\Microso
 C:\Users\Valued Customer\Documents\softwareEngClass2\TeamYesIdentity\bin\Microsoft.AI.Web.xml
 C:\Users\Valued Customer\Documents\softwareEngClass2\TeamYesIdentity\obj\Debug\TeamYesIdentity.dll
 C:\Users\Valued Customer\Documents\softwareEngClass2\TeamYesIdentity\obj\Debug\TeamYesIdentity.pdb
+C:\Users\Valued Customer\Documents\softwareEngClass2\TeamYesIdentity\obj\Debug\TeamYesIdentity.csprojResolveAssemblyReference.cache
