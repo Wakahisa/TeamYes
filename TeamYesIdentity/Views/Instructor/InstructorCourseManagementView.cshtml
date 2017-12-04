@@ -4,50 +4,51 @@
     ViewBag.Title = "InstructorCourseManagementView";
 }
 
-<h2>Course Name/Title</h2>
+<h2>Manage Course</h2>
 
-<div class="panel panel-primary">
-    <div class="panel-heading">Course Info</div>
-    <div class="panel-body">
-        @*various statistics about the course?*@
-        <div>
-            link to course edit
-            @Html.ActionLink("Instructor Course Edit View", "InstructorCourseEditView", new { id = Model.Course.ID})
+<div class="row">
+    <div class="panel panel-primary">
+        <div class="panel-heading">Course Info</div>
+        <div class="panel-body">
+            @*various statistics about the course?*@
+            <div>
+                @Html.ActionLink(Model.Course.Title, "InstructorCourseEditView", new { id = Model.Course.ID })
+            </div>
         </div>
     </div>
 </div>
 <div class="row">
-    <div class="col-sm-9">
+    <div class="col-sm-12">
         <div class="panel panel-primary">
             <div class="panel-heading">Lessons</div>
-            <div class="panel-body">
-                <div class="col-sm-6">
-                <ul>
-                    @foreach(var lesson in Model.LessonList)
-                    {
-                        <li>@Html.ActionLink(lesson.Title, "InstructorLessonManagementView", new { lessonID = lesson.ID})</li>
-                    }
-                    </ul>
-                </div>
-
-                </div>
-                <div class="col-sm-3">
-                    <ul>
-                        @foreach (var lesson in Model.LessonList)
-                        {
-                            <li>@Html.ActionLink("Edit", "InstructorLessonEditView", new { lessonID = lesson.ID })</li>
-                        }
-                    </ul>
+                <div class="panel-body">
+                    <div class="col-sm-6">
+                        <ul>
+                            @foreach (var lesson in Model.LessonList)
+                            {
+                                <li>@Html.ActionLink(lesson.Title, "InstructorLessonManagementView", new { lessonID = lesson.ID })</li>
+                            }
+                        </ul>
+                    </div>
+                    <div class="col-sm-3">
+                        <ul>
+                            @foreach (var lesson in Model.LessonList)
+                            {
+                                <li>@Html.ActionLink("Edit", "InstructorLessonEditView", new { lessonID = lesson.ID })</li>
+                            }
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="col-sm-6">
+<div class="row">
+    <div class="col-sm-12">
         <div class="panel panel-primary">
             <div class="panel-heading">Students</div>
             <div class="panel-body">
-                <div>
+                <div class="col-sm-6">
                     <ul>
                         @foreach (var student in Model.StudentList)
                         {
@@ -56,11 +57,18 @@
                             </li>
                         }
                     </ul>
-                    
                 </div>
-                <div class="panel-footer">
-
+                <div class="col-sm-3">
+                    <ul>
+                        @foreach (var student in Model.StudentList)
+                        {
+                            <li>
+                                @Html.ActionLink("Student Work", "InstructorStudentManagementView", new { studentID = student.ID })
+                            </li>
+                        }
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
+</div>
