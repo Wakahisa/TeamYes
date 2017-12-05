@@ -1,10 +1,15 @@
 ﻿@model TeamYesIdentity.Models.LessonCreateViewModel
 
+@*@{ ViewBag.title ="LessonCreateView"}*@
+
+<h2>Create Lesson</h2>
+
+
 @using (Html.BeginForm())
 {
-    <div>
-        Workflow instructions go here.
-    </div>
+  <h2>Create Lesson</h2>
+
+  <div class="row">
         <div class="panel panel-primary">
             <div class="panel-heading">Select a template</div>
             <div class="panel-body">
@@ -24,7 +29,9 @@
                 </button>
             </div>
         </div>
+  </div>
 
+    <div class="row">
         <div class="panel-primary">
             <div class="panel-heading">Edit</div>
             @*changes what to upload depending on partial view, actually part of the partial view, creates browse for modal*@
@@ -47,10 +54,12 @@
                 </div>*@
             </div>
         </div>
+    </div>
 
     <hr />
 
-        <div class="panel-primary">
+        <div class="row">
+    <div class="panel-primary">
             <div class="panel-heading">Preview</div>
                 <div class="media">
                     <div class="media-left">
@@ -59,15 +68,60 @@
                 <div class="media-body">
                     <h4 class="media-heading">@Html.TextBoxFor(x => x.Intro, new { @class = "form-control" })</h4>
                     <p>
-                        @Html.TextAreaFor(x=>x.Text, new { @class = "form-control", @rows = "20" })
+                        @Html.TextAreaFor(x=>x.Text, new { @class = "form-control", @rows = "10" })
                     </p>
                 </div>
             </div>
+        <div><!-- Useful tools for creating a lesson go here -->
+            <div class="row">
+                    <label>Add html link inside the text</label>
+                    @Html.TextBox("Copy/paste url here")
+                    <button>Add</button>
+            </div>
+            <div class="row">
+                    <label>Upload a document</label>
+                    @Html.TextBox("Copy/paste url here")
+                    <button>Browse</button>
+                    <button>Save</button>
+            </div>
+            <div class="row">
+                <div class="col-sm-1"></div>
+                <div>
+                    @Html.CheckBox("Use the document as the lesson's text")<label>Use the document as the lesson's text</label>
+                </div>            
+            </div>
+            <div class="row">
+                <div class="col-sm-1"></div>
+                <div>
+                    @Html.CheckBox("Add a link to the document in the resources")<label>Add a link to the document in the resources</label>
+                </div>            
+            </div>
+            <div class="row">
+                    <label>Upload a video</label>
+                    @Html.TextBox("Copy/paste url here")
+                    <button>Browse</button>
+                    <button>Save</button>
+            </div>
+            <div class="row">
+                <div class="col-sm-1"></div>
+                <div>
+                    @Html.CheckBox("Use the upload as the lesson's video")<label>Use the upload as the lesson's video</label>
+                </div>            
+            </div>
+            <div class="row">
+                <div class="col-sm-1"></div>
+                <div>
+                    @Html.CheckBox("Add a link to the video in the resources")<label>Add a link to the video in the resources</label>
+                </div>            
+            </div>
+        </div>
+        </div>
         </div>
 
     <hr />
 
-        <div class="panel-primary">
+        <div class="row">
+    <div class="panel-primary">
             <div class="panel-heading">Select Work, Previous Lesson, and Next Lesson</div>
             @*bunches of javascript for choosing stuff and changing the titles*@
             <div class="panel-body">
@@ -89,14 +143,17 @@
                 </div>
             </div>
             </div>
+        </div>
     <hr />
-            <div class="panel-body form-group">
+           <div class="row"> <div class="panel-body form-group">
                     <input type="submit" value="Save" class="btn btn-success" style="margin-left: 16px" />
                     @Html.ActionLink("Create Exercise", "InstructorWorkEditView", "Instructor", Model.WorkID, new { @class = "btn btn-default" })
             </div>
+    </div>
 
     <hr />
 
+    <div class="row">
     <div class="panel-primary">
         <div class="panel-heading">Useful Links</div>
         <div class="panel-body">
@@ -104,6 +161,7 @@
             @Html.ActionLink("Course Create/Edit", "InstructorCourseEditView", "Instructor", null, new { @class = "btn btn-default" })
             @Html.ActionLink("Home", "InstructorHomeView", "Instructor", null, new { @class = "btn btn-default" })
         </div>
+    </div>
     </div>
 }
 

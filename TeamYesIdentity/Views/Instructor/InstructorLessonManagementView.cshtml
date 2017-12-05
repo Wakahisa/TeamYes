@@ -1,93 +1,108 @@
 ﻿@model TeamYesIdentity.Models.InstructorLessonManageViewModel
+
 @{
     ViewBag.Title = "InstructorLessonManagement";
 }
 
-<h2>Course: Lesson</h2>
-<div class="form-group">
-    <div class="col-sm-4">
-        @Html.ActionLink("Next Lesson", "InstructorLessonManagementView", new { id = Model.CurrentLesson.NextLessonIDs, @class = "button-default" })
-    </div>
-    <div class="col-sm-4">
-        @Html.ActionLink("Course", "InstructorCourseManagementView", new { id = Model.CurrentLesson.CourseID, @class = "button-default" })
-    </div>
-    <div class="col-sm-4">
-        @Html.ActionLink("Previous Lesson", "InstructorLessonManagementView", new { id = Model.CurrentLesson.PreviousLessonIDs, @class = "button-default" })
-    </div>
-</div>
-<hr />
-<div class="panel panel-primary">
-    <div class="panel-heading">@Html.Display(Model.CurrentLesson.Title)</div>
-    <div class="panel-body">
-        <h2>@Html.Display(Model.CurrentLesson.IntroText)</h2>
-        <p>
-            @Html.Display(Model.LessonData.Placeholder)
-        </p>
-    </div>
-    <div class="panel-footer">
-        <div class="form-group">
-            <div class="col-sm-4">
-                @Html.ActionLink("Edit", "InstructorLessonEditView", new { id = Model.CurrentLesson.ID, @class = "button-default" })
-            </div>
-            <div class="col-sm-4">
-                @Html.ActionLink("Preview Work", "InstructorWorkEditView", new { id = Model.CurrentLesson.WorkID, @class = "button-default" })
+<h2>Manage Lesson</h2>
+
+<div class="row">
+    <div class="panel panel-primary">
+        <div class="panel-heading">@Html.Label(Model.CurrentLesson.Title)</div>
+        <div class="panel-body">
+            <div class="form-group">
+                <div class="col-sm-4">
+                    @Html.ActionLink("Next Lesson", "InstructorLessonManagementView", "Instructor", new { lessonID = Model.CurrentLesson.NextLessonIDs }, new { @class = "btn btn-default" })
+                </div>
+                <div class="col-sm-4">
+                    @Html.ActionLink("Course", "InstructorCourseManagementView", new { courseID = Model.CurrentLesson.CourseID }, new { @class = "btn btn-default" })
+                </div>
+                <div class="col-sm-4">
+                    @Html.ActionLink("Previous Lesson", "InstructorLessonManagementView", new { lessonID = Model.CurrentLesson.PreviousLessonIDs }, new { @class = "btn btn-default" })
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="panel panel-primary">
-    <div class="panel-heading">Students</div>
-    
-    <div class="panel-body">
-        <div class="col-sm-5">
-            <ul>
-                <li><h2>Students</h2></li>
-                @if (Model.StudentList.Count > 0)
-                {
-                    foreach (var student in Model.StudentList)
-                    {
-                        <li>@Html.Display(student.FirstName + " " + student.LastName)</li>
-                    }
-                } else
-                {
-                    <li><h3>No Students are listed for this lesson yet</h3></li>
-                }
-            </ul>
-            
+
+<div class="row">
+    <div class="panel panel-primary">
+        <div class="panel-heading">@Html.Label(Model.CurrentLesson.IntroText)</div>
+        <div class="panel-body">
+            @Html.Label(Model.LessonData.Placeholder)
         </div>
-        <div class="col-sm-3">
-            <ul>
-                <li><h2>Grades</h2></li>
-                @if (Model.StudentWorks.Count > 0)
-                {
-                    foreach (var work in Model.StudentWorks)
-                    {
-                        <li>*@Html.Display(work.Grade.ToString())</li>
-                    }
-                }else
-                {
-                    <li><h3>No Grades are listed for these items yet</h3></li>
-                }
-            </ul>
-            
+        <div class="panel-footer">
+            <div class="form-group">
+                <div class="col-sm-4">
+                    @Html.ActionLink("Edit", "InstructorLessonEditView", new { lessonID = Model.CurrentLesson.ID }, new { @class = "btn btn-default" })
+                </div>
+                <div class="col-sm-4">
+                    @Html.ActionLink("Preview Work", "InstructorWorkEditView", new { workID = Model.CurrentLesson.WorkID }, new { @class = "btn btn-default" })
+                </div>
+            </div>
         </div>
-        <div class="col-sm-3">
-            <ul>
-                <li><h2>Passed</h2></li>
-                @if (Model.StudentWorks.Count > 0)
-                {
-                    foreach (var work in Model.StudentWorks)
+    </div>
+</div>
+
+<div class="row">
+    <div class="panel panel-primary">
+        <div class="panel-heading">Students</div>
+
+        <div class="panel-body">
+            <div class="col-sm-5">
+                <h3>Students</h3>
+                <ul>
+                    @if (Model.StudentList.Count > 0)
                     {
-                    <li>@Html.Display(work.Passed.ToString())</li>
+                        foreach (var student in Model.StudentList)
+                        {
+                            <li>@Html.Display(student.FirstName + " " + student.LastName)</li>
+                        }
                     }
-                }else
-                {
-                    <li><h3>No Values are listed for these items yet</h3></li>
-                }
-            </ul>
-            
+                    else
+                    {
+                        <li><h3>No students yet</h3></li>
+                    }
+                </ul>
+
+            </div>
+            <div class="col-sm-3">
+                <h3>Grades</h3>
+                <ul>
+
+                    @if (Model.StudentWorks.Count > 0)
+                    {
+                        foreach (var work in Model.StudentWorks)
+                        {
+                            // <li>*@Html.Display(work.Grade.ToString())</li>
+                        }
+                    }
+                    else
+                    {
+                        <li><h3>No grades yet</h3></li>
+                    }
+                </ul>
+
+            </div>
+            <div class="col-sm-3">
+                <h3>Passed</h3>
+                <ul>
+                    @if (Model.StudentWorks.Count > 0)
+                    {
+                        foreach (var work in Model.StudentWorks)
+                        {
+                            //<li>@Html.Display(work.Passed.ToString())</li>
+                        }
+                    }
+                    else
+                    {
+                        <li><h3>No values yet</h3></li>
+                    }
+                </ul>
+
+            </div>
+
         </div>
-        
     </div>
 </div>

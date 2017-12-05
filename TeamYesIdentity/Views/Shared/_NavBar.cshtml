@@ -12,19 +12,20 @@
         <div class="navbar-collapse collapse col-sm-3">
             <ul class="nav navbar-nav">
                 <!--Parameters: Link Name, View, Controller -->
-                <li>@Html.ActionLink("About", "About", "Home")</li>
-                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                <li>@Html.ActionLink("Admin", "AdminView", "Admin")</li>
+                <li>@Html.ActionLink("Instructor", "InstructorHomeView", "Instructor")</li>
+                <li>@Html.ActionLink("Student", "StudentHomeView", "Student")</li>
                 @*<! --This section is for navigation buttons that we only want logged users to see -->*@
                 @*    @if(Request.IsAuthenticated)
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li> *@
             </ul>
-            @Html.Partial("_LoginPartial")
             <span  class="breadcrumb col-sm-12" style="background-color:blanchedalmond">
                 @*breadcrumbs *@
                 @Html.MvcSiteMap().SiteMapPath()
             </span>
         </div>
+        @Html.Partial("_LoginPartial")
     </div>
 </div>

@@ -23,6 +23,8 @@ namespace TeamYesIdentity.Models
         {
             Course = db.CourseModels.FirstOrDefault(f => f.ID == courseID);
             LessonList = db.LessonModels.Where(f=>f.CourseID == courseID).ToList();
+
+#warning Needs fixing: load all students with this course, not all students in db
             //StudentList = db.StudentModels.Where(f => f.CourseIDs.Contains(courseID)).ToList();
             //StudentList = db.StudentModels.Where(f => f.Courses.Contains(Course)).ToList();
             StudentList = Course.Students.ToList();

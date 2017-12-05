@@ -24,7 +24,7 @@
     </ul>
 </div>
 
-<div class="panel panel-primary">
+<div class="panel panel-primary" style="height: 700px;">
     <div class="panel-heading" id="mypanelId">Lessons</div>
     <div class="col-sm-3">
         @*<div class="panel-heading">Lessons</div>*@
@@ -46,11 +46,7 @@
                                 new AjaxOptions { UpdateTargetId = "Display", InsertionMode = InsertionMode.Replace })
                 </li>
                 <li>Lesson</li>
-                <li>Lesson</li>
-                <li>Lesson</li>
-                <li>Lesson</li>
-                <li>Lesson</li>
-                <li>Lesson</li>
+                <li>@Html.ActionLink("Resources", "ResourcesView", "Student", null, new { target = "_blank"@*, @class = "btn btn-primary"*@ })</li>
             </ul>
         </div>
     </div>

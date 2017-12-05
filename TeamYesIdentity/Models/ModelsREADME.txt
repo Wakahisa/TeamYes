@@ -1,0 +1,13 @@
+﻿This is a readme file for the models folder
+Things that go in here are instructions and notes specific to the models used in this project
+
+Especially important is any really useful custom helpers, templates, and coding conventions used
+
+It's up to the developer whether or not to reference by ID number or by object. If by ID number 
+then we should make a universal FindById service
+
+The Shared folder holds models that are used by multiple differene virew and controllers. The 
+DataItems folder is for simple data objects that the other models use.
+
+11/28/17
+-Edited IdentityModels, so we could register. Defaultconnection changed to Context to match connectionstring.
