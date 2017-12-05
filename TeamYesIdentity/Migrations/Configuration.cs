@@ -1,5 +1,7 @@
 namespace TeamYesIdentity.Migrations
 {
+    using Microsoft.AspNet.Identity;
+    using Microsoft.AspNet.Identity.EntityFramework;
     using System;
     using System.Collections.Generic;
     using System.Data.Entity;
@@ -277,6 +279,16 @@ namespace TeamYesIdentity.Migrations
                 Lessons = context.LessonModels.Where(f=>f.ID < 4).ToList(),
                 Homeworks = context.WorkModels.Where(f=>f.ID<4).ToList()
             });
+
+            // Creates or Updates the Roles
+            context.Roles.AddOrUpdate(r => r.Name,
+                new IdentityRole { Name = "Admin" },
+                new IdentityRole { Name = "Student" }
+                );
+
+            //// Assigns a User a role
+            //var UserManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
+
         }
     }
 }
