@@ -27,6 +27,7 @@ namespace TeamYesIdentity.Controllers.Instructor
 
             return View(model);
         }
+
         public ActionResult InstructorCourseCreationView()
         {
             return View();
@@ -52,6 +53,10 @@ namespace TeamYesIdentity.Controllers.Instructor
             return View(model);
         }
 
+        /// <summary>
+        /// savefile method
+        /// </summary>
+        /// <returns></returns>
         [HttpPost]
         public ActionResult SaveFile()
         {
@@ -96,24 +101,24 @@ namespace TeamYesIdentity.Controllers.Instructor
         /// <returns></returns>
         public ActionResult InstructorWorkEditView(int? workID)
         {
-            var model = new HomeworkCreateViewModel();
+            var model = new HomeworkEditViewModel();
             if (workID > 0)
             {
-                model.Load((int)workID);
+                model = model.Load((int)workID);
             }
             else
             {
-                model.work = new WorkModel();
-                model.questionModel = new QuestionsModel();
-                model.answerModel = new AnswerModel();
+                model.Work = new WorkModel();
+                model.QuestionModel = new QuestionsModel();
+                model.AnswerModel = new AnswerModel();
 
-                model.work.Title = "Empty Title";
-                model.work.IsProgramming = false;
-                model.work.InstructorNotes = "Note text";
-                model.work.InstructionText = "Instructions go here";
+                model.Work.Title = "Empty Title";
+                model.Work.IsProgramming = false;
+                model.Work.InstructorNotes = "Note text";
+                model.Work.InstructionText = "Instructions go here";
 
-                model.answerList.Capacity = 20;
-                model.questionList.Capacity = 20;
+                model.AnswerList.Capacity = 20;
+                model.QuestionList.Capacity = 20;
                 model.TFAnswerList.Capacity = 20;
                 model.MCAnswerList.Capacity = 20;
             }
@@ -126,9 +131,9 @@ namespace TeamYesIdentity.Controllers.Instructor
         /// <param name="entry"></param>
         /// <returns></returns>
         [HttpPost]
-        public ActionResult InstructorWorkEditView(HomeworkCreateViewModel entry)
+        public ActionResult InstructorWorkEditView(HomeworkEditViewModel entry)
         {
-            var model = new HomeworkCreateViewModel();
+            var model = new HomeworkEditViewModel();
             model.Save(entry);
 
             return View(model);
@@ -154,12 +159,26 @@ namespace TeamYesIdentity.Controllers.Instructor
         {
             return View();
         }
-        public ActionResult InstructorLessonManagementView(int lessonID)
+
+        /// <summary>
+        /// loads a lesson, it's students, and work for display
+        /// </summary>
+        /// <param name="lessonID"></param>
+        /// <returns></returns>
+        public ActionResult InstructorLessonManagementView(int? lessonID)
         {
             var model = new InstructorLessonManageViewModel();
-            model.Load(lessonID);
+            if (lessonID > 0)
+            {
+                model.Load((int)lessonID);
+            }
+            else
+            {
+                model.Load(1);
+            }          
             return View(model);
         }
+
         public ActionResult InstructorStudentManagementView()
         {
             return View();

@@ -7,8 +7,7 @@ It's up to the developer whether or not to reference by ID number or by object. 
 then we should make a universal FindById service
 
 The Shared folder holds models that are used by multiple differene virew and controllers. The 
-DataItems folder is for simple data objects that the other models use. A model in the DataItems
-never has another model as part of it's structure.
+DataItems folder is for simple data objects that the other models use.
 
 11/28/17
 -Edited IdentityModels, so we could register. Defaultconnection changed to Context to match connectionstring.

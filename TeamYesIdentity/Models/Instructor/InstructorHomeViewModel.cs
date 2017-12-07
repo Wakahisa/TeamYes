@@ -26,6 +26,7 @@ namespace TeamYesIdentity.Models
         {
             CourseList = db.CourseModels.Where(f=>f.InstructorID == instructorID).ToList();
 
+#warning Needs fixing: get all students in course and only those students
             // not the best code, and it doesn't work
             //foreach (CourseModel course in CourseList)
             //{

@@ -28,12 +28,15 @@ namespace TeamYesIdentity.Models
         public void Load(int lessonID)
         {
             CurrentLesson = db.LessonModels.FirstOrDefault(f => f.ID == lessonID);
+
+#warning Needs fixing: grab only students with this lesson in progress
             //StudentList = db.StudentModels.Where(f => f.InProgressLessons.Contains(CurrentLesson)).ToList();
-            StudentList = db.StudentModels.ToList(); // fix this sometime
+            StudentList = db.StudentModels.ToList(); // fix this sometime, currently gets all students in db
+
             LessonData = db.LessonDataModels.FirstOrDefault(f => f.ID == CurrentLesson.LessonDataID);
             CurrentWork = db.WorkModels.FirstOrDefault(f => f.ID == CurrentLesson.WorkID);
-            //List<int> workingOn = new List<int>();
-            foreach(var student in StudentList)
+
+            foreach (var student in StudentList)
             {
                 StudentWorks.Add(student.Homeworks.FirstOrDefault(f=>f.Title==CurrentWork.Title));
             }
