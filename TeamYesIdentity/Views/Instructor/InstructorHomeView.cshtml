@@ -7,7 +7,7 @@
 <h2>Home</h2>
 
 <div class="panel panel-primary">
-    <div class="panel-heading">My Courses</div>
+    <div class="panel-heading" id="mypanelId">My Courses</div>
         <div class="panel-body">
            <ul>
                @foreach(var course in Model.CourseList){
@@ -20,7 +20,7 @@
         </div>
     </div>
 <div class="panel panel-primary">
-    <div class="panel-heading">My Students / My Paycheck</div>
+    <div class="panel-heading" id="mypanelId">My Students / My Paycheck</div>
     <div class="panel-body">
         <ul>
             @foreach (var student in Model.StudentList)
@@ -34,7 +34,7 @@
     </div>
 </div>
 <div class="panel panel-primary">
-    <div class="panel-heading">Course Creation Module</div>
+    <div class="panel-heading" id="mypanelId">Course Creation Module</div>
     <div class="panel-body">
         <div class="col-sm-4">
             @Html.ActionLink("Instructor Creator Module", "InstructorCourseCreationView", "Instructor")

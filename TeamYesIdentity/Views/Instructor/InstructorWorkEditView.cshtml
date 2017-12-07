@@ -6,7 +6,7 @@
 {
    <div class="row"> 
         <div class="panel panel-primary">
-            <div class="panel-heading">
+            <div class="panel-heading" id="mypanelId">
                 Workflow instructions go here.
                 Homeworks are stored in the database as a work object with a title, instructions, notes, a set of questions and a set of answers.
                 The questions and answers each have their own titles in order to facilitate human readability for sorting and reuse.
@@ -14,7 +14,7 @@
         </div>
    </div>
         <div class="panel panel-primary"> 
-            <div class="panel-heading">Select a template, please only choose one.</div>
+            <div class="panel-heading" id="mypanelId">Select a template, please only choose one.</div>
             <div class="panel-body form-group">
                 <div class="col-sm-1"></div> <!-- spacer for the checkboxes -->
                 <div>
@@ -33,17 +33,17 @@
             </div>
         </div>
         <div class=" = panel-primary">
-            <div class="panel-heading">Notes for Instructors</div>
+            <div class="panel-heading" id="mypanelId">Notes for Instructors</div>
             <div class="panel-body">@Html.TextBoxFor(x => x.Work.InstructorNotes, new { @class = "form-control" })</div>
         </div>
         <div class=" = panel-primary">
-            <div class="panel-heading">Student Instructions</div>
+            <div class="panel-heading" id="mypanelId">Student Instructions</div>
             <div class="panel-body">@Html.TextBoxFor(x => x.Work.InstructionText, new { @class = "form-control" })</div>
         </div>
         <div>
             <div class="col-sm-6">
                 <div class="panel-primary">
-                    <div class="panel-heading">Set questions</div>
+                    <div class="panel-heading" id="mypanelId">Set questions</div>
                     <label>Question set title</label>
                     <div class="panel-body">
                         @Html.TextBoxFor(x => x.QuestionModel.Title, new { @class = "form-control" })
@@ -66,7 +66,7 @@
             </div>
             <div class="col-sm-6">
                 <div class="panel-primary">
-                    <div class="panel-heading">Set answers</div>
+                    <div class="panel-heading" id="mypanelId">Set answers</div>
                     <label>Answer set title</label>
                     <div class="panel-body">
                         @Html.TextBoxFor(x => x.AnswerModel.Title, new { @class = "form-control" })
