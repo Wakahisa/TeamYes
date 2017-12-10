@@ -27,7 +27,10 @@ namespace IdentityNew.Controllers.Student
         [Authorize(Roles = "Student, Admin")]
         public ActionResult StudentCourseView()
         {
-            return View();
+            var model = new CourseModel();
+
+            model = db.CourseModels.FirstOrDefault(x => x.ID == 1);
+            return View(model);
         }
 
         [Authorize(Roles = "Student, Admin")]

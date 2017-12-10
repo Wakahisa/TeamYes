@@ -1,4 +1,4 @@
-﻿
+﻿@model IdentityNew.Models.CourseModel
 @{
     ViewBag.Title = "StudentCourse";
 }
@@ -21,14 +21,19 @@
     </ul>
 </div>
 
+<!--Indents announcements and course names-->
+<style>
+    p {
+        text-indent: 50px;
+    }
+</style>
+
 <!--Student courses-->
 <div class="panel panel-primary">
     <div class="panel-heading" id="mypanelId">MY COURSES</div>
     <div class="panel-body">
-        <p>DISPLAY COURSE #1</p>
-        <p>DISPLAY COURSE #2</p>
-        <p>DISPLAY COURSE #3</p>
-        <p>DISPLAY COURSE #4</p>
+        <p><b>@Html.DisplayFor(x => x.Title)</b></p>
+        <p>@Html.DisplayFor(x => x.Description)</p>
         <a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentLessonView", "Student")'">Lessons &raquo;</a>
     </div>
 </div>
