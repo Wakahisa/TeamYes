@@ -7,7 +7,7 @@ using System.Web;
 
 namespace TeamYesIdentity.Models
 {
-    public class Context : IdentityDbContext<AppUser>
+    public class Context : IdentityDbContext<ApplicationUser>
     {    
         public Context() : base("name=Context")
         {

@@ -1,0 +1,44 @@
+﻿@model IEnumerable<IdentityNew.Models.WorkModel>
+
+<p>
+    @Html.ActionLink("Create New", "WorkEditView")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InstructionText)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InstructorNotes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsProgramming)
+        </th>
+
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InstructionText)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InstructorNotes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsProgramming)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "WorkEditView", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "DeleteWork", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

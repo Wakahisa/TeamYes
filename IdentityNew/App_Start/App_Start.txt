@@ -1,0 +1,3 @@
+Changed ApplicationDbContext to Context to be consistent with rest of project.
+
+This change is so only one database is recognized

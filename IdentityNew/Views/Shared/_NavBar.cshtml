@@ -1,0 +1,35 @@
+﻿<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            @Html.ActionLink("CodeYes CSCE 101", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+        </div>       
+
+        <div class="navbar-collapse collapse col-sm-3">
+            <ul class="nav navbar-nav">
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                <!--Parameters: Link Name, View, Controller -->
+                @if (Request.IsAuthenticated)
+                {
+                        @Html.AntiForgeryToken()
+                <li>@Html.ActionLink("Student", "StudentHomeView", "Student")</li>
+
+                    if (User.IsInRole("Admin"))
+                    {
+                        <li>@Html.ActionLink("Admin", "AdminView", "Admin")</li>
+                        <li>@Html.ActionLink("Instructor", "InstructorHomeView", "Instructor")</li>
+                    }
+                }
+            </ul>
+            <span  class="breadcrumb col-sm-12" style="background-color:blanchedalmond">
+                @*breadcrumbs *@
+                @Html.MvcSiteMap().SiteMapPath()
+            </span>
+        </div>
+        @Html.Partial("_LoginPartial")
+    </div>
+</div>

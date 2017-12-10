@@ -1,0 +1,30 @@
+﻿@{ 
+    ViewBag.Title = "_StudentLesson1View";
+}
+
+<div>
+    <div class="panel panel-primary">
+        <div class="panel-heading" id="mypanelId">LESSON #1</div>
+        <div class="panel-body">
+            <h2>String Lesson</h2>
+            <p>In this lesson, you will learn about String and its uses</p>
+            <iframe width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/pqmhZcPpTys?rel=0"
+                    frameborder="0"
+                    allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="col-sm-4">
+        <a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentLessonView", "Student")'">Previous Lesson &raquo;</a>
+    </div>
+    <div class="col-sm-4">
+        <a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentWorkView", "Student")'">Work Page &raquo;</a>
+    </div>
+    <div class="col-sm-4">
+        <a href="#" class="btn btn-default" onclick="location.href='@Url.Action("LoadStudentLesson2", "Student")'">Next Lesson &raquo;</a>
+    </div>
+</div>

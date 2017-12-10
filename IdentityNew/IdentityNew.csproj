@@ -9,12 +9,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{B8872EFC-69B8-4ED1-97DB-799A83E60FAA}</ProjectGuid>
+    <ProjectGuid>{C5DBB912-27F2-471E-A828-E0DBD2EC734A}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TeamYesIdentity</RootNamespace>
-    <AssemblyName>TeamYesIdentity</AssemblyName>
+    <RootNamespace>IdentityNew</RootNamespace>
+    <AssemblyName>IdentityNew</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
@@ -50,11 +50,11 @@
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="MvcSiteMapProvider, Version=4.6.22.0, Culture=neutral, PublicKeyToken=1923abe4657913cc, processorArchitecture=MSIL">
-      <HintPath>..\packages\MvcSiteMapProvider.MVC5.Core.4.6.22\lib\net45\MvcSiteMapProvider.dll</HintPath>
+    <Reference Include="MvcSiteMapProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=1923abe4657913cc, processorArchitecture=MSIL">
+      <HintPath>..\packages\EnhancedMvcSiteMap.MVC5.Core.1.0.4\lib\net45\MvcSiteMapProvider.dll</HintPath>
     </Reference>
-    <Reference Include="MvcSiteMapProvider.WebActivator, Version=4.6.22.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MvcSiteMapProvider.MVC5.4.6.22\lib\net45\MvcSiteMapProvider.WebActivator.dll</HintPath>
+    <Reference Include="MvcSiteMapProvider.WebActivator, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EnhancedMvcSiteMap.MVC5.1.0.5\lib\net45\MvcSiteMapProvider.WebActivator.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -207,9 +207,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712100301218_initial.cs" />
+    <Compile Include="Migrations\201712100301218_initial.Designer.cs">
+      <DependentUpon>201712100301218_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Admin\AdminTableModel.cs" />
-    <Compile Include="Models\Context.cs" />
     <Compile Include="Models\DataItems\AnswerModel.cs" />
     <Compile Include="Models\DataItems\LessonDataModel.cs" />
     <Compile Include="Models\DataItems\QuestionsModel.cs" />
@@ -232,15 +236,17 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Start\App_Start.txt" />
     <Content Include="Content\bootstrap-cerulean.css" />
-    <Content Include="Content\bootstrap-lumen.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min-cerulean.css" />
-    <Content Include="Content\bootstrap.min-lumen.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\custom.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
     <Content Include="Controllers\ControllerREADME.txt" />
     <Content Include="favicon.ico" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -251,15 +257,21 @@
     <Content Include="References\Images\programing-coding-languages.jpg" />
     <Content Include="References\Images\Seawolf-Head_GreenGold.png" />
     <Content Include="References\Images\UAA-partial.jpg" />
-    <Content Include="roslynFix.txt" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="ApplicationInsights.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
     <Content Include="Mvc.sitemap" />
     <None Include="MvcSiteMapSchema.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Scripts\jquery-1.10.2-vsdoc.js" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -272,14 +284,9 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Views\Shared\DisplayTemplates\CanonicalHelperModel.ascx" />
-    <Content Include="Views\Shared\DisplayTemplates\MenuHelperModel.ascx" />
-    <Content Include="Views\Shared\DisplayTemplates\MetaRobotsHelperModel.ascx" />
-    <Content Include="Views\Shared\DisplayTemplates\SiteMapHelperModel.ascx" />
-    <Content Include="Views\Shared\DisplayTemplates\SiteMapNodeModel.ascx" />
-    <Content Include="Views\Shared\DisplayTemplates\SiteMapNodeModelList.ascx" />
-    <Content Include="Views\Shared\DisplayTemplates\SiteMapPathHelperModel.ascx" />
-    <Content Include="Views\Shared\DisplayTemplates\SiteMapTitleHelperModel.ascx" />
+    <Content Include="Views\Shared\DisplayTemplates\SiteMapDescriptionHelperModel.ascx" />
+    <Content Include="Views\Shared\DisplayTemplates\SiteMapDescriptionTagHelperModel.ascx" />
+    <Content Include="Views\Shared\DisplayTemplates\SiteMapTitleTagHelperModel.ascx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -317,8 +324,10 @@
     <Content Include="Views\Admin\AdminView.cshtml" />
     <Content Include="Views\Admin\InstructorEditView.cshtml" />
     <Content Include="Views\Admin\StudentEditView.cshtml" />
+    <Content Include="Views\Admin\WorkEditView.cshtml" />
     <Content Include="Views\Admin\_InstructorTableView.cshtml" />
     <Content Include="Views\Admin\_StudentTableView.cshtml" />
+    <Content Include="Views\Admin\_WorkTableView.cshtml" />
     <Content Include="Views\Instructor\InstructorCourseCreationView.cshtml" />
     <Content Include="Views\Instructor\InstructorCourseEditView.cshtml" />
     <Content Include="Views\Instructor\InstructorCourseManagementView.cshtml" />
@@ -328,28 +337,28 @@
     <Content Include="Views\Instructor\InstructorStudentManagementView.cshtml" />
     <Content Include="Views\Instructor\InstructorWorkEditView.cshtml" />
     <Content Include="Views\Shared\_NavBar.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\SiteMapTitleTagHelperModel.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\SiteMapTitleHelperModel.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\SiteMapPathHelperModel.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\SiteMapNodeModelList.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\SiteMapNodeModel.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\SiteMapHelperModel.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\SiteMapDescriptionTagHelperModel.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\SiteMapDescriptionHelperModel.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\MetaRobotsHelperModel.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\MenuHelperModel.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\CanonicalHelperModel.cshtml" />
+    <Content Include="Views\Student\ResourcesView.cshtml" />
     <Content Include="Views\Student\StudentCourseView.cshtml" />
     <Content Include="Views\Student\StudentGradeView.cshtml" />
     <Content Include="Views\Student\StudentHomeView.cshtml" />
     <Content Include="Views\Student\StudentLessonView.cshtml" />
     <Content Include="Views\Student\StudentWorkView.cshtml" />
+    <Content Include="Views\Student\StudentWorkView2.cshtml" />
+    <Content Include="Views\Student\StudentWorkView3.cshtml" />
     <Content Include="Views\Student\_StudentLesson1View.cshtml" />
     <Content Include="Views\Student\_StudentLesson2View.cshtml" />
     <Content Include="Views\Student\_StudentLesson3View.cshtml" />
-    <Content Include="Views\Admin\_WorkTableView.cshtml" />
-    <Content Include="Views\Admin\WorkEditView.cshtml" />
-    <Content Include="Views\Student\ResourcesView.cshtml" />
-    <Content Include="Views\Student\StudentWorkView2.cshtml" />
-    <Content Include="Views\Student\StudentWorkView3.cshtml" />
-    <Content Include="Views\Student\_StudentCoursesTableView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -368,6 +377,11 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201712100301218_initial.resx">
+      <DependentUpon>201712100301218_initial.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -384,9 +398,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>58393</DevelopmentServerPort>
+          <DevelopmentServerPort>54111</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:58393/</IISUrl>
+          <IISUrl>http://localhost:54111/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
@@ -403,10 +417,6 @@
     <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props'))" />
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
   </Target>
-  <PropertyGroup>
-    <PreBuildEvent>tasklist /FI "IMAGENAME eq VBCSCompiler.exe" 2&gt;NUL | find /I /N "VBCSCompiler.exe"&gt;NUL
-if "%25ERRORLEVEL%25"=="0" (taskkill /IM VBCSCompiler.exe /F) else (verify &gt;NUL)</PreBuildEvent>
-  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

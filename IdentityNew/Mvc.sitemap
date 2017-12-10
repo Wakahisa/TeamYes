@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<mvcSiteMap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-4.0"
+            xsi:schemaLocation="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-4.0 MvcSiteMapSchema.xsd">
+
+  <mvcSiteMapNode title="Home" controller="Home" action="Index">
+    <mvcSiteMapNode title="About" controller="Home" action="About"/>
+    <mvcSiteMapNode title="Contact" controller="Home" action="Contact"/>
+
+    <mvcSiteMapNode title="Register" controller="Account" action="Register">
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="Login" controller="Account" action="Login">
+    </mvcSiteMapNode>
+    
+    <mvcSiteMapNode title="Administrator Home" controller="Admin" action="AdminView">
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="Student Home" controller="Student" action="StudentHomeView">
+      <mvcSiteMapNode title="Resources" controller="Student" action="ResourcesView"/>
+      <mvcSiteMapNode title="Courses" controller="Student" action="StudentCourseView">
+        <mvcSiteMapNode title="Lessons" controller="Student" action="StudentLessonView"/>
+        <mvcSiteMapNode title="Work" controller="Student" action="StudentWorkView"/>
+        <mvcSiteMapNode title="Grade" controller="Student" action="StudentGradeView"/>
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="Instructor Home" controller="Instructor" action="InstructorHomeView">
+      <mvcSiteMapNode title="Course Create" controller="Instructor" action="InstructorCourseCreationView">
+        <mvcSiteMapNode title="Course Edit" controller="Instructor" action="InstructorCourseEditView"/>
+        <mvcSiteMapNode title="Lesson Edit" controller="Instructor" action="InstructorLessonEditView"/>
+      </mvcSiteMapNode>
+      <mvcSiteMapNode title="Course Edit" controller="Instructor" action="InstructorCourseEditView"/>
+      <mvcSiteMapNode title="Courses" controller="Instructor" action="InstructorCourseManagementView">
+        <mvcSiteMapNode title="Lessons" controller="Instructor" action="InstructorLessonManagementView"/>
+        <mvcSiteMapNode title="Lesson Edit" controller="Instructor" action="InstructorLessonEditView"/>
+      </mvcSiteMapNode>
+
+      <mvcSiteMapNode title="Students" controller="Instructor" action="InstructorStudentManagementView"/>
+    </mvcSiteMapNode>
+
+  </mvcSiteMapNode>
+
+</mvcSiteMap>

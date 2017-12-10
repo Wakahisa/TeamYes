@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "StudentGradeView";
+}
+
+<h2>StudentGradeView</h2>
+
+<div>
+    this is where the response/grade to the student's final submitted work will be posted
+    it may be an automated response of a response entered by the instructor
+</div>
+
+<div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+        Student Menu
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+        <li><a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentHomeView", "Student")'">Student Home View &raquo;</a></li>
+        <li><a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentCourseView", "Student")'">Student Course View &raquo;</a></li>
+        <li><a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentGradeView", "Student")'">Student Grade View &raquo;</a></li>
+        <li><a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentLessonView", "Student")'">Student Lesson View &raquo;</a></li>
+    </ul>
+</div>
+
+<h3>MY GRADES</h3>
+
+<p>DISPLAY GRADES HERE SOMEHOW</p>

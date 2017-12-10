@@ -1,0 +1,55 @@
+﻿@model IdentityNew.Models.WorkModel
+@{
+    ViewBag.Title = "StudentWorkView";
+}
+
+<script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+
+<h2>StudentWorkView</h2>
+
+<div>
+    <h1>@Html.DisplayFor(x=>x.Title)</h1>
+    <h3>@Html.DisplayFor(x=>x.InstructionText)</h3>
+</div>
+
+<div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+        Student Menu
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+        <li><a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentHomeView", "Student")'">Student Home View &raquo;</a></li>
+        <li><a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentCourseView", "Student")'">Student Course View &raquo;</a></li>
+        <li><a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentGradeView", "Student")'">Student Grade View &raquo;</a></li>
+        <li><a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentLessonView", "Student")'">Student Lesson View &raquo;</a></li>
+    </ul>
+</div>
+
+<h3>MY WORK</h3>
+<div class="panel panel-primary">
+    <div class="panel-heading" id="mypanelId">My work</div>
+    <div class="panel-body">
+        <h4>Python exercise 1: String</h4>
+        <div data-datacamp-exercise data-lang="python">
+            <code data-type="pre-exercise-code">
+                # This will get executed each time the exercise gets initialized
+                b = 6
+            </code>
+            <code data-type="sample-code">
+                # fill in the string below, to print 'hello'
+                print('change me')
+
+
+            </code>
+            <code data-type="solution">
+                # fill in the string below, to print 'hello'
+                print('hello')
+            </code>
+            <code data-type="sct">
+                Ex().test_output_contains("hello", no_output_msg = "Did you print 'hello'?")
+            </code>
+            <div data-type="hint">Change the code where 'change me' is to hello.</div>
+        </div>
+        <a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentLessonView", "Student")'">Back to Lessons &raquo;</a>
+    </div>
+</div>

@@ -1,0 +1,102 @@
+﻿@model IdentityNew.Models.WorkModel
+@{
+    ViewBag.Title = "StudentWorkView3";
+}
+
+<script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+
+<h2>StudentWorkView</h2>
+
+<div>
+    <h1>@Html.DisplayFor(x=>x.Title)</h1>
+    <h3>@Html.DisplayFor(x=>x.InstructionText)</h3>
+</div>
+
+<div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+        Student Menu
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+        <li><a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentHomeView", "Student")'">Student Home View &raquo;</a></li>
+        <li><a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentCourseView", "Student")'">Student Course View &raquo;</a></li>
+        <li><a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentGradeView", "Student")'">Student Grade View &raquo;</a></li>
+        <li><a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentLessonView", "Student")'">Student Lesson View &raquo;</a></li>
+    </ul>
+</div>
+
+<h3>MY WORK</h3>
+<div class="panel panel-primary">
+    <div class="panel-heading" id="mypanelId">My work</div>
+    <div class="panel-body">
+        <h4>Python exercise 3: Lists</h4>
+        <div data-datacamp-exercise data-lang="python">
+            <code data-type="pre-exercise-code">
+                # This will get executed each time the exercise gets initialized
+                b = 6
+            </code>
+            <code data-type="sample-code">
+                # area variables (in square meters)
+                hall = 11.25
+                kit = 18.0
+                liv = 20.0
+                bed = 10.75
+                bath = 9.50
+
+                # Create list areas
+
+
+            </code>
+            <code data-type="solution">
+                # Area variables (in square meters)
+                hall = 11.25
+                kit = 18.0
+                liv = 20.0
+                bed = 10.75
+                bath = 9.50
+
+                # Create list areas
+                areas = [hall, kit, liv, bed, bath]
+            </code>
+            <code data-type="sct">
+                # This test makes sure that students are warned if they delete parts of the sample code.
+                # Note that
+                #
+                #     Ex().test_object("hall")
+                #     Ex().test_object("kit")
+                #
+                # Is equivalent to
+                #
+                #     Ex().multi(test_object("hall"), test_object("kit"))
+                #
+                # MC-NOTE: should I remove multi change these to all using Ex().test1; Ex().test2; ...?
+                msg = "Don't remove or edit the predefined variables!"
+                Ex().multi(
+                test_object("hall", undefined_msg = msg, incorrect_msg = msg),
+                test_object("kit", undefined_msg = msg, incorrect_msg = msg),
+                test_object("liv", undefined_msg = msg, incorrect_msg = msg),
+                test_object("bed", undefined_msg = msg, incorrect_msg = msg),
+                test_object("bath", undefined_msg = msg, incorrect_msg = msg)
+                )
+
+                # This code checks that the variable "areas" was defined, and is the correct value
+                Ex().test_object("areas", incorrect_msg = "Define `areas` as the list containing all the area variables, in the correct order: `hall`, `kit`, `liv`, `bed` and `bath`. Watch out for typos. The list doesn't have to contain anything else.")
+
+                # Note: Try making the submission code equal to the solution code, and then
+                #       change "kit = 18.0" in the submission to "kit = 18". Why does the submission pass?
+                #       The answer is that pythonwhat uses "==" to test that a variable has the same value
+                #       between the student and solution results. In python the following evaluate to True
+                #           [1, 2, 3] == [1.0, 2, 3]
+                #           [1, 2, 3] == [True, 2, 3]
+                #
+                # If you wanted to be very specific, you could use one of the following tests, which
+                # is similar to comparing str('areas') across student and solution results.
+                # for more on has_equal_value, see: http://pythonwhat.readthedocs.io/en/latest/expression_tests.html#expressions
+                Ex().check_object('areas').is_instance(list).has_equal_value(expr_code="str(areas)")
+            </code>
+            <div data-type="hint">You can use the variables that have already been created to build the list: areas = [hall, kit, ...].
+</div>
+        </div>
+        <a href="#" class="btn btn-default" onclick="location.href='@Url.Action("StudentLessonView", "Student")'">Back to Lessons &raquo;</a>
+    </div>
+</div>
