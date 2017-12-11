@@ -1,37 +1,31 @@
-﻿
+﻿@model List<IdentityNew.Models.CourseModel>
 @{
     ViewBag.Title = "InstructorCourseCreationView";
 }
-
-<h2>InstructorCourseCreationView</h2>
-
-<div>
-    page for creating/editing courses
-    basic instructions
-    choose a course to edit
-    create a course button
+<div class="row">
+    <h3> </h3> <!-- vertical spacer for header/navbar that won't play nice-->
+</div>
+<div class="row">
+    <h2>Course Editing and Creation Page</h2>
 </div>
 <div class="panel panel-primary">
     <div class="panel-heading" id="mypanelId">Instructions</div>
     <div class="panel-body">
-        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah 
-        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah 
-        blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah 
+        <label>Choose a course to edit or hit the 'Add A Course' button at the bottom</label>
     </div>
 </div>
-
 
 <div class="panel panel-primary">
     <div class="panel-heading" id="mypanelId">Add/Edit a course</div>
     <div class="panel-body">
         <ul>
-            <li>@Html.ActionLink("course", "InstructorCourseEditView", "Instructor")</li>
-            <li>@Html.ActionLink("course", "InstructorCourseEditView", "Instructor")</li>
-            <li>@Html.ActionLink("course", "InstructorCourseEditView", "Instructor")</li>
-            <li>@Html.ActionLink("course", "InstructorCourseEditView", "Instructor")</li>
+            @foreach (var course in Model)
+            {
+                <li>@Html.ActionLink(course.Title, "InstructorCourseEditView", new { courseID = course.ID })</li>
+            }
         </ul>
     </div>
     <div class="panel-footer">
-        @Html.ActionLink("Add a course", "InstructorCourseEditView", "Instructor")
+        @Html.ActionLink("Add A Course", "InstructorCourseEditView", "Instructor", null, new { @class = "btn btn-default" })
     </div>
 </div>

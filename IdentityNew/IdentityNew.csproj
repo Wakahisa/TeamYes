@@ -221,6 +221,7 @@
     <Compile Include="Models\DataItems\StringQuestionModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Instructor\HomeworkEditViewModel.cs" />
+    <Compile Include="Models\Instructor\InstructorCourseEditViewModel.cs" />
     <Compile Include="Models\Instructor\InstructorCourseManageViewModel.cs" />
     <Compile Include="Models\Instructor\InstructorHomeViewModel.cs" />
     <Compile Include="Models\Instructor\InstructorLessonManageViewModel.cs" />

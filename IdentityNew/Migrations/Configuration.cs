@@ -377,7 +377,7 @@ namespace IdentityNew.Migrations
             context.CourseModels.AddOrUpdate(new CourseModel
             {
                 ID = 2,
-                Title = "Intro to Programming 2",
+                Title = "Intro Java",
                 Description = "In this course you will learn basic information about programming.",
                 InstructorID = 2,
                 Lessons = context.LessonModels.Where(f => f.ID < 4).ToList(),
@@ -390,7 +390,7 @@ namespace IdentityNew.Migrations
             context.CourseModels.AddOrUpdate(new CourseModel
             {
                 ID = 3,
-                Title = "Intro to Programming 3",
+                Title = "Intro C++",
                 Description = "In this course you will learn basic information about programming.",
                 InstructorID = 2,
                 Lessons = context.LessonModels.Where(f => f.ID < 4).ToList(),
@@ -403,10 +403,10 @@ namespace IdentityNew.Migrations
 
             #endregion
 
-            //#region add info to students
+            #region add info to students
 
 
-            //context.SaveChanges();
+            context.SaveChanges();
 
             var tempStudent = context.StudentModels.FirstOrDefault(s => s.ID == 1);
             var student1 = new StudentModel();
@@ -419,7 +419,7 @@ namespace IdentityNew.Migrations
             les1.Students = new List<StudentModel>() { student1 };
             var work1 = new WorkModel();
             var tempWork = context.WorkModels.FirstOrDefault(x => x.ID == 1);
-            //work1.InstructionText = tempWork.InstructionText; work1.InstructionText = tempWork.InstructionText; work1.InstructorNotes = tempWork.InstructorNotes; work1.IsProgramming = tempWork.IsProgramming; work1.Questions = tempWork.Questions; work1.QuestionsID = tempWork.QuestionsID; work1.Title = tempWork.Title;
+            work1.InstructionText = tempWork.InstructionText; work1.InstructionText = tempWork.InstructionText; work1.InstructorNotes = tempWork.InstructorNotes; work1.IsProgramming = tempWork.IsProgramming; work1.Questions = tempWork.Questions; work1.QuestionsID = tempWork.QuestionsID; work1.Title = tempWork.Title;
             work1.ID = 4;
             work1.AnswerID = 4; // duplicate of work 1 with ansewer = db index 4 of answers
             work1.Answers = context.AnswerModels.FirstOrDefault(x => x.ID == 4);
@@ -431,14 +431,14 @@ namespace IdentityNew.Migrations
             les1.WorkItem = work1;
             context.LessonModels.AddOrUpdate(les1);
             // next set for student 1
-            tempLesson = context.LessonModels.FirstOrDefault(x => x.ID == 1);
+            tempLesson = context.LessonModels.FirstOrDefault(x => x.ID == 2);
             var les2 = new LessonModel();
             les2.HasVideo = tempLesson.HasVideo; les2.IntroText = tempLesson.IntroText; les2.LessonData = tempLesson.LessonData; les2.LessonDataID = tempLesson.LessonDataID; les2.NextLessonIDs = tempLesson.NextLessonIDs; les2.Title = tempLesson.Title; les2.VideoHtml = tempLesson.VideoHtml;
             les2.ID = 5; // duplicate of lesson 2
             les2.Students = new List<StudentModel>() { student1 };
-            tempWork = context.WorkModels.FirstOrDefault(x => x.ID == 1);
+            tempWork = context.WorkModels.FirstOrDefault(x => x.ID == 2);
             var work2 = new WorkModel();
-            //work2.InstructionText = tempWork.InstructionText; work2.InstructionText = tempWork.InstructionText; work2.InstructorNotes = tempWork.InstructorNotes; work2.IsProgramming = tempWork.IsProgramming; work2.Questions = tempWork.Questions; work2.QuestionsID = tempWork.QuestionsID; work2.Title = tempWork.Title;
+            work2.InstructionText = tempWork.InstructionText; work2.InstructionText = tempWork.InstructionText; work2.InstructorNotes = tempWork.InstructorNotes; work2.IsProgramming = tempWork.IsProgramming; work2.Questions = tempWork.Questions; work2.QuestionsID = tempWork.QuestionsID; work2.Title = tempWork.Title;
             work2.ID = 5;
             work2.Students.Add(student1);
             work2.AnswerID = 5; // duplicate of work 2 with ansewer = db index 5 of answers
@@ -463,7 +463,7 @@ namespace IdentityNew.Migrations
             les3.Students = new List<StudentModel>() { student2 };
             tempWork = context.WorkModels.FirstOrDefault(x => x.ID == 1);
             var work3 = new WorkModel();
-            //work3.InstructionText = tempWork.InstructionText; work3.InstructionText = tempWork.InstructionText; work3.InstructorNotes = tempWork.InstructorNotes; work3.IsProgramming = tempWork.IsProgramming; work3.Questions = tempWork.Questions; work3.QuestionsID = tempWork.QuestionsID; work3.Title = tempWork.Title;
+            work3.InstructionText = tempWork.InstructionText; work3.InstructionText = tempWork.InstructionText; work3.InstructorNotes = tempWork.InstructorNotes; work3.IsProgramming = tempWork.IsProgramming; work3.Questions = tempWork.Questions; work3.QuestionsID = tempWork.QuestionsID; work3.Title = tempWork.Title;
             work3.ID = 6;
             work3.Students.Add(student2);
             work3.AnswerID = 6; // duplicate of work 1 with ansewer = db index 6 of answers
@@ -476,7 +476,7 @@ namespace IdentityNew.Migrations
             context.LessonModels.AddOrUpdate(les3);
 
 
-            //#endregion
+            #endregion
             context.SaveChanges();
 
             // Creates or Updates the Roles
@@ -488,7 +488,7 @@ namespace IdentityNew.Migrations
             // Assigns a User a role
             var UserManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
             //UserManager.AddToRole("1594e4ae-5fc2-45b3-86ee-efa4e635df27", "Admin"); // ("UserID", "User Role")
-            UserManager.AddToRole("2e6b8ed2-5509-4c7f-895f-570e0f29a97d", "Admin"); // ("UserID", "User Role")
+            UserManager.AddToRole("a2d4a5a8-f546-48c8-823f-8a9ebcd016b5", "Admin"); // ("UserID", "User Role")
         }
     }
 }

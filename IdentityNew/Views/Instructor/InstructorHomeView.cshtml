@@ -3,33 +3,38 @@
 @{
     ViewBag.Title = "InstructorHomeView";
 }
-
-<h2>Home</h2>
-
-<div class="panel panel-primary">
-    <div class="panel-heading" id="mypanelId">My Courses</div>
+<div class="row">
+    <h3> </h3> <!-- vertical spacer for header/navbar that won't play nice-->
+</div>
+<div class="row">
+    <h2>Home</h2>
+</div>
+<div class="row">
+    <div class="panel panel-primary">
+        <div class="panel-heading" id="mypanelId">My Courses</div>
         <div class="panel-body">
-           <ul>
-               @foreach(var course in Model.CourseList){
-                   <li>@Html.ActionLink(course.Title, "InstructorCourseManagementView", new { courseID = course.ID })</li>
-               }
-           </ul>
+            <ul>
+                @foreach (var course in Model.CourseList)
+                {
+                    <li>@Html.ActionLink(course.Title, "InstructorCourseManagementView", new { courseID = course.ID })</li>
+                }
+            </ul>
             <div class="panel-footer">
 
             </div>
         </div>
     </div>
+</div>
 <div class="panel panel-primary">
     <div class="panel-heading" id="mypanelId">My Students / My Paycheck</div>
     <div class="panel-body">
         <ul>
             @foreach (var student in Model.StudentList)
             {
-                <li>@Html.ActionLink(student.LastName+", "+student.FirstName, "InstructorStudentManagementView", new { studentID = student.ID })</li>
+                <li>@Html.ActionLink(student.LastName + ", " + student.FirstName, "InstructorStudentManagementView", new { studentID = student.ID })</li>
             }
         </ul>
         <div class="panel-footer">
-
         </div>
     </div>
 </div>
@@ -41,8 +46,7 @@
         </div>
         @*<div class="col-sm-4">link to user profile management page</div>
 
-        <div class="col-sm-4">?link to communications?uaa stuff?</div>*@
+            <div class="col-sm-4">?link to communications?uaa stuff?</div>*@
     </div>
 </div>
 
-       

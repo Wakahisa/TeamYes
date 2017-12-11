@@ -1,60 +1,49 @@
-﻿
+﻿@model IdentityNew.Models.InstructorCourseEditViewModel
 @{
     ViewBag.Title = "View";
 }
-
-<h2>InstructorCourseEditView</h2>
-
-<div>
-    overall course editing
-    add lessons, edit lessons, link/order lessons
+<div class="row">
+    <h3> </h3> <!-- vertical spacer for header/navbar that won't play nice-->
 </div>
+<div class="row">
+    <h2>InstructorCourseEditView</h2>
+</div>
+@using (Html.BeginForm())
+{
+    <div class="panel panel-primary">
+        <div class="panel-heading" id="mypanelId">
+            <label>Course Title: </label>
+            @Html.TextBoxFor(model => model.Course.Title, new { @class = "form-control" })
+        </div>
 
-<div class="panel panel-primary">
-    <div class="panel-heading" id="mypanelId">Current content</div>
-    <div class="panel-body">
-        
-        <div class="row">
-            <div class="col-sm-5">
-                <div class="panel-heading" id="mypanelId">
-                    course overview/into text
-                </div>
-                <div class="panel-body">
-                    course overview/into text, course overview/into text, course overview/into text,
-                    course overview/into text, course overview/into text, course overview/into text, course overview/into text,
-                    course overview/into text, course overview/into text, course overview/into text, course overview/into text,
-                    course overview/into text, course overview/into text, course overview/into text, course overview/into text,
-                </div>
-                <div class="panel-footer">
-                    edit button
-                </div>
-            </div>
-
-            <div class="col-sm-7">
-                <div class="panel-heading" id="mypanelId">
-                    list of lessons
-                </div>
-                <div class="panel-body">
-                    <ul>
-                        <li>lesson</li>
-                        <li>lesson</li>
-                        <li>lesson</li>
-                        <li>lesson</li>
-                        <li>lesson</li>
-                        <li>lesson</li>
-                        <li>lesson</li>
-                        <li>lesson</li>
-                    </ul>
-                </div>
-                <div class="panel-footer" >
-                    <div class="col-sm-5">
-                        button for changing order
-                        button for loading saved lesson
-                        @Html.ActionLink("add new lesson button", "InstructorLessonEditView", "Instructor")
-                    </div>
-                </div>
-            </div>
-
+        <div class="panel-body">
+            <label>Course Description</label>
+            @Html.TextAreaFor(x => x.Course.Description, new { @class = "form-control", @rows = "10", @cols = "50" })
         </div>
     </div>
-</div>
+
+            <div class="panel panel-primary">
+                <div class="panel-heading" id="mypanelId">
+                    <label>Lessons</label>
+                </div>
+                <div class="panel-body">
+                    <div class="col-sm-4">
+                        <label>Current Lesson List</label>
+                        @Html.ListBoxFor(x => x.LessonList, Model.LessonList, new { @class = "form-control" })
+                        @Html.ActionLink("Remove Selected Lesson", "", null, new { @class = "btn btn-info" })
+                    </div>
+                    <div class="col-sm-4">
+                        <label>Selected Lessons</label>
+                        @Html.ListBoxFor(x => x.LessonOrder, Model.LessonOrder, new { @class = "form-control" })
+                        @Html.ActionLink("Add Lesson", "", null, new { @class = "btn btn-info" })
+                        @* TODO make the below button go to the selected lesson *@
+                        @Html.ActionLink("Edit", "InstructorLessonEditView", null, new { @class = "btn btn-info" })
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    @Html.ActionLink("Save", "", null, new { @class = "btn btn-success" }) @Html.ActionLink("Clear", "", null, new { @class = "btn btn-default" })
+                </div>
+            </div>
+
+
+}

@@ -1,41 +1,48 @@
-﻿
+﻿@model IdentityNew.Models.StudentModel
 @{
     ViewBag.Title = "InstructorStudentManagementView";
 }
-
-<h2>Manage Students</h2>
+<div class="row">
+    <h3> </h3> <!-- vertical spacer for header/navbar that won't play nice-->
+</div>
+<div class="row">
+    <h2>Student Management Page</h2>
+</div>
 <div class="panel panel-primary">
-    <div class="panel-heading" id="mypanelId">Students</div>
-    <div class="row">
-       big list fo students
-        <div class="col-sm-3">
-            name/number (is email/msg link)
+    <div class="panel-heading" id="mypanelId">Student: @Html.Label(" " + Model.LastName + ", " + Model.FirstName)</div>
+    <div class="panel-body">
+        <div class="row">
+            <label>Email: </label>@Html.DisplayFor(x => x.EmailAddress)
         </div>
-        <div class="col-sm-3">
-            course and progress (note multiple courses?)
+        <div class="col-sm-4">
+            @*@Html.ActionLink(student.LastName + ", " + student.FirstName, "InstructorStudentManagementView", new { studentID = student.ID })*@
+            <ul>
+                <h3>Courses</h3>
+                @foreach (var course in Model.Courses)
+                {
+                    <li>@Html.ActionLink(course.Title, "InstructorCourseManagementView", new { courseID = course.ID })</li>
+                }
+            </ul>
         </div>
-        <div class="col-sm-3">
-            link to current lesson and put that student at top of list
+        <div class="col-sm-4">
+            <ul>
+                <h3>Lessons In Progress</h3>
+                @foreach (var lesson in Model.InProgressLessons)
+                {
+                    <li>@Html.ActionLink(lesson.Title, "InstructorLessonManagementView", new { lessonID = lesson.ID })</li>
+                }
+            </ul>
         </div>
-        <div class="col-sm-3">
-            current grade/points
+        <div class="col-sm-4">
+            <ul>
+                <h3>Exercises</h3>
+                @foreach (var work in Model.Homeworks)
+                {
+                    // TODO: change  InstructorWorkEditView to (and MAKE) InstructorGadesView)
+                    <li>@Html.ActionLink(work.Title + ": " + work.Grade.ToString(), "InstructorWorkEditView", new { WorkID = work.ID })</li>
+                }
+            </ul>
         </div>
     </div>
 </div>
-
-<div class="panel panel-primary">
-    <div class="panel-heading" id="mypanelId">Add/Drop</div>
-    <div class="row">
-        <div class="col-sm-3">
-            add button
-        </div>
-        <div class="col-sm-3">
-            remove button
-        </div>
-        <div class="col-sm-3">
-            course stats button?
-        </div>
-    </div>
-</div>
-
 

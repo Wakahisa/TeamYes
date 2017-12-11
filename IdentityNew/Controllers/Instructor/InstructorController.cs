@@ -32,6 +32,7 @@ namespace IdentityNew.Controllers.Instructor
         [Authorize(Roles = "Admin")]
         public ActionResult InstructorCourseCreationView()
         {
+            List<CourseModel> model = db.CourseModels.Where(x => x.ID > 0).ToList();
             return View();
         }
 
@@ -53,6 +54,27 @@ namespace IdentityNew.Controllers.Instructor
             {
                 model.Load(db.LessonModels.FirstOrDefault());
             }
+
+#warning TODO correct loading so that no student in progress or graded studd is included
+            int counter = model.NextLessonList.Count();
+            while (counter > 3)
+            {
+                model.NextLessonList.ElementAt(counter - 1).Disabled = true;
+                counter--;
+            }
+            counter = model.NextLessonList.Count();
+            while (counter > 3)
+            {
+                model.PreviousLessonList.ElementAt(counter - 1).Disabled = true;
+                counter--;
+            }
+            counter = model.NextLessonList.Count();
+            while (counter > 3)
+            {
+                model.WorkList.ElementAt(counter - 1).Disabled = true;
+                counter--;
+            }
+
             return View(model);
         }
 
@@ -162,9 +184,20 @@ namespace IdentityNew.Controllers.Instructor
         }
 
 
-        public ActionResult InstructorCourseEditView()
+        /// <summary>
+        /// loads up a current or empty course for editing
+        /// </summary>
+        /// <param name="courseID"></param>
+        /// <returns></returns>
+        public ActionResult InstructorCourseEditView(int? courseID)
         {
-            return View();
+            var model = new InstructorCourseEditViewModel();
+            if (courseID > 0)
+            {
+                model.Load((int)courseID);
+            }
+
+            return View(model);
         }
 
         /// <summary>
@@ -187,10 +220,35 @@ namespace IdentityNew.Controllers.Instructor
             return View(model);
         }
 
+        /// <summary>
+        /// loads up a student for the view-a-student screen in instructor area
+        /// </summary>
+        /// <param name="studentID"></param>
+        /// <returns></returns>
         [Authorize(Roles = "Admin")]
-        public ActionResult InstructorStudentManagementView()
+        public ActionResult InstructorStudentManagementView(int? studentID)
         {
-            return View();
+            var model = new StudentModel();
+            if (studentID > 0)
+            {
+                model = db.StudentModels.FirstOrDefault(x => x.ID == (int)studentID);
+#warning TODO: real loading, this is just for the demo
+                if (model.ID == 1) // student 1 demo data
+                {
+                    model.Homeworks.Add(db.WorkModels.FirstOrDefault(x => x.ID == 4));
+                    model.Homeworks.Add(db.WorkModels.FirstOrDefault(x => x.ID == 5));
+                    model.InProgressLessons.Add(db.LessonModels.FirstOrDefault(x => x.ID == 5));
+                    model.Courses.Add(db.CourseModels.FirstOrDefault(X => X.ID == 1));
+                    model.Courses.Add(db.CourseModels.FirstOrDefault(X => X.ID == 2));
+                }
+                else // student 2 demo data
+                {
+                    model.Homeworks.Add(db.WorkModels.FirstOrDefault(x => x.ID == 6));
+                    model.InProgressLessons.Add(db.LessonModels.FirstOrDefault(x => x.ID == 6));
+                    model.Courses.Add(db.CourseModels.FirstOrDefault(X => X.ID == 1));
+                }
+            }
+            return View(model);
         }
     }
 }
