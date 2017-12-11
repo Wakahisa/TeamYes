@@ -196,6 +196,7 @@ namespace IdentityNew.Controllers.Instructor
             {
                 model.Load((int)courseID);
             }
+            else { model.Load(1); }
 
             return View(model);
         }
