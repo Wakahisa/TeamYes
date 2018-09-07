@@ -1,4 +1,6 @@
 # TeamYes
+This is a class project I worked on for Web Application Development.
+
 A web application that allows teachers to create courses and check student progress.
 
 August 2017 - December 2017
