@@ -1,4 +1,5 @@
 ﻿@model IdentityNew.Models.InstructorCourseEditViewModel
+
 @{
     ViewBag.Title = "View";
 }
@@ -29,17 +30,22 @@
                 <div class="panel-body">
                     <div class="col-sm-4">
                         <label>Current Lesson List</label>
+
                         @Html.ListBoxFor(x => x.LessonList, Model.LessonList, new { @class = "form-control" })
+
                         @Html.ActionLink("Remove Selected Lesson", "", null, new { @class = "btn btn-info" })
                     </div>
                     <div class="col-sm-4">
                         <label>Selected Lessons</label>
                         @Html.ListBoxFor(x => x.LessonOrder, Model.LessonOrder, new { @class = "form-control" })
+
                         @Html.ActionLink("Add Lesson", "", null, new { @class = "btn btn-info" })
                         @* TODO make the below button go to the selected lesson *@
                         @Html.ActionLink("Edit", "InstructorLessonEditView", null, new { @class = "btn btn-info" })
                     </div>
+
                 </div>
+
                 <div class="panel-footer">
                     @Html.ActionLink("Save", "", null, new { @class = "btn btn-success" }) @Html.ActionLink("Clear", "", null, new { @class = "btn btn-default" })
                 </div>

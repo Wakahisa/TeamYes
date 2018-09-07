@@ -1,0 +1,12 @@
+This is a readme file for the controllers folder
+Things that go in here are instructions and notes specific to the controllers used in this project
+
+Especially important is any really useful custom helpers, templates, and coding conventions used
+
+AdminController has a link for each table in the db
+	links go to an action result that returns a partial view which is a list of the table rows
+	editors are modal popups that dieplay an items that is to be edited
+
+Collapsable regions: you can create collapsable regions in the .cs files (but not in .cshtml) with
+	#region nameOfRegion
+	#endregion

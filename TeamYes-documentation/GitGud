@@ -1,0 +1,63 @@
+GitGud
+
+This file assumes that you have a git repository and a local copy of master.
+
+1. Add some branches so you can't accidentally destroy your work. Because it is possible to screw up a branch to the point where it is unrecoverable you want multiple branches and a way to test code and merges.
+
+$: git checkout -b nameWork
+$: git branch --set-upstream origin nameWork
+$: git checkout -b nameTest
+$: git branch --set-upstream origin nameTest
+$: git checkout -b nameRelease
+$: git branch --set-upstream origin nameRelease
+
+2. You now have three copies of the branch that you started from. You can pull and push to these branches. Never push to another person's branch without asking permission first. Check your branches with:
+
+$: git branch
+
+3. To start working on your code make new local branches and do the work there.
+
+$: git checkout -b name_AddLogin
+$: git checkout -b name_FixBug_274
+
+4. When you're happy with your code add all the new files that you've created and commit them. Afterwards check the branch status, it should be clean.
+
+$: git add .
+$: git commit -am "Useful commit message"
+$: git status
+
+5. Then merge the new branches into your working branch. Because they are your code from your branch there should not be any conflicts unless you have edited the same files in each of them. If there are conflicts then they should be easy to fix, and it's good practice for dealing with merge conflicts because you're already familiar with this code.
+
+$: git checkout nameWork
+$: git merge name_AddLogin
+$: git merge name_FixBut_274
+
+6. Test your work branch and fix any errors. Repeat step 4 if you have changed anything. When you're happy that the code is perfect, merge it into your release branch and push it. You can push your work and test branches too if other people on the project might be interested in seeing them or if you're worried about the computer dying or a disk failure.
+
+$: git checkout nameRelease
+$: git merge nameWork
+# git status
+$: git push
+
+7. To get other people's code into your branch you want to fetch the online branches, pull one of them, and merge it with your test branch. Then fix any merge conflicts and test it. If you're satisfied with it you merge it to your other active branches.
+
+$: git fetch
+$: git checkout -b thatGuysBranch
+$: git pull origin thatGuysBranch
+$: git add .
+$: git commit -am 'pull & merge from thatGuysBranch'
+$: git checkout nameTest
+$: git merge thatGuysBranch
+<fix conflicts & test>
+$: git checkout nameWork
+$: git merge nameTest
+
+8. If you run into any surprising errors or things that stop you from using git check Google and check several answers. Read the entire solution, the best ones are generally the ones that also tell you what the commands are doing or explain what went wrong. The worst case scenario is that you delete a bad branch and re-branch or re-pull. Ideally you should never need to do this to any branch but your test branch or somebody else's branch that you pulled down. The branch command with the -D argument will delete it's target.
+
+$: git checkout nameTest
+$: git commit -am "This branch is pining for the fjords"
+$: git checkout nameWork
+$: git branch -D nameTest
+$: git branch
+$: git checkout -b nameTest
+$: git branch --set-upstream origin nameTest

@@ -32,23 +32,72 @@ namespace IdentityNew.Models
         /// </summary>
         /// <param name="workID"></param>
         /// <returns>HomeworkCreateViewModel</returns>
-        public HomeworkEditViewModel Load (int workID)
+        public HomeworkEditViewModel Load(int workID)
         {
             var model = new HomeworkEditViewModel();
 
             model.Work = db.WorkModels.FirstOrDefault(f => f.ID == workID);
-            // load the questions modelq
+            // load the questions model
             model.QuestionModel = db.QuestionModels.FirstOrDefault(f => f.ID == model.Work.QuestionsID);
             if (model.QuestionModel.ID > 0)
             {   // load the questions
                 model.QuestionModel.Questions = db.StringQuestions.Where(q => q.QuestionModelID == model.Work.QuestionsID).ToList();
             }
+            // indorrect code due to flaky info in DB
+            int counter = 1;
+            while (counter < 4)
+            {
+                if (model.QuestionModel.ID == 1)
+                {
+                    model.QuestionList.Add(db.StringQuestions.FirstOrDefault(f => f.ID == counter).Question);
+
+                }
+                if (model.QuestionModel.ID == 2)
+                {
+                    model.QuestionList.Add(db.StringQuestions.FirstOrDefault(f => f.ID == counter + 3).Question);
+
+                }
+                if (model.QuestionModel.ID == 3)
+                {
+                    model.QuestionList.Add(db.StringQuestions.FirstOrDefault(f => f.ID == counter + 6).Question);
+
+                }
+                counter++;
+            }
+            // correct code
+            //foreach(var question in model.QuestionModel.Questions)
+            //{
+            //    model.QuestionList.Add(question.Question);
+            //}
             //load the answer model
             model.AnswerModel = db.AnswerModels.FirstOrDefault(f => f.ID == model.Work.AnswerID);
             if (model.AnswerModel.ID > 0)
             {   // load the answers
                 model.AnswerModel.Answers = db.StringAnswers.Where(q => q.AnswerModelID == model.Work.AnswerID).ToList();
             }
+            // indorrect code due to flaky info in DB
+            counter = 1;
+            while (counter < 4)
+            {
+                if (model.AnswerModel.ID == 1)
+                {
+                    model.AnswerList.Add(db.StringAnswers.FirstOrDefault(f => f.ID == counter).Answer);
+                }
+                if (model.AnswerModel.ID == 2)
+                {
+                    model.AnswerList.Add(db.StringAnswers.FirstOrDefault(f => f.ID == counter + 3).Answer);
+                }
+                if (model.AnswerModel.ID == 3 && model.AnswerList.Count < 3)
+                {
+                    model.AnswerList.Add(db.StringAnswers.FirstOrDefault(f => f.ID == counter + 6).Answer);
+                }
+                counter++;
+            }
+            //correct code
+            //foreach(var answer in model.AnswerModel.Answers)
+            //{
+            //    model.AnswerList.Add(answer.Answer);
+            //}
 
             // get the correct answers
             if (model.AnswerModel.TrueFalse)

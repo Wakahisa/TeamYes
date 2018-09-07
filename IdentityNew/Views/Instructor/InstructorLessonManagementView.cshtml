@@ -6,7 +6,9 @@
 <div class="row">
     <h3> </h3> <!-- vertical spacer for header/navbar that won't play nice-->
 </div>
-<h2>Manage Lesson</h2>
+<div class="row">
+    <h2>Lesson Management Page</h2>
+</div>
 
 <div class="row">
     <div class="panel panel-primary">
@@ -32,16 +34,29 @@
     <div class="panel panel-primary">
         <div class="panel-heading" id="mypanelId">@Html.Label(Model.CurrentLesson.IntroText)</div>
         <div class="panel-body">
-            @Html.Label(Model.LessonData.Placeholder)
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-sm-1"></div> <!--spacer-->
+                    <!-- no clue why this works for the intro text above byut not for the placeholder string -->
+                    @Html.LabelFor(x => x.LessonData.Placeholder)
+                    @*@Html.LabelFor(x=>x.LessonDataDisplayString.ToString())*@
+                    @*@Html.Label(Model.LessonData.Placeholder)
+                        @Html.TextArea(Model.LessonData.Placeholder)*@
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-4">
+                        @Html.ActionLink("Edit", "InstructorLessonEditView", new { lessonID = Model.CurrentLesson.ID }, new { @class = "btn btn-default" })
+                    </div>
+                    <div class="col-sm-4">
+                        @Html.ActionLink("Preview Work", "InstructorWorkEditView", new { workID = Model.CurrentLesson.WorkID }, new { @class = "btn btn-default" })
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="panel-footer">
             <div class="form-group">
-                <div class="col-sm-4">
-                    @Html.ActionLink("Edit", "InstructorLessonEditView", new { lessonID = Model.CurrentLesson.ID }, new { @class = "btn btn-default" })
-                </div>
-                <div class="col-sm-4">
-                    @Html.ActionLink("Preview Work", "InstructorWorkEditView", new { workID = Model.CurrentLesson.WorkID }, new { @class = "btn btn-default" })
-                </div>
+
             </div>
         </div>
     </div>
@@ -59,7 +74,7 @@
                     {
                         foreach (var student in Model.StudentList)
                         {
-                            <li>@Html.Display(student.FirstName + " " + student.LastName)</li>
+                            <li>@Html.ActionLink(student.LastName + ", " + student.FirstName, "InstructorStudentManagementView", new { studentID = student.ID })</li>
                         }
                     }
                     else
@@ -75,10 +90,13 @@
 
                     @if (Model.StudentWorks.Count > 0)
                     {
+                        // serious formatting issues surrounding decimals apparently
                         foreach (var work in Model.StudentWorks)
                         {
-                            // <li>*@Html.Display(work.Grade.ToString())</li>
+                            //<li>@Html.Label(work.Grade.ToString())</li>
                         }
+                        <li><label>100</label></li>
+                        <li><label>33.3</label></li>
                     }
                     else
                     {
@@ -94,7 +112,7 @@
                     {
                         foreach (var work in Model.StudentWorks)
                         {
-                            //<li>@Html.Display(work.Passed.ToString())</li>
+                            <li>@Html.Label(work.Passed.ToString())</li>
                         }
                     }
                     else

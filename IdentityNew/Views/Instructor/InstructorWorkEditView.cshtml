@@ -1,5 +1,6 @@
 ﻿@model IdentityNew.Models.HomeworkEditViewModel
 
+
 <div class="row">
     <h3> </h3> <!-- vertical spacer for header/navbar that won't play nice-->
 </div>
@@ -82,6 +83,7 @@
                             {
                                 <tr>@Html.TextAreaFor(x => thing, new { @class = "form-control" })</tr>
                             }
+
                             @*@if (Model.Work.IsProgramming)
                                 {
                                     <tr>This is a programming assignment TODO: set answer checking</tr>
@@ -106,17 +108,21 @@
                                     <tr>dddddddddddd these answers by hand.</tr>
                                 }*@
 
+
                         </tbody>
                     </table>
                 </div>
             </div>
+
             <hr />
             <div class="col-sm-12" column-span>
                 <input type="submit" value="Save" class="btn btn-success" style="margin-left: 16px" />
                 @Html.ActionLink("Clear", "InstructorWorkEditView", "Instructor", null, new { @class = "btn btn-default" })
             </div>
+
         </div>
 }
+
 <script type="text/javascript" language="javascript">
             // FIND / FIX ABILITY TO SELECT ONLY ONE CHECKBOX
             //window.onload = function () {

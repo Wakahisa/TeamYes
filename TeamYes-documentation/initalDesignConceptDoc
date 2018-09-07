@@ -1,0 +1,42 @@
+Inital program design workflow concept document
+
+**All users start here**
+welcome page
+(splash screen, uaa stuff, eula, PG-13 rating, etc.)
+
+secure login (student/teacher/admin?)
+(secure, user table of database)
+
+**Student area**
+course/s options & account settings
+(see courses, join/leave courses, account management)
+
+course info, content, & links
+(about course, requirements, content overview)
+
+course section selection & progress
+(lession titles, lessons passed/failed, choose a lesson)
+
+lesson intro, contents, & links
+(lesson subject, text, links, info, teaching)
+
+lesson challenge/work
+(complex)
+
+lesson feedback
+(pass/fail, retry, next/previous, breadcrumbs?)
+
+**Teacher area**
+course/s options, student options & account settings
+(see courses, create/edit courses, account management)
+(one page or split into three? big section)
+
+*needs more work here*
+*probably after basic student section setup*
+CRUD raw course
+update in-progress course
+CRUD students
+
+**?Admin areas?**
+
+*unknown at this time*

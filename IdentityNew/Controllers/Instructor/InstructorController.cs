@@ -1,11 +1,11 @@
-﻿using IdentityNew.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web.Mvc;
 using System.Web;
 using System.IO;
+using IdentityNew.Models;
 
 namespace IdentityNew.Controllers.Instructor
 {
@@ -18,7 +18,6 @@ namespace IdentityNew.Controllers.Instructor
         /// load list of courses and students for the instructor
         /// </summary>
         /// <returns></returns>
-        [Authorize(Roles = "Admin")]
         public ActionResult InstructorHomeView()
         {
             var model = new InstructorHomeViewModel();
@@ -29,11 +28,14 @@ namespace IdentityNew.Controllers.Instructor
             return View(model);
         }
 
-        [Authorize(Roles = "Admin")]
+        /// <summary>
+        /// just loads a list of courses into the view for editing or creating more
+        /// </summary>
+        /// <returns></returns>
         public ActionResult InstructorCourseCreationView()
         {
             List<CourseModel> model = db.CourseModels.Where(x => x.ID > 0).ToList();
-            return View();
+            return View(model);
         }
 
         #region Lesson Edit
@@ -42,7 +44,6 @@ namespace IdentityNew.Controllers.Instructor
         /// Loads a lesson for editing via the model load method
         /// </summary>
         /// <returns></returns>
-        [Authorize(Roles = "Admin")]
         public ActionResult InstructorLessonEditView(int? lessonID)
         {
             var model = new LessonCreateViewModel();
@@ -106,7 +107,6 @@ namespace IdentityNew.Controllers.Instructor
         /// </summary>
         /// <param name="entry"></param>
         /// <returns></returns>
-        [Authorize(Roles = "Admin")]
         [HttpPost]
         public ActionResult InstructorLessonEditView(LessonCreateViewModel entry)
         {
@@ -125,7 +125,6 @@ namespace IdentityNew.Controllers.Instructor
         /// </summary>
         /// <param name="workID"></param>
         /// <returns></returns>
-        [Authorize(Roles = "Admin")]
         public ActionResult InstructorWorkEditView(int? workID)
         {
             var model = new HomeworkEditViewModel();
@@ -157,7 +156,6 @@ namespace IdentityNew.Controllers.Instructor
         /// </summary>
         /// <param name="entry"></param>
         /// <returns></returns>
-        [Authorize(Roles = "Admin")]
         [HttpPost]
         public ActionResult InstructorWorkEditView(HomeworkEditViewModel entry)
         {
@@ -174,7 +172,6 @@ namespace IdentityNew.Controllers.Instructor
         /// </summary>
         /// <param name="courseID"></param>
         /// <returns></returns>
-        [Authorize(Roles = "Admin")]
         public ActionResult InstructorCourseManagementView(int courseID)
         {
             //var model = db.CourseModels.FirstOrDefault(f => f.ID == courseID);
@@ -182,7 +179,6 @@ namespace IdentityNew.Controllers.Instructor
             model.Load(courseID);
             return View(model);
         }
-
 
         /// <summary>
         /// loads up a current or empty course for editing
@@ -196,7 +192,10 @@ namespace IdentityNew.Controllers.Instructor
             {
                 model.Load((int)courseID);
             }
-            else { model.Load(1); }
+            else
+            {
+                model.Load(1);
+            }
 
             return View(model);
         }
@@ -206,7 +205,6 @@ namespace IdentityNew.Controllers.Instructor
         /// </summary>
         /// <param name="lessonID"></param>
         /// <returns></returns>
-        [Authorize(Roles = "Admin")]
         public ActionResult InstructorLessonManagementView(int? lessonID)
         {
             var model = new InstructorLessonManageViewModel();
@@ -226,7 +224,6 @@ namespace IdentityNew.Controllers.Instructor
         /// </summary>
         /// <param name="studentID"></param>
         /// <returns></returns>
-        [Authorize(Roles = "Admin")]
         public ActionResult InstructorStudentManagementView(int? studentID)
         {
             var model = new StudentModel();
