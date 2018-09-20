@@ -3,6 +3,8 @@ This is a class project I worked on for Web Application Development.
 
 A web application that allows teachers to create courses and check student progress.
 
+Technologies: ASP.NET MVC, HTML, CSS, JavaScript, Bootstrap, SQL Server, FontAwesome, Ajax
+
 August 2017 - December 2017
 
 Description:
